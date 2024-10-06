@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 2227905900012232012}
   - component: {fileID: 903560618167781843}
   - component: {fileID: 587072615589072027}
+  - component: {fileID: 6684932336843493439}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -64,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: ea414a4927b417c4183bd5d7ecca0fdf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -107,3 +108,17 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6684932336843493439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8276687240861986080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbebda84d1b9362489c3b47df967f00b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 7
+  enemyMat: {fileID: 2100000, guid: ea414a4927b417c4183bd5d7ecca0fdf, type: 2}

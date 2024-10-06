@@ -57,4 +57,12 @@ public class GameManager : Singleton<GameManager>
             
         }
     }
+    
+    // EnemySpawner에서 남은 시간 확인용
+    public float GetElapsedTime()
+    {
+        return playTimeCounter.GetElapsedTime();
+    }
+    
+    
 }
