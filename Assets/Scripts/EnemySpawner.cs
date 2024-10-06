@@ -90,6 +90,4 @@ public class EnemySpawner : MonoBehaviour
         Vector3 respawnPosition = originPosition + RandomPostion;
         return respawnPosition;
     }
-
-    
 }
