@@ -9,19 +9,19 @@ public class GameManager : Singleton<GameManager>
     public bool IsGameOver { get; set;} = false;//끝났나
     
     
-    public float gameTime = 0f;
-    [SerializeField]
-    private float remainTime;
+    public float gameTime = 0f; 
+    public float RemainTime { get; private set; }
+    public float ElapsedTime { get; private set; }
 
     
     public float restartTime = 0f;
-    private TimeCounter playTimeCounter;
-    private TimeCounter restartTimeCounter;
+    private TimeCounter playTimeCounter; //플레이 타이머
+    private TimeCounter restartTimeCounter; //재시작 타이머
     
     // Start is called before the first frame update
     void Start()
     {
-        IsGameStarted = true;
+        IsGameStarted = true; //임의로 시작 
         playTimeCounter = new TimeCounter();
         restartTimeCounter = new TimeCounter();
     }
@@ -31,13 +31,17 @@ public class GameManager : Singleton<GameManager>
     {
         playTimeCounter.Update();
         restartTimeCounter.Update();
-        remainTime = playTimeCounter.GetTimeLeft();
+        
+        RemainTime = playTimeCounter.GetTimeLeft();
+        ElapsedTime = playTimeCounter.GetElapsedTime();
         
         if (IsGameStarted||restartTimeCounter.WasEndedThisFrame()) //게임 플레이 시작 (재시작)
         {
             //대충 장면 전환
             
-            playTimeCounter.Start(gameTime);
+            
+            SpawnerManager.instance.SpawnerStart(); //스포너 활성화
+            playTimeCounter.Start(gameTime); //플레이 타이머 시작
             IsGameStarted = false;
         }
 
@@ -46,7 +50,10 @@ public class GameManager : Singleton<GameManager>
             //대충 실패 효과
             
             
-            restartTimeCounter.Start(restartTime);
+            playTimeCounter.Stop(); //플레이 타이머 종료
+            EnemyManager.instance.DeleteAllEnemies(); //적 모두 삭제
+            SpawnerManager.instance.SpawnerStop(); //스포너 비활성화
+            restartTimeCounter.Start(restartTime); //재시작 타이머 시작
             IsGameOver = false;
         }
 
@@ -55,6 +62,8 @@ public class GameManager : Singleton<GameManager>
             //대충 성공 효과
             
             
+            EnemyManager.instance.DeleteAllEnemies(1f);//적 모두 삭제
+            SpawnerManager.instance.SpawnerStop();//스포너 비활성화
         }
     }
 }
