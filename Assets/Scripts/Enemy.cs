@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,7 +8,6 @@ public class Enemy : MonoBehaviour
 {
     public float speed;
     public Material enemyMat;
-    
     private Transform target; // 적이 달려오는 타겟
     
     
@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Barrier").transform;
+        EnemyManager.instance.enemies.Add(this);
     }
 
     // Update is called once per frame
@@ -40,5 +41,10 @@ public class Enemy : MonoBehaviour
             Debug.Log("Shoot Success");
             enemyMat.color = Color.yellow;
         }
+    }
+
+    private void OnDestroy()
+    {
+        EnemyManager.instance.enemies.Remove(this);
     }
 }
