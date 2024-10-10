@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.unity.2d.psdimporter": "9.0.3",
     "com.unity.ai.navigation": "2.0.0",
     "com.unity.burst": "1.8.18",
     "com.unity.cinemachine": "2.10.1",

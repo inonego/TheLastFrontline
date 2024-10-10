@@ -27,6 +27,7 @@ public class Barrier : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             barrierHp-=damage; 
+            GameManager.instance.DecreaseBarrierHP();
             
             //대충 베리어 이펙트
             
@@ -58,7 +59,6 @@ public class Barrier : MonoBehaviour
         {
             barrierMat.color = Color.yellow;
         }
-        
         
         // 대충 배리어 파괴 직전 이펙트나 파티클 효과같은거 넣기
     }
