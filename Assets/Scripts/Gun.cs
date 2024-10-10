@@ -55,6 +55,7 @@ public class Gun : MonoBehaviour
         {
             currentDamp = fireDamp;
             currentBullet--;
+            GameManager.instance.ShowBulletCount(currentBullet/maxBullet);
             
             Instantiate(bullet, shotPoint.transform.position, shotPoint.transform.rotation);
             
@@ -70,6 +71,7 @@ public class Gun : MonoBehaviour
     public void OnReload()
     {
         isReloading = true;
+        GameManager.instance.ShowBulletCount(currentBullet/maxBullet);
         reloadCounter.Start(reloadTime);
     }
     

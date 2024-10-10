@@ -27,6 +27,7 @@ public class Barrier : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {
             barrierHp-=damage; 
+            GameManager.instance.DecreaseBarrierHP();
             
             
             //대충 베리어 이펙트
@@ -54,6 +55,6 @@ public class Barrier : MonoBehaviour
             }
         }
         
-        
     }
+    
 }
