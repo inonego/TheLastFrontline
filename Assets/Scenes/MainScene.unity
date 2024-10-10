@@ -131,6 +131,8 @@ GameObject:
   m_Component:
   - component: {fileID: 84979060}
   - component: {fileID: 84979059}
+  - component: {fileID: 84979061}
+  - component: {fileID: 84979062}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -177,6 +179,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &84979061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84979058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ec15cc7df22166439527e6a1b4258a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  phaseNumber: 1
+  phase1Spawners: []
+  phase2Spawners: []
+  phase3Spawners: []
+--- !u!114 &84979062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84979058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94cec21466af2a24d9af2d486a9da670, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies: []
 --- !u!1 &96442390
 GameObject:
   m_ObjectHideFlags: 3
@@ -2282,7 +2313,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -3337,10 +3368,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a127f2834ae1576409c0957a4bee427b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  phase: 1
   enemy: {fileID: 8276687240861986080, guid: f47fc6ba2e8084343814acf693a90df7, type: 3}
   minTimeBetweenSpawns: 3
   maxTimeBetweenSpawns: 5
-  phaseNumber: 1
   rangeObject: {fileID: 1879360315}
 --- !u!4 &960509029 stripped
 Transform:

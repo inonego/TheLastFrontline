@@ -84,7 +84,6 @@ public class GameManager : Singleton<GameManager>
         {
             //대충 성공 효과
             
-            
             EnemyManager.instance.DeleteAllEnemies(1f);//적 모두 삭제
             SpawnerManager.instance.SpawnerStop();//스포너 비활성화
         }
@@ -127,8 +126,8 @@ public class GameManager : Singleton<GameManager>
             phaseText.text = "Phase 3";
         }
 
-        int min = (int)(remainTime / 60f);
-        int sec = (int)(remainTime % 60);
+        int min = (int)(RemainTime / 60f);
+        int sec = (int)(RemainTime % 60);
         
         timeText.text = string.Format("{0:00}:{1:00}", min, sec);
     }
