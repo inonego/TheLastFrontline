@@ -34,6 +34,7 @@ public class Barrier : MonoBehaviour
             
             
             //대충 타 죽는 몬스터
+            EnemyManager.instance.enemies.Remove(other.gameObject.GetComponent<Enemy>());
             Destroy(other.gameObject, 0.5f); //죽는 모션 이후 삭제
             
             
