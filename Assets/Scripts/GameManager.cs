@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
+
 
 public class GameManager : Singleton<GameManager>
 {
@@ -33,14 +35,24 @@ public class GameManager : Singleton<GameManager>
     public Image BarrierHP;
     public Image BulletCount;
 
+    // 스크립트 대사용 변수
     private float scriptTime = 0f; // 각 스크립트 보여주는 시간
     private bool isFadingOut = false; // Panel 페이드 아웃 중인지 확인
     private float fadeDuration = 2f; // 페이드 인/아웃 시간
     private int currentPhase = 0; // 현재 phase
     
+    // PausePanel용 변수
+    public InputActionReference pauseAction;
+    public GameObject pausePanel;
+    public bool isPaused{ get; private set; }
+    
+    //Settings용 변수
+    public GameObject settingsPanel;
+    
     // Start is called before the first frame update
     void Start()
     {
+        isPaused = false;
         IsGameStarted = true; //임의로 시작 
         playTimeCounter = new TimeCounter();
         restartTimeCounter = new TimeCounter();
@@ -228,5 +240,44 @@ public class GameManager : Singleton<GameManager>
         isFadingOut = false;
         ScriptPanel.SetActive(true); // 대화창 활성화
         ScriptPanel.GetComponent<Image>().color = new Color(1, 1, 1, 0); // 투명하게 시작
+    }
+    
+    public void PauseGame()
+    {
+        if (!isPaused)
+        {
+            pausePanel.SetActive(true);
+            Time.timeScale = 0f; // 게임 중단 (시간 정지)
+            isPaused = true; 
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+    }
+
+    public void ResumeGame()
+    {
+        pausePanel.SetActive(false); 
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        Time.timeScale = 1f; // 게임 재개 (시간 정상)
+        isPaused = false; 
+    }
+    
+    public void ShowSettings()
+    {
+        pausePanel.SetActive(false); 
+        settingsPanel.SetActive(true);
+    }
+
+    public void BackToGame()
+    {
+        pausePanel.SetActive(true); 
+        settingsPanel.SetActive(false);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+        Debug.Log("Game Closed");
     }
 }

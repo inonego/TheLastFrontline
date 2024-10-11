@@ -44,9 +44,16 @@ public class Gun : MonoBehaviour
             currentBullet = maxBullet;
             isReloading = false;
         }
-        
+
+        // 일단 InputManager에서 처리하게 만듦
+        /*
         if (inputAction.action.IsPressed())
+        {
+            Debug.Log("Shoot is pressed.");
             Fire();
+        }
+        */
+            
     }
     
     public void Fire()
