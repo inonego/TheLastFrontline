@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6789162878392710114
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5145100090257905271}
+  - component: {fileID: 5542817106126168598}
+  - component: {fileID: 434941895908033345}
+  - component: {fileID: 4548197606122307335}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5145100090257905271
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6789162878392710114}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.2951176, y: 34.365955, z: 25.536066}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5542817106126168598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6789162878392710114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10350039c4cf98b47bc60c1fce1f3b04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameTime: 300
+  remainTime: 0
+  restartTime: 0
+  gamePanel: {fileID: 0}
+  timeText: {fileID: 0}
+  phaseText: {fileID: 0}
+  ScriptPanel: {fileID: 0}
+  ScriptText: {fileID: 0}
+  BarrierUI: {fileID: 0}
+  BulletUI: {fileID: 0}
+  BarrierHP: {fileID: 0}
+  BulletCount: {fileID: 0}
+  pauseAction: {fileID: -5689090393582774183, guid: a77bf7968ddc3254992e058b8df800f6,
+    type: 3}
+  pausePanel: {fileID: 0}
+  settingsPanel: {fileID: 0}
+--- !u!114 &434941895908033345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6789162878392710114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ec15cc7df22166439527e6a1b4258a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  phaseNumber: 1
+  phase1Spawners: []
+  phase2Spawners: []
+  phase3Spawners: []
+--- !u!114 &4548197606122307335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6789162878392710114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94cec21466af2a24d9af2d486a9da670, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies: []
