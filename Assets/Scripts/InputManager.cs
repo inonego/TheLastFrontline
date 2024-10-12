@@ -7,13 +7,13 @@ using UnityEngine.InputSystem;
 public class InputManager : MonoBehaviour
 {
     public GameObject gunObject;
-    private Gun gun;
+    public Gun gun;
     public InputActionReference fireAction; // 총알 발사
     public InputActionReference pauseAction; // esc 누름
 
     private void Awake()
     {
-        gun = gunObject.GetComponent<Gun>();
+
     }
 
     // Update is called once per frame
