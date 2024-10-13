@@ -108,6 +108,7 @@ public class Gun : MonoBehaviour
         muzzleFlashParticle.Emit(1);
         proceduralRecoil.ApplyRecoil();
         audioSource.PlayOneShot(fireSound);
+        GameManager.instance.ShowBulletCount(currentBullet/maxBullet);
 
         if (OnFire != null) OnFire.Invoke();
 

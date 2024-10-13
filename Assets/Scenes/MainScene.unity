@@ -539,6 +539,12 @@ Transform:
   - {fileID: 145785612}
   m_Father: {fileID: 976724517}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &142811887 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7284817976041542968, guid: c4470e8aeb8045146928b57ac42003d3,
+    type: 3}
+  m_PrefabInstance: {fileID: 3198284858320375638}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &145785609
 GameObject:
   m_ObjectHideFlags: 0
@@ -11805,10 +11811,8 @@ MonoBehaviour:
   phaseText: {fileID: 326624873}
   ScriptPanel: {fileID: 670322700}
   ScriptText: {fileID: 2005956010}
-  BarrierUI: {fileID: 2005956008}
-  BulletUI: {fileID: 803449455}
-  BarrierHP: {fileID: 1420075782}
-  BulletCount: {fileID: 1849864146}
+  BarrierHPUI: {fileID: 1420075780}
+  BulletCountUI: {fileID: 142811887}
   pauseAction: {fileID: -4641422249680603934, guid: a77bf7968ddc3254992e058b8df800f6,
     type: 3}
   pausePanel: {fileID: 2040944226}
@@ -12227,18 +12231,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1841078676}
   m_Mesh: {fileID: 2534964839176971238, guid: 0958f39262d06be43960e446926da7d3, type: 3}
---- !u!114 &1849864146 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3192547930144038242, guid: c4470e8aeb8045146928b57ac42003d3,
-    type: 3}
-  m_PrefabInstance: {fileID: 3198284858320375638}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1855893282
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -30,8 +30,8 @@ public class GameManager : Singleton<GameManager>
     public TextMeshProUGUI phaseText;
     public GameObject ScriptPanel;
     public TextMeshProUGUI ScriptText;
-    public GameObject BarrierUI;
-    public GameObject BulletUI;
+    public GameObject BarrierHPUI;
+    public GameObject BulletCountUI;
     private Image BarrierHP;
     private Image BulletCount;
 
@@ -42,7 +42,7 @@ public class GameManager : Singleton<GameManager>
     private int currentPhase = 0; // 현재 phase
 
     // PausePanel용 변수
-    public InputActionReference pauseAction;
+    private InputAction pauseAction => InputManager.instance.inputActions[InputType.Pause].action;
     public GameObject pausePanel;
     public bool isPaused { get; private set; }
 
@@ -57,8 +57,8 @@ public class GameManager : Singleton<GameManager>
         playTimeCounter = new TimeCounter();
         restartTimeCounter = new TimeCounter();
 
-        BarrierHP = BarrierUI.GetComponent<Image>();
-        BulletCount = BulletUI.GetComponent<Image>();
+        BarrierHP = BarrierHPUI.GetComponent<Image>();
+        BulletCount = BulletCountUI.GetComponent<Image>();
     }
 
     // Update is called once per frame
@@ -98,6 +98,11 @@ public class GameManager : Singleton<GameManager>
 
             EnemyManager.instance.DeleteAllEnemies(1f);//적 모두 삭제
             SpawnerManager.instance.SpawnerStop();//스포너 비활성화
+        }
+
+        if (pauseAction.IsPressed() && !isPaused)
+        {
+            PauseGame();
         }
 
         ShowScriptText();
@@ -152,7 +157,7 @@ public class GameManager : Singleton<GameManager>
 
         if (scriptTime < fadeDuration && !isFadingOut) // 페이드 인 효과
         {
-            ScriptPanel.GetComponent<Image>().color = new Color(1, 1, 1, scriptTime / fadeDuration);
+            //ScriptPanel.GetComponent<Image>().color = new Color(1, 1, 1, scriptTime / fadeDuration);
             ScriptText.text = "";
         }
         else if (nowTime < 120f) // phase 1
@@ -226,7 +231,7 @@ public class GameManager : Singleton<GameManager>
         if (isFadingOut)
         {
             float fadeOutTime = scriptTime - fadeDuration;
-            ScriptPanel.GetComponent<Image>().color = new Color(1, 1, 1, 1 - (fadeOutTime / fadeDuration));
+            //ScriptPanel.GetComponent<Image>().color = new Color(1, 1, 1, 1 - (fadeOutTime / fadeDuration));
             if (fadeOutTime >= fadeDuration)
             {
                 isFadingOut = false; // 페이드 아웃 완료
