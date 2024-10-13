@@ -5,15 +5,14 @@ using UnityEngine;
 
 public class Barrier : MonoBehaviour
 {
-    public float barrierHpMax = 100f;
-    [SerializeField]
-    private float barrierHp;
+    public float maxBarrierHp = 100f;
+    [SerializeField] private float currentBarrierHp;
     public Material barrierMat; 
     
     public float damage; //몬스터 한마리당 소모되는 HP량
     void Start()
     {
-        barrierHp = barrierHpMax;
+        currentBarrierHp = maxBarrierHp;
     }
 
     // Update is called once per frame
@@ -26,7 +25,7 @@ public class Barrier : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            barrierHp-=damage; 
+            currentBarrierHp-=damage; 
             GameManager.instance.DecreaseBarrierHP();
             
             
@@ -41,16 +40,16 @@ public class Barrier : MonoBehaviour
             // 배리어 HP 상태에 따라 배리어 색상 다르게
             // HP에 따라 배리어 색상 변화
             // 임의로 색상 정함...
-            if (barrierHp / barrierHpMax < 0.5f)
+            if (currentBarrierHp / maxBarrierHp < 0.5f)
             {
                 barrierMat.color = Color.red;
             }
-            else if (barrierHp / barrierHpMax < 0.75f)
+            else if (currentBarrierHp / maxBarrierHp < 0.75f)
             {
                 barrierMat.color = Color.yellow;
             }
             // 대충 배리어 파괴 직전 이펙트나 파티클 효과같은거 넣기
-            if (barrierHp <= 0)
+            if (currentBarrierHp <= 0)
             {
                 GameManager.instance.IsGameOver = true;
             }
