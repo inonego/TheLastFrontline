@@ -32,8 +32,8 @@ public class GameManager : Singleton<GameManager>
     public TextMeshProUGUI ScriptText;
     public GameObject BarrierUI;
     public GameObject BulletUI;
-    public Image BarrierHP;
-    public Image BulletCount;
+    private Image BarrierHP;
+    private Image BulletCount;
 
     // 스크립트 대사용 변수
     private float scriptTime = 0f; // 각 스크립트 보여주는 시간
