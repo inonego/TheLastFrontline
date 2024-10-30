@@ -152,7 +152,7 @@ public class GameManager : Singleton<GameManager>
 
         if (scriptTime < fadeDuration && !isFadingOut) // 페이드 인 효과
         {
-            ScriptPanel.GetComponent<Image>().color = new Color(1, 1, 1, scriptTime / fadeDuration);
+            //ScriptPanel.GetComponent<Image>().color = new Color(1, 1, 1, scriptTime / fadeDuration);
             ScriptText.text = "";
         }
         else if (nowTime < 120f) // phase 1
@@ -226,7 +226,7 @@ public class GameManager : Singleton<GameManager>
         if (isFadingOut)
         {
             float fadeOutTime = scriptTime - fadeDuration;
-            ScriptPanel.GetComponent<Image>().color = new Color(1, 1, 1, 1 - (fadeOutTime / fadeDuration));
+            //ScriptPanel.GetComponent<Image>().color = new Color(1, 1, 1, 1 - (fadeOutTime / fadeDuration));
             if (fadeOutTime >= fadeDuration)
             {
                 isFadingOut = false; // 페이드 아웃 완료

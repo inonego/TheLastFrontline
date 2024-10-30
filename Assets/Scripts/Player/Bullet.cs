@@ -18,12 +18,20 @@ public class Bullet : MonoBehaviour
         rigidbody = GetComponent<Rigidbody>();
     }
 
-    private void Start()
+    private void OnEnable()
     {
-        rigidbody.AddForce(transform.forward * bulletSpeed, ForceMode.Impulse);
+        rigidbody.velocity = transform.forward * bulletSpeed;
 
         lifeTimeCounter.Start(bulletLifeTime);
     }
+
+    private void OnDisable()
+    {
+        rigidbody.velocity = Vector3.zero;
+
+        lifeTimeCounter.Stop();
+    }
+
 
     private void Update()
     {
@@ -31,20 +39,30 @@ public class Bullet : MonoBehaviour
 
         if (lifeTimeCounter.WasEndedThisFrame())
         {
-            Destroy(gameObject);
+            Destroy();
         }
     }
 
-    void OnCollisionEnter(Collision collision)
+    private void FixedUpdate()
+    {
+        rigidbody.rotation = rigidbody.rotation * Quaternion.LookRotation(Vector3.up);
+    }
+
+    private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            Destroy(gameObject);
+            Destroy();
         }
 
         if (collision.gameObject.CompareTag("Ground"))
         {
-            Destroy(gameObject);
+            Destroy();
         }
+    }
+
+    private void Destroy()
+    {
+        gameObject.Despawn();
     }
 }

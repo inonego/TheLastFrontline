@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(ProceduralRecoil))]
 public class Gun : MonoBehaviour
 {
     [Header("General")]
@@ -12,8 +11,11 @@ public class Gun : MonoBehaviour
     public float delayTime;                     // 연사 딜레이
     public float reloadTime;                    // 재장전 시간
     public GameObject bullet;                   // 총알 프리팹
+
+    [Header("Point")]
     public Transform shootPoint;                // 발사 지점
 
+    [Header("Visual and Sound Effect")]
     public AudioClip fireSound;
     public AudioClip reloadSound;
 
@@ -27,18 +29,18 @@ public class Gun : MonoBehaviour
     public Action OnFire = null;
     public Action OnReload = null;
 
+    private Pool pool;
     private ParticleSystem muzzleFlashParticle;         // 발사 파티클
     private ParticleSystemRenderer muzzleFlashRenderer; //
-    private ProceduralRecoil proceduralRecoil;          // 반동 제어기
     private AudioSource audioSource;
 
     private InputAction inputAction => InputManager.instance.inputActions[InputType.Fire].action;
 
     private void Awake()
     {
+        pool = GetComponent<Pool>();
         muzzleFlashParticle = shootPoint.GetComponent<ParticleSystem>();
         muzzleFlashRenderer = shootPoint.GetComponent<ParticleSystemRenderer>();
-        proceduralRecoil = GetComponent<ProceduralRecoil>();
         audioSource = GetComponent<AudioSource>();
     }
 
@@ -101,12 +103,11 @@ public class Gun : MonoBehaviour
     {
         currentBullet--;
 
-        Instantiate(bullet, shootPoint.position, shootPoint.rotation);
+        GameObject GO = pool.packList[0].Spawn(shootPoint.position, shootPoint.rotation);
 
         muzzleFlashRenderer.material = muzzleFlashMaterialList[UnityEngine.Random.Range(0, muzzleFlashMaterialList.Count)];
 
         muzzleFlashParticle.Emit(1);
-        proceduralRecoil.ApplyRecoil();
         audioSource.PlayOneShot(fireSound);
 
         if (OnFire != null) OnFire.Invoke();

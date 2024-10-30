@@ -7,18 +7,26 @@ using Random = UnityEngine.Random;
 public class BackgroundBullet : MonoBehaviour
 {
     public bool isStart = false;
-    public GameObject bullet;
     
+    
+    public GameObject bullet;
+    [Header("체크 안하면 다시 시작하기 전까지 방향 안바뀜")]
+    public bool isAllRandomDirection = false;
+    [Header("범위 설정 ")]
     public Vector3 direction;
     public float angle;
-    public float length;
-
+    
+    [Header("총알 개수 및 연사 속도")]
     public int fireCount;
-    public float fireDamp;
+    public float fireDampMin, fireDampMax;
+    
+    [Header("초기 시작 시간")]
+    public float startTime;
+    
+    [Header("다시 시작 시간")]
     public float restartDelay;
     
     private Coroutine workingCoroutine;
-
     private Vector3 currentdir;
     // Start is called before the first frame update
     void Start()
@@ -39,15 +47,20 @@ public class BackgroundBullet : MonoBehaviour
 
     IEnumerator BulletFire()
     {
+        yield return new WaitForSeconds(startTime);
+        
         while (true)
         {
-          
+            if(!isAllRandomDirection)
+                currentdir = CreateVector();
             
             for(int i = 0; i < fireCount; i++)
             {
-                currentdir = CreateVector();
+                if(isAllRandomDirection)
+                    currentdir = CreateVector();
+                
                 Fire(currentdir);
-                yield return new WaitForSeconds(fireDamp);
+                yield return new WaitForSeconds(Random.Range(fireDampMin, fireDampMax));
             }
             yield return new WaitForSeconds(restartDelay);
         }
@@ -66,11 +79,9 @@ public class BackgroundBullet : MonoBehaviour
         return Quaternion.AngleAxis(theta, dir) * Quaternion.AngleAxis(alpha,Vector3.up+dir) * dir;
     }
 
-    
-    
-    private void OnDrawGizmos()
+    private void OnDrawGizmosSelected()
     {
-        DrawGizmosCone(transform.position,angle,length,(transform.rotation * direction).normalized,Color.red,true);
+        DrawGizmosCone(transform.position,angle,10f,(transform.rotation * direction).normalized,Color.red,true);
         Gizmos.color = Color.blue;
         Gizmos.DrawLine(transform.position,transform.position + currentdir);
     }
