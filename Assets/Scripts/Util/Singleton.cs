@@ -24,6 +24,13 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 
     protected virtual void Awake()
     {
+        // 싱글톤 중복 확인
+        if (_instance != null && _instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        
         if (transform.parent != null && transform.root != null) 
         {
             DontDestroyOnLoad(transform.root.gameObject);
@@ -32,6 +39,5 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
         {
             DontDestroyOnLoad(gameObject); 
         }
-
     }
 }

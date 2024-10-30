@@ -14,4 +14,9 @@ public class EnemyManager : Singleton<EnemyManager>
             Destroy(enemy,deleteTime);
         }
     }
+
+    public void ResetList()
+    {
+        enemies.Clear();
+    }
 }

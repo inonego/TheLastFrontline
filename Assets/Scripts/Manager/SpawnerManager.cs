@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SpawnerManager : Singleton<SpawnerManager>
 {
@@ -18,6 +19,10 @@ public class SpawnerManager : Singleton<SpawnerManager>
     // Update is called once per frame
     void Update()
     {
+        if (SceneManager.GetActiveScene().name != "MainScene")
+        {
+            return;
+        }
         // 남은 시간에 따라 Phase 변경
         CheckPhase();
     }
@@ -114,5 +119,13 @@ public class SpawnerManager : Singleton<SpawnerManager>
         // 스폰 간격 -> 너무 짧아지지 않도록 일단 제한
         //minTimeBetweenSpawns = Mathf.Clamp(minTimeBetweenSpawns, 0.5f, 10f);
         //maxTimeBetweenSpawns = Mathf.Clamp(maxTimeBetweenSpawns, 1f, 15f);
+    }
+    
+    public void ResetList()
+    {
+        phase1Spawners.Clear();
+        phase2Spawners.Clear();
+        phase3Spawners.Clear();
+        phaseNumber = 1;
     }
 }

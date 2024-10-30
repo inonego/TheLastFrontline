@@ -6,10 +6,18 @@ using UnityEngine;
 public class Barrier : MonoBehaviour
 {
     public float maxBarrierHp = 100f;
-    [SerializeField] private float currentBarrierHp;
+    [SerializeField] public float currentBarrierHp { get; private set; }
     public Material barrierMat; 
     
     public float damage; //몬스터 한마리당 소모되는 HP량
+    
+    private PlayModeUI barrierUI;
+
+    private void Awake()
+    {
+        barrierUI = FindAnyObjectByType<PlayModeUI>();
+    }
+
     void Start()
     {
         currentBarrierHp = maxBarrierHp;
@@ -26,8 +34,7 @@ public class Barrier : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {
             currentBarrierHp-=damage; 
-            GameManager.instance.DecreaseBarrierHP();
-            
+            barrierUI.DecreaseBarrierHP(currentBarrierHp/maxBarrierHp);
             
             //대충 베리어 이펙트
             

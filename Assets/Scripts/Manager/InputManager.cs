@@ -14,14 +14,4 @@ public class InputManager : Singleton<InputManager>
 {
     public SerializedDictionary<InputType, InputActionReference> inputActions = new SerializedDictionary<InputType, InputActionReference>();
 
-    // Update is called once per frame
-    void Update()
-    {
-        //if (pauseAction.action.IsPressed())
-        //{
-        //    Debug.Log("ESC is pressed.");
-        //    GameManager.instance.PauseGame();
-        //}
-        
-    }
 }

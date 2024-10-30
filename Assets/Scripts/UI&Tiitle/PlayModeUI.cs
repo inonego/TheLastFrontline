@@ -1,0 +1,256 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
+using TMPro;
+
+public class PlayModeUI : MonoBehaviour
+{
+    // UI용 변수들
+    [Header("Script UI")]
+    public GameObject ScriptPanel;
+    public TextMeshProUGUI ScriptText;
+    private float scriptTime = 0f; // 각 스크립트 보여주는 시간
+    private bool isFadingOut = false; // Panel 페이드 아웃 중인지 확인
+    private float fadeDuration = 2f; // 페이드 인/아웃 시간
+    private int currentPhase = 0; // 현재 phase
+    
+    [Header("Timer & Phase UI")]
+    public TextMeshProUGUI timeText;
+    public TextMeshProUGUI phaseText;
+    public GameObject TimeWheelGameObject;
+    private Image timeWheel;
+    
+    [Header("Barrier UI")]
+    public GameObject BarrierHpGameObject;
+    public Barrier barrier;
+    private Image BarrierHP;
+    
+    [Header("Bullet UI")]
+    public GameObject BulletCountGameObject;
+    public Gun gun;
+    private TextMeshProUGUI BulletCount;
+    
+    [Header("Pause & Settings")]
+    public GameObject gamePanel;
+    public GameObject pausePanel;
+    public GameObject settingsPanel;
+    private InputAction pauseAction => InputManager.instance.inputActions[InputType.Pause].action;
+    public bool isPaused { get; private set; }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        isPaused = false;
+        BarrierHP = BarrierHpGameObject.GetComponent<Image>();
+        BulletCount = BulletCountGameObject.GetComponent<TextMeshProUGUI>();
+        timeWheel = TimeWheelGameObject.GetComponent<Image>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (pauseAction.IsPressed() && !isPaused)
+        {
+            PauseGame();
+        }
+
+        ShowScriptText();
+    }
+    
+    void LateUpdate()
+    {
+        UpdateUIText();
+        UpdateTimeWheel();
+    }
+
+    public void UpdateTimeWheel()
+    {
+        float ratio = GameManager.instance.ElapsedTime/ GameManager.instance.gameTime;
+        timeWheel.fillAmount = ratio;
+    }
+
+    public void DecreaseBarrierHP(float ratio)
+    {
+        BarrierHP.fillAmount = ratio;
+    }
+
+    public void ShowBulletCount(float current, float max)
+    {
+        BulletCount.text = string.Format("Bullet Count : {0:0} / {1:00}", current, max);
+    }
+
+    void UpdateUIText()
+    {
+
+        if (GameManager.instance.ElapsedTime < 120f)
+        {
+            phaseText.text = "Phase 1";
+        }
+        else if (GameManager.instance.ElapsedTime < 240f)
+        {
+            phaseText.text = "Phase 2";
+        }
+        else
+        {
+            phaseText.text = "Phase 3";
+        }
+
+        int min = (int)(GameManager.instance.RemainTime/ 60f);
+        int sec = (int)(GameManager.instance.RemainTime % 60);
+
+        timeText.text = string.Format("{0:00}:{1:00}", min, sec);
+    }
+
+    void ShowScriptText()
+    {
+        float nowTime = GameManager.instance.ElapsedTime;
+
+        if (scriptTime < fadeDuration && !isFadingOut) // 페이드 인 효과
+        {
+            ScriptText.text = "";
+        }
+        else if (nowTime < 120f) // phase 1
+        {
+            currentPhase = 1;
+
+            if (nowTime < 5f)
+            {
+                ScriptText.text = "The detonation device has been activated, but it's set to trigger in 5 minutes for safety.";
+            }
+            else if (nowTime < 8f)
+            {
+                ScriptText.text = "I have to hold off these monsters for the next 5 minutes.";
+            }
+            else if (nowTime < 11f)
+            {
+                ScriptText.text = "… My legs are shattered. I can barely move.";
+            }
+            else if (nowTime < 14f)
+            {
+                ScriptText.text = "Damn it…";
+            }
+            else if (!isFadingOut) // Panel 페이드 아웃
+            {
+                StartFadeOut();
+            }
+        }
+        else if (nowTime < 240f) // phase 2
+        {
+            if (currentPhase != 2)
+            {
+                StartNewPhase(2);
+            }
+            if (nowTime < 125f)
+            {
+                ScriptText.text = "More enemies are closing in.";
+            }
+            else if (nowTime < 128f)
+            {
+                ScriptText.text = "What are these things? What are they really?";
+            }
+            else if (nowTime < 131f)
+            {
+                ScriptText.text = "What is their purpose for invading Earth over and over again?";
+            }
+            else if (!isFadingOut)
+            {
+                StartFadeOut();
+            }
+        }
+        else // phase 3
+        {
+            if (currentPhase != 3)
+            {
+                StartNewPhase(3);
+            }
+            if (nowTime < 245f)
+            {
+                ScriptText.text = "This is an onslaught on a completely different scale.";
+            }
+            else if (nowTime < 248f)
+            {
+                ScriptText.text = "This must be their final assault. If I can hold them off this time, victory will be ours.";
+            }
+            else if (!isFadingOut)
+            {
+                StartFadeOut();
+            }
+        }
+
+        if (isFadingOut)
+        {
+            float fadeOutTime = scriptTime - fadeDuration;
+            if (fadeOutTime >= fadeDuration)
+            {
+                isFadingOut = false; // 페이드 아웃 완료
+                ScriptPanel.SetActive(false); // 대화창 비활성화
+            }
+        }
+
+        scriptTime += Time.deltaTime;
+    }
+
+    void StartFadeOut()
+    {
+        isFadingOut = true;
+        scriptTime = fadeDuration; // 페이드 아웃 시작 시간 설정
+    }
+
+    void StartNewPhase(int phase)
+    {
+        currentPhase = phase;
+        scriptTime = 0f; // 새로운 phase -> 시간 초기화
+        isFadingOut = false;
+        ScriptPanel.SetActive(true); // 대화창 활성화
+    }
+
+    public void PauseGame()
+    {
+        if (!isPaused)
+        {
+            pausePanel.SetActive(true);
+            Time.timeScale = 0f; // 게임 중단 (시간 정지)
+            isPaused = true;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+    }
+
+    public void ResumeGame()
+    {
+        pausePanel.SetActive(false);
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        Time.timeScale = 1f; // 게임 재개 (시간 정상)
+        isPaused = false;
+    }
+
+    public void ShowSettings()
+    {
+        pausePanel.SetActive(false);
+        settingsPanel.SetActive(true);
+    }
+
+    public void BackToGame()
+    {
+        pausePanel.SetActive(true);
+        settingsPanel.SetActive(false);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+        Debug.Log("Game Closed");
+    }
+
+    public void MainMenu()
+    {
+        EnemyManager.instance.ResetList();
+        SpawnerManager.instance.ResetList();
+        pausePanel.SetActive(false);
+        SceneManager.LoadScene("Scenes/TitleScene", LoadSceneMode.Single);
+    }
+}

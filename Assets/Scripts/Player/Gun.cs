@@ -26,6 +26,7 @@ public class Gun : MonoBehaviour
 
     public Action OnFire = null;
     public Action OnReload = null;
+    private PlayModeUI gunUI;
 
     private ParticleSystem muzzleFlashParticle;         // 발사 파티클
     private ParticleSystemRenderer muzzleFlashRenderer; //
@@ -36,6 +37,7 @@ public class Gun : MonoBehaviour
 
     private void Awake()
     {
+        gunUI = FindAnyObjectByType<PlayModeUI>();
         muzzleFlashParticle = shootPoint.GetComponent<ParticleSystem>();
         muzzleFlashRenderer = shootPoint.GetComponent<ParticleSystemRenderer>();
         proceduralRecoil = GetComponent<ProceduralRecoil>();
@@ -49,7 +51,10 @@ public class Gun : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.instance.isPaused) return;
+        if (gunUI.isPaused) return;
+        gunUI.ShowBulletCount(currentBullet, maxBullet);
+
+        
 
         if (inputAction.IsPressed())
         {
@@ -108,7 +113,6 @@ public class Gun : MonoBehaviour
         muzzleFlashParticle.Emit(1);
         proceduralRecoil.ApplyRecoil();
         audioSource.PlayOneShot(fireSound);
-        GameManager.instance.ShowBulletCount(currentBullet/maxBullet);
 
         if (OnFire != null) OnFire.Invoke();
 
