@@ -21,8 +21,21 @@ public class ProceduralRecoil : MonoBehaviour
 
     public float snappiness, returnAmount;
 
+    private Gun gun;
+
+    private ZoomAim zoomAim;
+
+    private void Awake()
+    {
+        gun = GetComponentInChildren<Gun>();
+
+        zoomAim = GetComponentInChildren<ZoomAim>();
+    }
+
     private void Start()
     {
+        gun.OnFire += ApplyRecoil;
+
         initialPosition = transform.localPosition;
         initialRotation = transform.localRotation.eulerAngles;
 
@@ -35,9 +48,8 @@ public class ProceduralRecoil : MonoBehaviour
         targetRotation = Vector3.Lerp(targetRotation, initialRotation, Time.deltaTime * returnAmount);
         currentRotation = Vector3.Slerp(currentRotation, targetRotation, Time.deltaTime * snappiness);
 
-        transform.localRotation = Quaternion.Euler(currentRotation);
-
         camera.localRotation = Quaternion.Euler(currentRotation);
+        transform.localRotation = Quaternion.Euler(currentRotation);
 
         KickBack();
     }
@@ -52,6 +64,11 @@ public class ProceduralRecoil : MonoBehaviour
     {
         targetPosition = Vector3.Lerp(targetPosition, initialPosition, Time.deltaTime * returnAmount);
         currentPosition = Vector3.Slerp(currentPosition, targetPosition, Time.deltaTime * snappiness);
+
+        if (zoomAim.isZoomed)
+        {
+            targetPosition = initialPosition;
+        }
 
         transform.localPosition = currentPosition;
     }

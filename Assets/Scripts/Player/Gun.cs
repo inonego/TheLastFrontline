@@ -28,9 +28,9 @@ public class Gun : MonoBehaviour
     public Action OnReload = null;
     private PlayModeUI gunUI;
 
+    private Pool pool;
     private ParticleSystem muzzleFlashParticle;         // 발사 파티클
     private ParticleSystemRenderer muzzleFlashRenderer; //
-    private ProceduralRecoil proceduralRecoil;          // 반동 제어기
     private AudioSource audioSource;
 
     private InputAction inputAction => InputManager.instance.inputActions[InputType.Fire].action;
@@ -38,9 +38,9 @@ public class Gun : MonoBehaviour
     private void Awake()
     {
         gunUI = FindAnyObjectByType<PlayModeUI>();
+        pool = GetComponent<Pool>();
         muzzleFlashParticle = shootPoint.GetComponent<ParticleSystem>();
         muzzleFlashRenderer = shootPoint.GetComponent<ParticleSystemRenderer>();
-        proceduralRecoil = GetComponent<ProceduralRecoil>();
         audioSource = GetComponent<AudioSource>();
     }
 
@@ -106,12 +106,11 @@ public class Gun : MonoBehaviour
     {
         currentBullet--;
 
-        Instantiate(bullet, shootPoint.position, shootPoint.rotation);
+        GameObject GO = pool.packList[0].Spawn(shootPoint.position, shootPoint.rotation);
 
         muzzleFlashRenderer.material = muzzleFlashMaterialList[UnityEngine.Random.Range(0, muzzleFlashMaterialList.Count)];
 
         muzzleFlashParticle.Emit(1);
-        proceduralRecoil.ApplyRecoil();
         audioSource.PlayOneShot(fireSound);
 
         if (OnFire != null) OnFire.Invoke();

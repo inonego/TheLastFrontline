@@ -2,75 +2,115 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 using Random = UnityEngine.Random;
 
+[RequireComponent(typeof(Pool))]
 public class BackgroundExplosion : MonoBehaviour
-{   
-    public bool isStart = false;
-    
-    public float radius;
+{
+    [Header("General")]
+    public LayerMask groundLayer;
 
+    [Header("Time")]
     public float minTimeBetweenExplosion;
     public float maxTimeBetweenExplosion;
-    
-    public GameObject explosionPosition;
-    public GameObject noneExplosionPosition;
+
+    public float despawnTime;
+
+    [Header("Range")]
+    public float distance;
+    public float radius;
     public float noneRadius;
- 
+    public Transform noneExplosionPoint;
+
+    [Header("Gizmo")]
     public Mesh gizmoMesh;
-    public Coroutine WorkingCoroutine;
-    private ParticleSystem explosionParticle;
-    void Start()
+
+    private Coroutine workingCoroutine;
+
+    private Pool pool;
+
+    private void Awake()
     {
-        isStart = true;
-        explosionParticle = explosionPosition.GetComponent<ParticleSystem>();
+        pool = GetComponent<Pool>();
     }
 
-
-    void Update()
+    private void Start()
     {
-        if (isStart)
-        {
-            WorkingCoroutine = StartCoroutine(ExplodeCoroutine());
-            isStart = false;
-        }
+        BeginExplosion();
     }
 
-    IEnumerator ExplodeCoroutine()
+    public void BeginExplosion()
+    {
+        StopExplosion();
+
+        workingCoroutine = StartCoroutine(ExplodeCoroutine());
+    }
+
+    public void StopExplosion()
+    {
+        if (workingCoroutine != null) StopCoroutine(workingCoroutine);
+    }
+
+    public void MakeExplosion(Vector3 position)
+    {
+        int index = Random.Range(0, pool.packList.Count);
+
+        GameObject GO = pool.packList[index].Spawn();
+
+        GO.transform.position = position;
+
+        CameraShake.instance.GiveShake(GO);
+
+        StartCoroutine(DespawnExplosion(GO));
+    }
+
+    private IEnumerator DespawnExplosion(GameObject GO)
+    {
+        yield return new WaitForSeconds(despawnTime);
+
+        GO.Despawn();
+    }
+
+    private IEnumerator ExplodeCoroutine()
     {
         while (true)
         {
-            //실행
-            RandomPosition();
-            explosionParticle.Play();
+            Vector3 randPos = GetRandomPosition();
+
+            MakeExplosion(randPos);
             
             yield return new WaitForSeconds(Random.Range(minTimeBetweenExplosion, maxTimeBetweenExplosion));
         }
     }
     
-    void RandomPosition()
+    private Vector3 GetRandomPosition()
     {
         Vector3 randPos;
+
         while (true)
         {
-            randPos = Random.insideUnitCircle * radius;
-            randPos.z = randPos.y;
-            randPos+=transform.position;
-            randPos.y = noneExplosionPosition.transform.position.y;
-            if(Vector3.Distance(noneExplosionPosition.transform.position, randPos)>noneRadius)
-                break;
+            Vector2 randCircle = Random.insideUnitCircle * radius;
+
+            randPos = new Vector3(randCircle.x, 0f, randCircle.y) + transform.position;
+
+            randPos.y = noneExplosionPoint.transform.position.y;
+
+            if (Vector3.Distance(noneExplosionPoint.transform.position, randPos) > noneRadius) break;
         }
-        RaycastHit hit;
-        Physics.Raycast(randPos,Vector3.down,out hit,100f,LayerMask.GetMask("Ground"));
+
+        Physics.Raycast(randPos,Vector3.down, out RaycastHit hit, distance, groundLayer);
+
         randPos.y = hit.point.y;
-        explosionPosition.transform.position = randPos;
+
+        return randPos;
     }
 
-    private void OnDrawGizmos()
+    private void OnDrawGizmosSelected()
     {
         Gizmos.color = new Color(0f, 1f, 0f, 0.1f);
-        Gizmos.DrawWireMesh(gizmoMesh,transform.position,transform.rotation,transform.lossyScale*radius*2);
+        Gizmos.DrawWireMesh(gizmoMesh,transform.position, transform.rotation, transform.lossyScale * radius * 2);
         Gizmos.color = new Color(0f, 0f, 1f, 0.1f);
-        Gizmos.DrawWireMesh(gizmoMesh,noneExplosionPosition.transform.position,noneExplosionPosition.transform.rotation,transform.lossyScale*noneRadius*2);
+        Gizmos.DrawWireMesh(gizmoMesh, noneExplosionPoint.transform.position, noneExplosionPoint.transform.rotation, transform.lossyScale * noneRadius * 2);
     }
 }

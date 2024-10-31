@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 
 public enum InputType
 {
-    Fire, Pause
+    Fire, Zoom, Pause
 }
 
 public class InputManager : Singleton<InputManager>
