@@ -10,6 +10,8 @@ public class Enemy : MonoBehaviour
 
     public int hp = 4;
 
+    public float damage = 10f;
+
     private Transform target; // 적이 달려오는 타겟
     private Rigidbody rigid;
 

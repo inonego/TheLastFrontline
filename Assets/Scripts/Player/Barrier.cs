@@ -35,7 +35,10 @@ public class Barrier : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
+            damage = other.gameObject.GetComponent<Enemy>().damage;
+            Debug.Log(damage);
             currentBarrierHp-=damage; 
+            
             barrierUI.DecreaseBarrierHP(currentBarrierHp/maxBarrierHp);
             
             //대충 베리어 이펙트

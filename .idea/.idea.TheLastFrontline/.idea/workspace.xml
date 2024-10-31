@@ -5,298 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="213f37a9-47e9-4c81-a0c3-bd4cef47adf3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Animations.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/BarrierHit.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/BarrierSignal.signal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/BarrierSignal.signal.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/F-35 Falling.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/F-35 Falling.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/F-35 Falling.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/F-35 Falling.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/PlayerSetWorkingFalseSignal.signal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/PlayerSetWorkingFalseSignal.signal.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/PlayerSetWorkingTrueSignal.signal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/PlayerSetWorkingTrueSignal.signal.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/PlayerSignal.signal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/PlayerSignal.signal.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/DefaultVolumeProfile.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/DefaultVolumeProfile.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/F-35 FallingTimeline.playable" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/F-35 FallingTimeline.playable.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/DOTween.XML" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/DOTween.XML.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/DOTween.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/DOTween.dll.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.XML" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.XML.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/Imgs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/Imgs/DOTweenIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/Imgs/DOTweenIcon.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/Imgs/DOTweenMiniIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/Imgs/DOTweenMiniIcon.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Footer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Footer.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Footer_dark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Footer_dark.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Header.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Header.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleAudio.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleAudio.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleEPOOutline.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleEPOOutline.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics2D.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics2D.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleSprite.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleSprite.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUI.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUI.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUnityVersion.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUnityVersion.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUtils.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUtils.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/readme.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/readme.txt.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/EnemyDestroyEffect.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/EnemyDestroyEffect.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Background Bullet.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Background Bullet.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Gun Modeling.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CameraShake.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CameraShake.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/GameTimeLine.playable" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/GameTimeLine.playable.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/ZoomAim.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/ZoomAim.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Randomizer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Randomizer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Util/Pool.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Util/Pool.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/DefaultPlayablesDocumentation.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/DefaultPlayablesDocumentation.pdf.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/Editor.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/Editor/TimelinePlayableWizard.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/Editor/TimelinePlayableWizard.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/LightControl.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/LightControl/Editor.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/LightControl/Editor/LightControlDrawer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/LightControl/Editor/LightControlDrawer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/LightControl/LightControlBehaviour.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/LightControl/LightControlBehaviour.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/LightControl/LightControlClip.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/LightControl/LightControlClip.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/LightControl/LightControlMixerBehaviour.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/LightControl/LightControlMixerBehaviour.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/LightControl/LightControlTrack.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/LightControl/LightControlTrack.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/NavMeshAgentControl.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/NavMeshAgentControl/NavMeshAgentControlBehaviour.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/NavMeshAgentControl/NavMeshAgentControlBehaviour.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/NavMeshAgentControl/NavMeshAgentControlClip.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/NavMeshAgentControl/NavMeshAgentControlClip.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/NavMeshAgentControl/NavMeshAgentControlMixerBehaviour.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/NavMeshAgentControl/NavMeshAgentControlMixerBehaviour.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/NavMeshAgentControl/NavMeshAgentControlTrack.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/NavMeshAgentControl/NavMeshAgentControlTrack.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/ScreenFader.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/ScreenFader/Editor.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/ScreenFader/Editor/ScreenFaderDrawer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/ScreenFader/Editor/ScreenFaderDrawer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/ScreenFader/ScreenFaderBehaviour.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/ScreenFader/ScreenFaderBehaviour.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/ScreenFader/ScreenFaderClip.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/ScreenFader/ScreenFaderClip.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/ScreenFader/ScreenFaderMixerBehaviour.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/ScreenFader/ScreenFaderMixerBehaviour.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/ScreenFader/ScreenFaderTrack.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/ScreenFader/ScreenFaderTrack.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/TextSwitcher.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/TextSwitcher/Editor.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/TextSwitcher/Editor/TextSwitcherDrawer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/TextSwitcher/Editor/TextSwitcherDrawer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/TextSwitcher/TextSwitcherBehaviour.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/TextSwitcher/TextSwitcherBehaviour.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/TextSwitcher/TextSwitcherClip.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/TextSwitcher/TextSwitcherClip.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/TextSwitcher/TextSwitcherMixerBehaviour.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/TextSwitcher/TextSwitcherMixerBehaviour.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/TextSwitcher/TextSwitcherTrack.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/TextSwitcher/TextSwitcherTrack.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/TimeDilation.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/TimeDilation/Editor.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/TimeDilation/Editor/TimeDilationDrawer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/TimeDilation/Editor/TimeDilationDrawer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/TimeDilation/TimeDilationBehaviour.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/TimeDilation/TimeDilationBehaviour.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/TimeDilation/TimeDilationClip.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/TimeDilation/TimeDilationClip.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/TimeDilation/TimeDilationMixerBehaviour.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/TimeDilation/TimeDilationMixerBehaviour.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/TimeDilation/TimeDilationTrack.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/TimeDilation/TimeDilationTrack.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/TransformTween.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/TransformTween/Editor.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/TransformTween/Editor/TransformTweenDrawer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/TransformTween/Editor/TransformTweenDrawer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/TransformTween/TransformTweenBehaviour.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/TransformTween/TransformTweenBehaviour.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/TransformTween/TransformTweenClip.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/TransformTween/TransformTweenClip.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/TransformTween/TransformTweenMixerBehaviour.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/TransformTween/TransformTweenMixerBehaviour.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/TransformTween/TransformTweenTrack.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/TransformTween/TransformTweenTrack.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/Video.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/Video/VideoPlayableBehaviour.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/Video/VideoPlayableBehaviour.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/Video/VideoSchedulerPlayableBehaviour.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/Video/VideoSchedulerPlayableBehaviour.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/Video/VideoScriptPlayableAsset.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/Video/VideoScriptPlayableAsset.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/Video/VideoScriptPlayableTrack.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/Video/VideoScriptPlayableTrack.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/VideoScriptPlayable.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/DefaultPlayables/VideoScriptPlayable.pdf.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheLastFrontline/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheLastFrontline/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InputSystem/InputActions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InputSystem/InputActions.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy Spawner.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy Spawner.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/TempEnemyMaterial.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/TempEnemyMaterial.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/BarrierHit.anim.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Level Design/Fire.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Level Design/Fire.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Level Design/MediumFire.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Level Design/MediumFire.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Bullet.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Gun.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Gun.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Gun Modeling.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/LightingData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/LightingData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-0_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-0_comp_dir.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-0_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-0_comp_light.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-0_comp_shadowmask.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-0_comp_shadowmask.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-10_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-10_comp_dir.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-10_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-10_comp_light.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-10_comp_shadowmask.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-10_comp_shadowmask.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-11_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-11_comp_dir.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-11_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-11_comp_light.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-11_comp_shadowmask.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-11_comp_shadowmask.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-12_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-12_comp_dir.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-12_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-12_comp_light.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-12_comp_shadowmask.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-12_comp_shadowmask.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-13_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-13_comp_dir.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-13_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-13_comp_light.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-13_comp_shadowmask.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-13_comp_shadowmask.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-14_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-14_comp_dir.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-14_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-14_comp_light.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-14_comp_shadowmask.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-14_comp_shadowmask.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-15_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-15_comp_dir.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-15_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-15_comp_light.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-15_comp_shadowmask.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-15_comp_shadowmask.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-16_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-16_comp_dir.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-16_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-16_comp_light.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-16_comp_shadowmask.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-16_comp_shadowmask.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-17_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-17_comp_dir.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-17_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-17_comp_light.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-17_comp_shadowmask.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-17_comp_shadowmask.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-18_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-18_comp_dir.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-18_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-18_comp_light.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-18_comp_shadowmask.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-18_comp_shadowmask.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-19_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-19_comp_dir.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-19_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-19_comp_light.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-19_comp_shadowmask.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-19_comp_shadowmask.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-1_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-1_comp_dir.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-1_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-1_comp_light.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-1_comp_shadowmask.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-1_comp_shadowmask.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-20_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-20_comp_dir.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-20_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-20_comp_light.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-20_comp_shadowmask.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-20_comp_shadowmask.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-21_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-21_comp_dir.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-21_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-21_comp_light.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-21_comp_shadowmask.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-21_comp_shadowmask.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-22_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-22_comp_dir.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-22_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-22_comp_light.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-22_comp_shadowmask.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-22_comp_shadowmask.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-23_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-23_comp_dir.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-23_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-23_comp_light.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-23_comp_shadowmask.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-23_comp_shadowmask.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-24_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-24_comp_dir.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-24_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-24_comp_light.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-24_comp_shadowmask.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-24_comp_shadowmask.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-2_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-2_comp_dir.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-2_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-2_comp_light.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-2_comp_shadowmask.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-2_comp_shadowmask.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-3_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-3_comp_dir.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-3_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-3_comp_light.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-3_comp_shadowmask.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-3_comp_shadowmask.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-4_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-4_comp_dir.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-4_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-4_comp_light.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-4_comp_shadowmask.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-4_comp_shadowmask.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-5_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-5_comp_dir.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-5_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-5_comp_light.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-5_comp_shadowmask.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-5_comp_shadowmask.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-6_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-6_comp_dir.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-6_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-6_comp_light.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-6_comp_shadowmask.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-6_comp_shadowmask.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-7_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-7_comp_dir.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-7_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-7_comp_light.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-7_comp_shadowmask.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-7_comp_shadowmask.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-8_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-8_comp_dir.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-8_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-8_comp_light.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-8_comp_shadowmask.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-8_comp_shadowmask.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-9_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-9_comp_dir.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-9_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-9_comp_light.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-9_comp_shadowmask.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene/Lightmap-9_comp_shadowmask.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene_BACKUP_1494.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene_BASE_1494.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene_LOCAL_1494.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene_REMOTE_1494.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TitleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TitleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level Design/BackgroundBullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level Design/BackgroundBullet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level Design/BackgroundBullet.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level Design/BackgroundBullet.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level Design/BackgroundExplosion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level Design/BackgroundExplosion.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/InputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/InputManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Barrier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Barrier.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Bullet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/CameraMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CameraMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Gun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Gun.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/ProceduralRecoil.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/ProceduralRecoil.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/DefaultVolumeProfile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/DefaultVolumeProfile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/HD.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/HD.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/AudioManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/AudioManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -325,21 +43,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Merging WaterK",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;WaterK&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="E:\Program Files\Unity\Hub\Editor\2023.2.20f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2023.2.20f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath E:\UnityProjects\TheLastFrontline\TheLastFrontline -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="E:\UnityProjects\TheLastFrontline\TheLastFrontline" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -347,7 +65,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="E:\Program Files\Unity\Hub\Editor\2023.2.20f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2023.2.20f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath E:\UnityProjects\TheLastFrontline\TheLastFrontline -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="E:\UnityProjects\TheLastFrontline\TheLastFrontline" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -403,7 +121,9 @@
       <workItem from="1730274022384" duration="1969000" />
       <workItem from="1730296902036" duration="8676000" />
       <workItem from="1730305809392" duration="24000" />
-      <workItem from="1730364859547" duration="1317000" />
+      <workItem from="1730364859547" duration="2337000" />
+      <workItem from="1730368297256" duration="153000" />
+      <workItem from="1730368587733" duration="2606000" />
     </task>
     <servers />
   </component>
