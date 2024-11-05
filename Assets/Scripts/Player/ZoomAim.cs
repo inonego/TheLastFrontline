@@ -21,7 +21,7 @@ public class ZoomAim : MonoBehaviour
 
     private float currentFocalLength;
 
-    private InputAction zoomAction => InputManager.instance.inputActions[InputType.Zoom].action;
+    private InputAction zoomAction => InputManager.Instance.inputActions[InputType.Zoom].action;
 
     public bool isZoomed => zoomAction.IsPressed();
 
@@ -41,10 +41,10 @@ public class ZoomAim : MonoBehaviour
     {
         Vector3 position = isZoomed ? zoomedPoint.localPosition : unzoomedPoint.localPosition;
 
-        // ÇöÀç À§Ä¡¸¦ ºÎµå·´°Ô º¸°£ÇÕ´Ï´Ù.
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½Îµå·´ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
         transform.localPosition = Vector3.Lerp(transform.localPosition, position, zoomSpeed * Time.deltaTime);
 
-        // ÇöÀç Focal Length¸¦ ºÎµå·´°Ô º¸°£ÇÕ´Ï´Ù.
+        // ï¿½ï¿½ï¿½ï¿½ Focal Lengthï¿½ï¿½ ï¿½Îµå·´ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
         currentFocalLength = Mathf.Lerp(currentFocalLength, isZoomed ? zoomedFocalLength : unzoomedFocalLength, zoomSpeed * Time.deltaTime);
 
         camera.m_Lens.FieldOfView = FocalLengthToFOV(currentFocalLength);

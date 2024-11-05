@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityCommunity.UnitySingleton;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SpawnerManager : Singleton<SpawnerManager>
+public class SpawnerManager : PersistentMonoSingleton<SpawnerManager>
 {
     [SerializeField]
     private int phaseNumber = 1; // phase 번호 (1~3?)
@@ -95,12 +96,12 @@ public class SpawnerManager : Singleton<SpawnerManager>
     
     private void CheckPhase()
     {
-        if (GameManager.instance.ElapsedTime >= 120f) // phase2 진입 (2분 경과)
+        if (GameManager.Instance.ElapsedTime >= 120f) // phase2 진입 (2분 경과)
         {
             SpawnerStop();
             SpawnerStart(2);
             IncreaseDifficulty();
-        } else if (GameManager.instance.ElapsedTime >= 240f) // phase3 진입 (4분 경과)
+        } else if (GameManager.Instance.ElapsedTime >= 240f) // phase3 진입 (4분 경과)
         {
             SpawnerStop();
             SpawnerStart(3);

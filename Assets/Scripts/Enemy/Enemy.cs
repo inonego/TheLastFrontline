@@ -7,21 +7,26 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public float speed;
-
     public int hp = 4;
+    
+    public Randomizer speedRandomizer;
+    public Randomizer hpRandomizer;
 
-    public float damage = 10f;
+    public int damage = 10;
 
     private Transform target; // 적이 달려오는 타겟
     private Rigidbody rigid;
 
     public GameObject effectOnDead;
-
+    
     private void Awake()
     {
         rigid = GetComponent<Rigidbody>();
+        
+        EnemyManager.Instance.enemies.Add(this);
 
-        EnemyManager.instance.enemies.Add(this);
+        speed = speed * speedRandomizer.value;
+        hp = (int)(hp * hpRandomizer.value);
     }
 
     private void Start()
@@ -62,9 +67,9 @@ public class Enemy : MonoBehaviour
 
     public void Destroy()
     {
+        EnemyManager.Instance.enemies.Remove(this);
+        
         Instantiate(effectOnDead, transform.position, Quaternion.identity);
-
-        EnemyManager.instance.enemies.Remove(this);
 
         Destroy(gameObject);
     }

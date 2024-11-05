@@ -60,7 +60,7 @@ public class BackgroundExplosion : MonoBehaviour
 
         GO.transform.position = position;
 
-        CameraShake.instance.GiveShake(GO);
+        CameraShake.Instance.GiveShake(GO);
 
         StartCoroutine(DespawnExplosion(GO));
     }

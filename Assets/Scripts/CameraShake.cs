@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityCommunity.UnitySingleton;
 using UnityEngine;
 
-public class CameraShake : Singleton<CameraShake>
+public class CameraShake : MonoSingleton<CameraShake>
 {
     public float lerpAmount;
     public float minShakeDuration;

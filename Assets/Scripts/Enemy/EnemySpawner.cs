@@ -23,7 +23,7 @@ public class EnemySpawner : MonoBehaviour
 
         rangeCollider = rangeObject.GetComponent<BoxCollider>();
         respawnCounter = new TimeCounter();
-        SpawnerManager.instance.SpawnerAdd(phase, this);
+        SpawnerManager.Instance.SpawnerAdd(phase, this);
 
     }
     void Update()

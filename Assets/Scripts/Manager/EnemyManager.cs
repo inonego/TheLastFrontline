@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityCommunity.UnitySingleton;
 using UnityEngine;
 
-public class EnemyManager : Singleton<EnemyManager>
+public class EnemyManager : PersistentMonoSingleton<EnemyManager>
 {
     public List<Enemy> enemies;
     

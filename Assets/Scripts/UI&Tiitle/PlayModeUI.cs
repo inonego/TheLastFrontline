@@ -37,7 +37,7 @@ public class PlayModeUI : MonoBehaviour
     public GameObject gamePanel;
     public GameObject pausePanel;
     public GameObject settingsPanel;
-    private InputAction pauseAction => InputManager.instance.inputActions[InputType.Pause].action;
+    private InputAction pauseAction => InputManager.Instance.inputActions[InputType.Pause].action;
     public bool isPaused { get; private set; }
 
     // Start is called before the first frame update
@@ -68,28 +68,24 @@ public class PlayModeUI : MonoBehaviour
 
     public void UpdateTimeWheel()
     {
-        float ratio = GameManager.instance.ElapsedTime/ GameManager.instance.gameTime;
+        float ratio = GameManager.Instance.ElapsedTime/ GameManager.Instance.gameTime;
         timeWheel.fillAmount = ratio;
-    }
-
-    public void DecreaseBarrierHP(float ratio)
-    {
-        BarrierHP.fillAmount = ratio;
     }
 
     public void ShowBulletCount(float current, float max)
     {
-        BulletCount.text = string.Format("Bullet Count : {0:0} / {1:00}", current, max);
+        BulletCount.text = string.Format("{0:00} / {1:00}", current, max);
     }
 
     void UpdateUIText()
     {
-
-        if (GameManager.instance.ElapsedTime < 120f)
+        BarrierHP.fillAmount = (float)barrier.currentBarrierHp / barrier.maxBarrierHp;
+        
+        if (GameManager.Instance.ElapsedTime < 120f)
         {
             phaseText.text = "Phase 1";
         }
-        else if (GameManager.instance.ElapsedTime < 240f)
+        else if (GameManager.Instance.ElapsedTime < 240f)
         {
             phaseText.text = "Phase 2";
         }
@@ -98,15 +94,15 @@ public class PlayModeUI : MonoBehaviour
             phaseText.text = "Phase 3";
         }
 
-        int min = (int)(GameManager.instance.RemainTime/ 60f);
-        int sec = (int)(GameManager.instance.RemainTime % 60);
+        int min = (int)(GameManager.Instance.RemainTime/ 60f);
+        int sec = (int)(GameManager.Instance.RemainTime % 60);
 
         timeText.text = string.Format("{0:00}:{1:00}", min, sec);
     }
 
     void ShowScriptText()
     {
-        float nowTime = GameManager.instance.ElapsedTime;
+        float nowTime = GameManager.Instance.ElapsedTime;
 
         if (scriptTime < fadeDuration && !isFadingOut) // 페이드 인 효과
         {
@@ -248,8 +244,8 @@ public class PlayModeUI : MonoBehaviour
 
     public void MainMenu()
     {
-        EnemyManager.instance.ResetList();
-        SpawnerManager.instance.ResetList();
+        EnemyManager.Instance.ResetList();
+        SpawnerManager.Instance.ResetList();
         pausePanel.SetActive(false);
         SceneManager.LoadScene("Scenes/TitleScene", LoadSceneMode.Single);
     }

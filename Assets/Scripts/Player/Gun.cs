@@ -33,7 +33,8 @@ public class Gun : MonoBehaviour
     private ParticleSystemRenderer muzzleFlashRenderer; //
     private AudioSource audioSource;
 
-    private InputAction inputAction => InputManager.instance.inputActions[InputType.Fire].action;
+    private InputAction fireInputAction => InputManager.Instance.inputActions[InputType.Fire].action;
+    private InputAction reloadInputAction => InputManager.Instance.inputActions[InputType.Reload].action;
 
     private void Awake()
     {
@@ -54,9 +55,7 @@ public class Gun : MonoBehaviour
         if (gunUI.isPaused) return;
         gunUI.ShowBulletCount(currentBullet, maxBullet);
 
-        
-
-        if (inputAction.IsPressed())
+        if (fireInputAction.IsPressed())
         {
             // 현재 연사 딜레이 적용 중이거나 재장전 중이 아니라면 
             if (!(isDelaying || isReloading))
@@ -71,6 +70,12 @@ public class Gun : MonoBehaviour
                     Reload();
                 }
             }
+        }
+
+        if (!isReloading && reloadInputAction.WasPressedThisFrame())
+        {
+            // 총알이 부족한 경우 재장전
+            Reload();
         }
     }
 
