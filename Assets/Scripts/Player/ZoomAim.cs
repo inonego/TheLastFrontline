@@ -8,6 +8,8 @@ using UnityEngine.InputSystem;
 
 public class ZoomAim : MonoBehaviour
 {
+    public bool canZoom = true;
+    
     [Header("General")]
     public float zoomSpeed = 10f;
 
@@ -23,7 +25,7 @@ public class ZoomAim : MonoBehaviour
 
     private InputAction zoomAction => InputManager.Instance.inputActions[InputType.Zoom].action;
 
-    public bool isZoomed => zoomAction.IsPressed();
+    public bool isZoomed => canZoom && zoomAction.IsPressed();
 
     private void Awake()
     {

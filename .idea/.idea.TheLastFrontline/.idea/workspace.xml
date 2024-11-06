@@ -5,26 +5,61 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="213f37a9-47e9-4c81-a0c3-bd4cef47adf3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.GP10_1/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.GP10_1/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.GP10_1/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/Boss.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/Boss.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Boss.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Boss.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Boss.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Boss.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Beam.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Beam.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Family.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Family.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Family.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Family.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Portal Explosion.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Portal Explosion.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/TextAnimation.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/TextAnimation.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/포탈.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/포탈.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CreditUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CreditUI.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Level Design/Beam/Beam.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Level Design/Beam/Beam.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Level Design/Beam/Beam.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Level Design/Beam/Beam.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Level Design/Beam/Beam.shadergraph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Level Design/Beam/Beam.shadergraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Level Design/Beam/Portal.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Level Design/Beam/Portal.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Level Design/Beam/Portal.shadergraph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Level Design/Beam/Portal.shadergraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/EndingCreditScene.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/EndingCreditScene.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameManagerSignal.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Timeline.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Timeline/GameClearTimeline.playable" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheLastFrontline/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheLastFrontline/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy L.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy L.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy Spawner.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy Spawner.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DefaultVolumeProfile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DefaultVolumeProfile.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/F-35 FallingTimeline.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Timeline/F-35 FallingTimeline.playable" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/F-35 FallingTimeline.playable.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Timeline/F-35 FallingTimeline.playable.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameClearTimeline.playable" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameClearTimeline.playable.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Timeline/GameClearTimeline.playable.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFailTimeline.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Timeline/GameFailTimeline.playable" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFailTimeline.playable.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Timeline/GameFailTimeline.playable.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameManagerSignal.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameManagerSignal.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManagerSignal.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quixel.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Level Design/Beam.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScreenFadeTimeline.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Timeline/ScreenFadeTimeline.playable" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScreenFadeTimeline.playable.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Timeline/ScreenFadeTimeline.playable.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/EnemyManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/EnemyManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Barrier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Barrier.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Bullet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Gun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Gun.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/ZoomAim.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/ZoomAim.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI&amp;Tiitle/MainMenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI&amp;Tiitle/MainMenuManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/DefaultVolumeProfile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/DefaultVolumeProfile.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Low.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Low.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,8 +71,12 @@
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://E:/UnityProjects/TheLastFrontline/TheLastFrontline/Assets/Prefabs/Enemy/Enemy L.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://E:/UnityProjects/TheLastFrontline/TheLastFrontline/Assets/Prefabs/Enemy/Enemy L.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/UnityProjects/TheLastFrontline/TheLastFrontline/Assets/Scenes/MainScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/UnityProjects/TheLastFrontline/TheLastFrontline/Assets/Scenes/MainScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/UnityProjects/TheLastFrontline/TheLastFrontline/Assets/Scripts/Manager/EnemyManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/UnityProjects/TheLastFrontline/TheLastFrontline/Assets/Scripts/Manager/EnemyManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/UnityProjects/TheLastFrontline/TheLastFrontline/Assets/Scripts/Manager/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/UnityProjects/TheLastFrontline/TheLastFrontline/Assets/Scripts/Manager/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI&amp;Tiitle/PlayModeUI.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -48,18 +87,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Merging WaterK",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Merging WaterK&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="E:\Program Files\Unity\Hub\Editor\2023.2.20f1\Editor\Unity.exe" />
@@ -135,6 +174,7 @@
       <workItem from="1730879640138" duration="681000" />
       <workItem from="1730890958313" duration="17159000" />
       <workItem from="1730913652563" duration="375000" />
+      <workItem from="1730917158225" duration="918000" />
     </task>
     <servers />
   </component>

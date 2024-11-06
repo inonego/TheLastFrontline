@@ -14,6 +14,8 @@ public class EnemyManager : PersistentMonoSingleton<EnemyManager>
         {
             Destroy(enemy,deleteTime);
         }
+        ResetList();
+
     }
 
     public void ResetList()

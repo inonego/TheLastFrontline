@@ -7,6 +7,8 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(ProceduralRecoil))]
 public class Gun : MonoBehaviour
 {
+    public ZoomAim zoomAim;
+    
     [Header("General")]
     public float maxBullet;                     // 최대 총알 개수
     public float delayTime;                     // 연사 딜레이
@@ -91,6 +93,7 @@ public class Gun : MonoBehaviour
     private IEnumerator DoReload()
     {
         isReloading = true;
+        zoomAim.canZoom = false;
 
         float playSoundTime = Mathf.Max(reloadTime - reloadSound.length, 0f);
 
@@ -105,6 +108,7 @@ public class Gun : MonoBehaviour
         if (OnReload != null) OnReload.Invoke();
 
         isReloading = false;
+        zoomAim.canZoom = true;
     }
 
     public void Fire()
