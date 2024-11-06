@@ -5,22 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="213f37a9-47e9-4c81-a0c3-bd4cef47adf3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheLastFrontline/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheLastFrontline/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.GP10_1/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.GP10_1/.idea/indexLayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.GP10_1/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Boss.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Boss.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Boss.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Boss.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Boss.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Boss.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheLastFrontline/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheLastFrontline/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/F-35 FallingTimeline.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/F-35 FallingTimeline.playable" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy L.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy L.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy Spawner.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy Spawner.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TitleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TitleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemySpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemySpawner.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/EnemyManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/EnemyManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/SpawnerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/SpawnerManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/CameraMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CameraMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI&amp;Tiitle/PlayModeUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI&amp;Tiitle/PlayModeUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TimelineSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TimelineSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Barrier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Barrier.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Bullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,16 +33,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://E:/UnityProjects/TheLastFrontline/TheLastFrontline/Assets/Scenes/MainScene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://E:/UnityProjects/TheLastFrontline/TheLastFrontline/Assets/Scenes/MainScene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://E:/UnityProjects/TheLastFrontline/TheLastFrontline/Assets/Scripts/Manager/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://E:/UnityProjects/TheLastFrontline/TheLastFrontline/Assets/Scripts/Manager/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://E:/UnityProjects/TheLastFrontline/TheLastFrontline/Assets/Scripts/Player/Barrier.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://E:/UnityProjects/TheLastFrontline/TheLastFrontline/Assets/Scripts/Player/Barrier.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://E:/UnityProjects/TheLastFrontline/TheLastFrontline/Assets/Scripts/Player/Gun.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://E:/UnityProjects/TheLastFrontline/TheLastFrontline/Assets/Scripts/Player/Gun.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/UnityProjects/TheLastFrontline/TheLastFrontline/Assets/Prefabs/Enemy/Enemy L.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/UnityProjects/TheLastFrontline/TheLastFrontline/Assets/Prefabs/Enemy/Enemy L.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI&amp;Tiitle/PlayModeUI.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -49,21 +48,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;WaterK&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Merging WaterK",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2023.2.20f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="E:\Program Files\Unity\Hub\Editor\2023.2.20f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath E:\UnityProjects\TheLastFrontline\TheLastFrontline -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="E:\UnityProjects\TheLastFrontline\TheLastFrontline" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -71,7 +70,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2023.2.20f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="E:\Program Files\Unity\Hub\Editor\2023.2.20f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath E:\UnityProjects\TheLastFrontline\TheLastFrontline -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="E:\UnityProjects\TheLastFrontline\TheLastFrontline" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -134,7 +133,8 @@
       <workItem from="1730819430707" duration="6136000" />
       <workItem from="1730874113709" duration="14000" />
       <workItem from="1730879640138" duration="681000" />
-      <workItem from="1730890958313" duration="17008000" />
+      <workItem from="1730890958313" duration="17159000" />
+      <workItem from="1730913652563" duration="375000" />
     </task>
     <servers />
   </component>

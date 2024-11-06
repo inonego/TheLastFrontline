@@ -5,14 +5,14 @@ using UnityEngine;
 
 public class EnemyManager : PersistentMonoSingleton<EnemyManager>
 {
-    public List<Enemy> enemies;
+    public List<GameObject> enemies;
     
 
     public void DeleteAllEnemies(float deleteTime = 0f)
     {
         foreach (var enemy in enemies)
         {
-            Destroy(enemy.gameObject,deleteTime);
+            Destroy(enemy,deleteTime);
         }
     }
 

@@ -112,7 +112,7 @@ public class GameManager : PersistentMonoSingleton<GameManager>
         state = GameState.Finished;
         
         playTimeCounter.Stop(); //플레이 타이머 종료
-        EnemyManager.Instance.DeleteAllEnemies(); //적 모두 삭제
+        EnemyManager.Instance.DeleteAllEnemies(1.5f); //적 모두 삭제
         SpawnerManager.Instance.SpawnerStop(); //스포너 
         SpawnerManager.Instance.ResetList();
     }

@@ -2,9 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
+using UnityEditor;
+using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Boss : MonoBehaviour
 {
     public int index; // 몬스터 종류 구분 인덱스
     // 임시로 해파리는 1로 하겠음
@@ -21,9 +23,11 @@ public class Enemy : MonoBehaviour
 
     public GameObject effectOnDead;
     
+    private Collider[] colliders;
+    
     // dissolve관련 변수
-    public Material dissolveMaterial;
-    private MeshRenderer mesh;
+    private MeshRenderer[] mesh;
+    private SkinnedMeshRenderer[] mesh2;
     public float dissolveSpeed = 1.5f; // Dissolve 속도
     private float dissolveAmount = 0f; // 현재 Dissolve 상태
     private bool isDissolving = false; // Dissolve 시작 여부
@@ -31,7 +35,9 @@ public class Enemy : MonoBehaviour
     private void Awake()
     {
         rigid = GetComponent<Rigidbody>();
-        mesh = GetComponent<MeshRenderer>();
+        mesh = GetComponentsInChildren<MeshRenderer>();
+        mesh2 = GetComponentsInChildren<SkinnedMeshRenderer>();
+        colliders = GetComponentsInChildren<Collider>();
         EnemyManager.Instance.enemies.Add(gameObject);
 
         speed = speed * speedRandomizer.value;
@@ -40,7 +46,14 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
-        target = GameObject.Find("Target Point").transform;
+        if (hp > 100)//boss
+        {
+            target = GameObject.Find("Target Point2").transform;
+        }
+        else
+        {
+            target = GameObject.Find("Target Point").transform;
+        }
     }
 
     private void Update()
@@ -48,9 +61,15 @@ public class Enemy : MonoBehaviour
         if (isDissolving)
         {
             dissolveAmount = Mathf.Clamp01(dissolveAmount + Time.deltaTime * dissolveSpeed);
-            
-            mesh.material.SetFloat("_DissolveAmount", dissolveAmount);  // 셰이더 값 업데이트
 
+            foreach (MeshRenderer mesh in mesh)
+            {
+                mesh.material.SetFloat("_DissolveAmount", dissolveAmount);  // 셰이더 값 업데이트
+            }
+            foreach (SkinnedMeshRenderer mesh in mesh2)
+            {
+                mesh.material.SetFloat("_DissolveAmount", dissolveAmount);  // 셰이더 값 업데이트
+            }
             // Dissolve가 완료되면 오브젝트 제거
             if (dissolveAmount >= 1f)
             {
@@ -74,11 +93,6 @@ public class Enemy : MonoBehaviour
 
             rigid.velocity = direction * speed;
             rigid.rotation = Quaternion.LookRotation(direction, Vector3.up);
-            
-            if (index == 1)
-            {
-                rigid.rotation *= Quaternion.Euler(60, -20, -60);
-            }
         }
     }
 
@@ -98,7 +112,10 @@ public class Enemy : MonoBehaviour
     public void Destroy()
     {
         EnemyManager.Instance.enemies.Remove(gameObject);
-
+        foreach (Collider collider in colliders)
+        {
+            collider.enabled = false;
+        }
         if (index == 1)
         {
             dissolve();
@@ -112,7 +129,6 @@ public class Enemy : MonoBehaviour
 
     public void dissolve()
     {
-        mesh.material = dissolveMaterial;
         isDissolving = true;
     }
 }
