@@ -72,5 +72,13 @@ public class Barrier : MonoBehaviour
             
             enemy.Destroy();
         }
+        else if (other.gameObject.CompareTag("Boss"))
+        {
+            Boss boss = other.gameObject.GetComponentInParent<Boss>();
+            
+            TakeDamage(boss.damage);
+            
+            boss.Destroy();
+        }
     }
 }
