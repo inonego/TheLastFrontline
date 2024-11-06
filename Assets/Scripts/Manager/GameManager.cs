@@ -34,8 +34,6 @@ public class GameManager : PersistentMonoSingleton<GameManager>
     protected override void Awake()
     {
         base.Awake();
-        
-        playableDirector = GetComponent<PlayableDirector>();
     }
     
     private void Update()
@@ -65,12 +63,14 @@ public class GameManager : PersistentMonoSingleton<GameManager>
     // 씬이 새로 로드될 때 초기화 수행
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        playableDirector = GameObject.Find("게임 컷씬")?.GetComponent<PlayableDirector>();
+        
         ResetGame();
     }
 
-    public void GoToTitleMenu()
+    public void GoToScene(string sceneName)
     {
-        SceneManager.LoadScene("TitleScene");
+        SceneManager.LoadScene(sceneName);
     }
     
     // 게임 초기화 메서드
@@ -105,7 +105,7 @@ public class GameManager : PersistentMonoSingleton<GameManager>
         Time.timeScale = 1f;
     }
     
-    private void FinishGame()
+    public void FinishGame()
     {
         state = GameState.Finished;
         
