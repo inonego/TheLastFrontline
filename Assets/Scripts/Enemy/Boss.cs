@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using UnityEditor;
-using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
 public class Boss : MonoBehaviour
@@ -29,7 +28,8 @@ public class Boss : MonoBehaviour
     private MeshRenderer[] mesh;
     private SkinnedMeshRenderer[] mesh2;
     public float dissolveSpeed = 1.5f; // Dissolve 속도
-    private float dissolveAmount = 0f; // 현재 Dissolve 상태
+    private float dissolveAmount = 1f; // 현재 Dissolve 상태
+    private bool isStartDis = true;
     private bool isDissolving = false; // Dissolve 시작 여부
     
     private void Awake()
@@ -58,6 +58,25 @@ public class Boss : MonoBehaviour
 
     private void Update()
     {
+        if (isStartDis)
+        {
+            dissolveAmount = Mathf.Clamp01(dissolveAmount - Time.deltaTime * dissolveSpeed);
+
+            foreach (MeshRenderer mesh in mesh)
+            {
+                mesh.material.SetFloat("_DissolveAmount", dissolveAmount);  // 셰이더 값 업데이트
+            }
+            foreach (SkinnedMeshRenderer mesh in mesh2)
+            {
+                mesh.material.SetFloat("_DissolveAmount", dissolveAmount);  // 셰이더 값 업데이트
+            }
+            // Dissolve가 완료되면 오브젝트 제거
+            if (dissolveAmount <= 0f)
+            {
+                isStartDis = false;
+            }
+        }
+        
         if (isDissolving)
         {
             dissolveAmount = Mathf.Clamp01(dissolveAmount + Time.deltaTime * dissolveSpeed);

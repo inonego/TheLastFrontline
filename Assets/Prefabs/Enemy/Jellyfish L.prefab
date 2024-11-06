@@ -67,7 +67,7 @@ PrefabInstance:
         type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: c77d3fe131ef2be439370fa3c10644cc, type: 2}
+      objectReference: {fileID: 2100000, guid: efa2f38634913154686d30cb50d66c30, type: 2}
     - target: {fileID: -2747296727722086946, guid: 6636ba1304bc1c54db4a8c7966daff7a,
         type: 3}
       propertyPath: m_TagString
@@ -76,7 +76,7 @@ PrefabInstance:
     - target: {fileID: -2651794279922082499, guid: 6636ba1304bc1c54db4a8c7966daff7a,
         type: 3}
       propertyPath: m_Name
-      value: Jellyfish_003
+      value: Jellyfish L
       objectReference: {fileID: 0}
     - target: {fileID: -2651794279922082499, guid: 6636ba1304bc1c54db4a8c7966daff7a,
         type: 3}
@@ -366,7 +366,7 @@ MonoBehaviour:
       m_Calls: []
   effectOnDead: {fileID: 5473095762777323546, guid: 962176136cee66b4baeb5acefd8678d4,
     type: 3}
-  dissolveMaterial: {fileID: 2100000, guid: 94abf8db7bd823d4cacf7b4f8ac31386, type: 2}
+  dissolveMaterial: {fileID: 2100000, guid: f94ff915efbc6f044befeffbc78b7185, type: 2}
   dissolveSpeed: 1.5
 --- !u!1 &6547877746942013638 stripped
 GameObject:

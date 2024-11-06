@@ -92,13 +92,13 @@ public class SpawnerManager : MonoSingleton<SpawnerManager>
     
     private void CheckPhase()
     {
-        if (phaseNumber == 1 && GameManager.Instance.ElapsedTime >= 120f) // phase2 진입 (2분 경과)
+        if (phaseNumber == 1 && GameManager.Instance.ElapsedTime >= 60f) // phase2 진입 (1분 경과)
         {
             SpawnerStop();
             phaseNumber++;
             SpawnerStart(2);
             
-        } else if (phaseNumber == 2 && GameManager.Instance.ElapsedTime >= 240f) // phase3 진입 (4분 경과)
+        } else if (phaseNumber == 2 && GameManager.Instance.ElapsedTime >= 120f) // phase3 진입 (2분 경과)
         {
             SpawnerStop();
             phaseNumber++;

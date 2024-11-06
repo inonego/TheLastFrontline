@@ -47,17 +47,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbebda84d1b9362489c3b47df967f00b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 0
   speed: 7
-  hp: 8
+  hp: 7
   speedRandomizer:
     minValue: 0.9
     maxValue: 1.4
   hpRandomizer:
     minValue: 1
     maxValue: 2
-  damage: 10
+  damage: 7
+  onDeath:
+    m_PersistentCalls:
+      m_Calls: []
   effectOnDead: {fileID: 5473095762777323546, guid: 962176136cee66b4baeb5acefd8678d4,
     type: 3}
+  dissolveMaterial: {fileID: 0}
+  dissolveSpeed: 1.5
 --- !u!135 &1297561038823812710
 SphereCollider:
   m_ObjectHideFlags: 0

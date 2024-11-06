@@ -708,7 +708,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7421167088304350927}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 5000
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -762,15 +762,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 1
-  speed: 4
-  hp: 250
+  speed: 6
+  hp: 200
   speedRandomizer:
     minValue: 1
     maxValue: 1
   hpRandomizer:
     minValue: 1
     maxValue: 1
-  damage: 50
+  damage: 40
   effectOnDead: {fileID: 5473095762777323546, guid: 962176136cee66b4baeb5acefd8678d4,
     type: 3}
   dissolveSpeed: 0.5

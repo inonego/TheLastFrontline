@@ -94,11 +94,11 @@ public class PlayModeUI : MonoBehaviour
     {
         BarrierHP.fillAmount = (float)barrier.currentBarrierHp / barrier.maxBarrierHp;
         
-        if (GameManager.Instance.ElapsedTime < 120f)
+        if (GameManager.Instance.ElapsedTime < 60f)
         {
             phaseText.text = "Phase 1";
         }
-        else if (GameManager.Instance.ElapsedTime < 240f)
+        else if (GameManager.Instance.ElapsedTime < 120f)
         {
             phaseText.text = "Phase 2";
         }
@@ -121,7 +121,7 @@ public class PlayModeUI : MonoBehaviour
         {
             ScriptText.text = "";
         }
-        else if (nowTime < 120f) // phase 1
+        else if (nowTime < 60f) // phase 1
         {
             currentPhase = 1;
 
@@ -146,21 +146,21 @@ public class PlayModeUI : MonoBehaviour
                 StartFadeOut();
             }
         }
-        else if (nowTime < 240f) // phase 2
+        else if (nowTime < 120f) // phase 2
         {
             if (currentPhase != 2)
             {
                 StartNewPhase(2);
             }
-            if (nowTime < 125f)
+            if (nowTime < 65f)
             {
                 ScriptText.text = "More enemies are closing in.";
             }
-            else if (nowTime < 128f)
+            else if (nowTime < 68f)
             {
                 ScriptText.text = "What are these things? What are they really?";
             }
-            else if (nowTime < 131f)
+            else if (nowTime < 71f)
             {
                 ScriptText.text = "What is their purpose for invading Earth over and over again?";
             }
@@ -175,11 +175,11 @@ public class PlayModeUI : MonoBehaviour
             {
                 StartNewPhase(3);
             }
-            if (nowTime < 245f)
+            if (nowTime < 125f)
             {
                 ScriptText.text = "This is an onslaught on a completely different scale.";
             }
-            else if (nowTime < 248f)
+            else if (nowTime < 128f)
             {
                 ScriptText.text = "This must be their final assault. If I can hold them off this time, victory will be ours.";
             }

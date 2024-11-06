@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Enemy : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class Enemy : MonoBehaviour
     public Randomizer hpRandomizer;
 
     public int damage = 10;
+    
+    public UnityEvent onDeath;
+    private bool isLive = true;
 
     private Transform target; // 적이 달려오는 타겟
     private Rigidbody rigid;
@@ -88,9 +92,13 @@ public class Enemy : MonoBehaviour
         {
             hp -= 1;
 
-            if (hp <= 0)
+            if (isLive && hp <= 0)
             {
                 Destroy();
+
+                isLive = false;
+                
+                onDeath.Invoke();
             }
         }
     }

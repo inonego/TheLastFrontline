@@ -18,7 +18,7 @@ public class GameManager : PersistentMonoSingleton<GameManager>
 {
     public GameState state = GameState.Idle;
     
-    public float gameTime = 300f;
+    public float gameTime = 180f;
     public float RemainTime => playTimeCounter.GetTimeLeft();
     public float ElapsedTime => playTimeCounter.GetElapsedTime();
 

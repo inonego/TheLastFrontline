@@ -8,8 +8,7 @@ public class EnemySpawner : MonoBehaviour
     public int phase=1;
     public List<GameObject> enemyPrefabs;
     public List<float> spawnChances; //각 프리팹 스폰 확률?
-                                     //(0~1 사이 값으로 합이 무조건 1이 돼야함)
-    public GameObject enemy;
+                                     //(0~1 사이 값으로 합이 무조건 1이 돼야함
     public float minTimeBetweenSpawns;
     public float maxTimeBetweenSpawns;
     private float spawnRate = 1.5f;
@@ -37,8 +36,7 @@ public class EnemySpawner : MonoBehaviour
 
     public void ActivationSpawner()//스포너 활성화
     {
-        spawnRate = Random.Range(minTimeBetweenSpawns, maxTimeBetweenSpawns);
-        respawnCounter.Start(spawnRate);
+        Spawn();
     }
 
     public void InactivationSpawner()//스포너 비활성화
