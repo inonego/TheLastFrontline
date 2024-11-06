@@ -12,7 +12,7 @@ public class EnemyManager : PersistentMonoSingleton<EnemyManager>
     {
         foreach (var enemy in enemies)
         {
-            Destroy(enemy,deleteTime);
+            Destroy(enemy.gameObject,deleteTime);
         }
     }
 

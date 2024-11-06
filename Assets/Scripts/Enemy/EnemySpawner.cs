@@ -6,6 +6,9 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public int phase=1;
+    public List<GameObject> enemyPrefabs;
+    public List<float> spawnChances; //각 프리팹 스폰 확률?
+                                     //(0~1 사이 값으로 합이 무조건 1이 돼야함)
     public GameObject enemy;
     public float minTimeBetweenSpawns;
     public float maxTimeBetweenSpawns;
@@ -18,7 +21,6 @@ public class EnemySpawner : MonoBehaviour
     
     void Start()
     {
-
         respawnCounter = new TimeCounter();
 
         rangeCollider = rangeObject.GetComponent<BoxCollider>();
@@ -35,7 +37,8 @@ public class EnemySpawner : MonoBehaviour
 
     public void ActivationSpawner()//스포너 활성화
     {
-        Spawn();
+        spawnRate = Random.Range(minTimeBetweenSpawns, maxTimeBetweenSpawns);
+        respawnCounter.Start(spawnRate);
     }
 
     public void InactivationSpawner()//스포너 비활성화
@@ -46,11 +49,32 @@ public class EnemySpawner : MonoBehaviour
     void Spawn()
     {
 
-        Instantiate(enemy, ReturnRandomPosition(),transform.rotation);
+        // GetRandomEnemyPrefab => 여기서 프리팹 확률에 따라서 선택
+        GameObject enemyPrefab = GetRandomEnemyPrefab();
+        Instantiate(enemyPrefab, ReturnRandomPosition(), transform.rotation);
         
         // 스폰 후에 다시 respawnCounter 시작
         spawnRate = Random.Range(minTimeBetweenSpawns, maxTimeBetweenSpawns);
         respawnCounter.Start(spawnRate); // 스폰 후 다음 스폰 카운트다운 시작
+    }
+    
+    // 프리팹 리스트에서 확률로 랜덤 고르기
+    GameObject GetRandomEnemyPrefab()
+    {
+        float randomValue = Random.value; // 0 ~ 1 사이 확률 float 값
+        float cumulativeProbability = 0f;
+
+        for (int i = 0; i < enemyPrefabs.Count; i++)
+        {
+            cumulativeProbability += spawnChances[i];
+            if (randomValue <= cumulativeProbability)
+            {
+                return enemyPrefabs[i];
+            }
+        }
+
+        // 확률 계산 잘못됨 => 기본값으로 첫번째 프리팹 반환
+        return enemyPrefabs[0];
     }
     
     // 스폰 범위에서 랜덤한 위치 반환

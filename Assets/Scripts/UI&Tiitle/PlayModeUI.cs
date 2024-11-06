@@ -33,6 +33,10 @@ public class PlayModeUI : MonoBehaviour
     public Gun gun;
     private TextMeshProUGUI BulletCount;
     
+    [Header("Sensitivity Settings")]
+    public Slider sensitivitySlider; // 감도 슬라이더
+    public CameraMovement cameraMovement;
+    
     [Header("Pause & Settings")]
     public GameObject gamePanel;
     public GameObject pausePanel;
@@ -47,6 +51,15 @@ public class PlayModeUI : MonoBehaviour
         BarrierHP = BarrierHpGameObject.GetComponent<Image>();
         BulletCount = BulletCountGameObject.GetComponent<TextMeshProUGUI>();
         timeWheel = TimeWheelGameObject.GetComponent<Image>();
+        
+        // Slider 초기화
+        if (sensitivitySlider != null)
+        {
+            sensitivitySlider.minValue = 1f;
+            sensitivitySlider.maxValue = 25f;
+            sensitivitySlider.value = 25f; // 이게 Default 값일듯?
+            sensitivitySlider.onValueChanged.AddListener(OnSensitivityChanged);
+        }
     }
 
     // Update is called once per frame
@@ -248,5 +261,14 @@ public class PlayModeUI : MonoBehaviour
         SpawnerManager.Instance.ResetList();
         pausePanel.SetActive(false);
         SceneManager.LoadScene("Scenes/TitleScene", LoadSceneMode.Single);
+    }
+    
+    // Slider 값 조절 -> 호출됨
+    private void OnSensitivityChanged(float newSensitivity)
+    {
+        if (cameraMovement != null)
+        {
+            cameraMovement.UpdateSensitivity(newSensitivity);
+        }
     }
 }

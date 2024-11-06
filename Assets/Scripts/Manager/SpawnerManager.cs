@@ -4,18 +4,13 @@ using UnityCommunity.UnitySingleton;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SpawnerManager : PersistentMonoSingleton<SpawnerManager>
+public class SpawnerManager : MonoSingleton<SpawnerManager>
 {
     [SerializeField]
     private int phaseNumber = 1; // phase 번호 (1~3?)
     public List<EnemySpawner> phase1Spawners;
     public List<EnemySpawner> phase2Spawners;
     public List<EnemySpawner> phase3Spawners;
-    
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -46,6 +41,7 @@ public class SpawnerManager : PersistentMonoSingleton<SpawnerManager>
 
     public void SpawnerStart(int phase=1) //스포너 활성화 
     {
+        phase = phaseNumber;
         switch (phase)
         {
             case 1:
@@ -96,30 +92,18 @@ public class SpawnerManager : PersistentMonoSingleton<SpawnerManager>
     
     private void CheckPhase()
     {
-        if (GameManager.Instance.ElapsedTime >= 120f) // phase2 진입 (2분 경과)
+        if (phaseNumber == 1 && GameManager.Instance.ElapsedTime >= 120f) // phase2 진입 (2분 경과)
         {
             SpawnerStop();
+            phaseNumber++;
             SpawnerStart(2);
-            IncreaseDifficulty();
-        } else if (GameManager.Instance.ElapsedTime >= 240f) // phase3 진입 (4분 경과)
+            
+        } else if (phaseNumber == 2 && GameManager.Instance.ElapsedTime >= 240f) // phase3 진입 (4분 경과)
         {
             SpawnerStop();
+            phaseNumber++;
             SpawnerStart(3);
-            IncreaseDifficulty();
         }
-    }
-    void IncreaseDifficulty()//일단 보류
-    {
-        //Debug.Log(phaseNumber + " phase Started");
-        phaseNumber++; // 다음 페이즈로 이동됨
-        
-        // 임의로 난이도 조정 ;; ㅎ
-        //minTimeBetweenSpawns -= 0.1f; // 스폰 최소 시간 감소
-        //maxTimeBetweenSpawns -= 0.1f; // 스폰 최대 시간 감소
-
-        // 스폰 간격 -> 너무 짧아지지 않도록 일단 제한
-        //minTimeBetweenSpawns = Mathf.Clamp(minTimeBetweenSpawns, 0.5f, 10f);
-        //maxTimeBetweenSpawns = Mathf.Clamp(maxTimeBetweenSpawns, 1f, 15f);
     }
     
     public void ResetList()

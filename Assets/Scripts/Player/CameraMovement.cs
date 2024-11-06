@@ -6,9 +6,8 @@ using UnityEngine.InputSystem;
 public class CameraMovement : MonoBehaviour
 {
     public bool isWorking = true;
-
-    public float sensitivity = 360f;
-    public float zoomedSensitivity = 180f;
+    
+    [SerializeField] private float currentSensitivity = 25f; // 초기 카메라 감도
 
     private Vector2 mouse = Vector2.zero;
 
@@ -23,10 +22,10 @@ public class CameraMovement : MonoBehaviour
     {
         if (isWorking)
         {
-            float currentSensitivity = zoomAim.isZoomed ? sensitivity : sensitivity;
+            // 현재 감도 값 적용 (줌 상태에 따라 감도 변화 가능)
+            float sensitivity = zoomAim.isZoomed ? currentSensitivity / 2 : currentSensitivity;
 
-            mouse += Mouse.current.delta.ReadValue() * currentSensitivity * Time.smoothDeltaTime;
-
+            mouse += Mouse.current.delta.ReadValue() * sensitivity * Time.smoothDeltaTime;
             mouse.y = Mathf.Clamp(mouse.y, -90f, 90f);
 
             transform.rotation = Quaternion.Euler(-mouse.y, mouse.x, 0);
@@ -37,6 +36,11 @@ public class CameraMovement : MonoBehaviour
 
             mouse = new Vector2(look.eulerAngles.y, -look.eulerAngles.x);
         }
+    }
+    
+    public void UpdateSensitivity(float newSensitivity)
+    {
+        currentSensitivity = newSensitivity;
     }
 
     public void SetWorking(bool value)
