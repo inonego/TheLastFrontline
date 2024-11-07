@@ -53,11 +53,13 @@ public class GameManager : PersistentMonoSingleton<GameManager>
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
+        SceneManager.sceneUnloaded += OnSceneUnloaded;
     }
 
     private void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
+        SceneManager.sceneUnloaded -= OnSceneUnloaded;
     }
 
     // 씬이 새로 로드될 때 초기화 수행
@@ -66,6 +68,11 @@ public class GameManager : PersistentMonoSingleton<GameManager>
         playableDirector = GameObject.Find("게임 컷씬")?.GetComponent<PlayableDirector>();
         
         ResetGame();
+    }
+
+    private void OnSceneUnloaded(Scene scene)
+    {
+        AudioManager.Instance.MuteAudioGroup(false);
     }
 
     public void GoToScene(string sceneName)
