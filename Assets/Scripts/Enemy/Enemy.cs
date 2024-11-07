@@ -79,10 +79,12 @@ public class Enemy : MonoBehaviour
             rigid.velocity = direction * speed;
             rigid.rotation = Quaternion.LookRotation(direction, Vector3.up);
             
+            
             if (index == 1)
             {
                 rigid.rotation *= Quaternion.Euler(60, -20, -60);
             }
+            
         }
     }
 
