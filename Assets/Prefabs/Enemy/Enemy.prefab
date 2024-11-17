@@ -9,9 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4706200465463407521}
-  - component: {fileID: 6684932336843493439}
   - component: {fileID: 1297561038823812710}
   - component: {fileID: 3593458500627344622}
+  - component: {fileID: -57162794267575449}
+  - component: {fileID: 6684932336843493439}
+  - component: {fileID: -8553632774683905450}
   m_Layer: 8
   m_Name: Enemy
   m_TagString: Enemy
@@ -35,35 +37,6 @@ Transform:
   - {fileID: 686837374298712856}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6684932336843493439
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8276687240861986080}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbebda84d1b9362489c3b47df967f00b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  index: 0
-  speed: 7
-  hp: 7
-  speedRandomizer:
-    minValue: 0.9
-    maxValue: 1.4
-  hpRandomizer:
-    minValue: 1
-    maxValue: 2
-  damage: 7
-  onDeath:
-    m_PersistentCalls:
-      m_Calls: []
-  effectOnDead: {fileID: 5473095762777323546, guid: 962176136cee66b4baeb5acefd8678d4,
-    type: 3}
-  dissolveMaterial: {fileID: 0}
-  dissolveSpeed: 1.5
 --- !u!135 &1297561038823812710
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -112,6 +85,51 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!114 &-57162794267575449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8276687240861986080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6aefae313d68b0548864a3d1d4968527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Current>k__BackingField: 0
+  <AliveOnAwake>k__BackingField: 1
+  <DestroyOnDead>k__BackingField: 1
+  <HP>k__BackingField: 7
+  <MaxHP>k__BackingField: 7
+--- !u!114 &6684932336843493439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8276687240861986080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbebda84d1b9362489c3b47df967f00b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 7
+  damage: 7
+--- !u!114 &-8553632774683905450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8276687240861986080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6971620003118fe4790e656d9617a815, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  count: 1
+  prefab: {fileID: 1121192042590650, guid: f6133f9959d604f418dc379c46869f32, type: 3}
 --- !u!1001 &1009540303074626803
 PrefabInstance:
   m_ObjectHideFlags: 0

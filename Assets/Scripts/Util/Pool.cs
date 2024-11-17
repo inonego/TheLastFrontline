@@ -25,7 +25,7 @@ public class PoolPack
     {
         this.spawnedToParent = spawnedToParent;
 
-        // ÃÊ±â °³¼ö ¸¸Å­ °ÔÀÓ ¿ÀºêÁ§Æ®¸¦ Ãß°¡ÇÕ´Ï´Ù.
+        // ï¿½Ê±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å­ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ß°ï¿½ï¿½Õ´Ï´ï¿½.
         for (int i = 0; i < InitalCount; i++)
         {
             pool.Enqueue(InstantiateGO());
@@ -36,7 +36,7 @@ public class PoolPack
     {
         GameObject GO = MonoBehaviour.Instantiate(Prefab);
 
-        // °ÔÀÓ ¿ÀºêÁ§Æ® »óÅÂ ¼³Á¤
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         GO.transform.SetParent(spawnedToParent);
         GO.SetActive(false);
 
@@ -50,13 +50,13 @@ public class PoolPack
 
     public GameObject Spawn(Vector3 position, Quaternion rotation)
     {
-        // Ç® ¸ñ·Ï¿¡¼­ Á¦°Å
+        // Ç® ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         if (!pool.TryDequeue(out GameObject GO))
         {
             GO = InstantiateGO();
         }
 
-        // ½ºÆù ¸ñ·Ï¿¡ Ãß°¡
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ï¿ï¿½ ï¿½ß°ï¿½
         spawned.Add(GO);
 
         PoolUtil.Register(this, GO);
@@ -64,7 +64,7 @@ public class PoolPack
         GO.transform.position = position;
         GO.transform.rotation = rotation;
 
-        // °ÔÀÓ ¿ÀºêÁ§Æ® »óÅÂ ¼³Á¤
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         GO.transform.SetParent(null);
         GO.SetActive(true);
 
@@ -73,13 +73,13 @@ public class PoolPack
 
     internal void Despawn(GameObject GO)
     {
-        // ½ºÆù ¸ñ·Ï¿¡¼­ Á¦°Å
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         spawned.Remove(GO);
 
-        // Ç® ¸ñ·Ï¿¡ Ãß°¡
+        // Ç® ï¿½ï¿½Ï¿ï¿½ ï¿½ß°ï¿½
         pool.Enqueue(GO);
 
-        // °ÔÀÓ ¿ÀºêÁ§Æ® »óÅÂ ¼³Á¤
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         GO.transform.SetParent(spawnedToParent);
         GO.SetActive(false);
     }

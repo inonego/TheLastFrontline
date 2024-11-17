@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 3128853055955601975}
   - component: {fileID: 7919144258510044851}
   - component: {fileID: 1248984310598797363}
-  - component: {fileID: 1885202216135326808}
   - component: {fileID: 9040646878357703694}
   - component: {fileID: 6864101628606007996}
+  - component: {fileID: 3266938190163278736}
+  - component: {fileID: 1885202216135326808}
+  - component: {fileID: -4984833340571805122}
   m_Layer: 0
   m_Name: JellyNA2
   m_TagString: Enemy
@@ -88,35 +90,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1885202216135326808
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2063612324883351183}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbebda84d1b9362489c3b47df967f00b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  index: 1
-  speed: 6
-  hp: 1
-  speedRandomizer:
-    minValue: 0.9
-    maxValue: 1.4
-  hpRandomizer:
-    minValue: 1
-    maxValue: 2
-  damage: 3
-  onDeath:
-    m_PersistentCalls:
-      m_Calls: []
-  effectOnDead: {fileID: 5473095762777323546, guid: 962176136cee66b4baeb5acefd8678d4,
-    type: 3}
-  dissolveMaterial: {fileID: 2100000, guid: f94ff915efbc6f044befeffbc78b7185, type: 2}
-  dissolveSpeed: 1.5
 --- !u!135 &9040646878357703694
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -165,3 +138,52 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!114 &3266938190163278736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063612324883351183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6aefae313d68b0548864a3d1d4968527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Current>k__BackingField: 0
+  <AliveOnAwake>k__BackingField: 1
+  <DestroyOnDead>k__BackingField: 0
+  <HP>k__BackingField: 3
+  <MaxHP>k__BackingField: 3
+--- !u!114 &1885202216135326808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063612324883351183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbebda84d1b9362489c3b47df967f00b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 6
+  damage: 3
+--- !u!114 &-4984833340571805122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063612324883351183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c424429b5240904799649e9132eba53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useOnSpawn: 0
+  useOnDead: 1
+  dissolveSpeed: 1.5
+  replaceMaterialOnDissolve: 1
+  dissolveMaterial: {fileID: -876546973899608171, guid: 15200967b41fd7c4a9a16988ddae6ecc,
+    type: 3}

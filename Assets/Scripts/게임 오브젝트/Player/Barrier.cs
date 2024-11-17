@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Barrier : MonoBehaviour
@@ -66,19 +65,11 @@ public class Barrier : MonoBehaviour
         
         if (other.gameObject.CompareTag("Enemy"))
         {
-            Enemy enemy = other.gameObject.GetComponent<Enemy>();
+            Enemy enemy = other.GetComponentInParent<Enemy>();
             
             TakeDamage(enemy.damage);
             
-            enemy.Destroy();
-        }
-        else if (other.gameObject.CompareTag("Boss"))
-        {
-            Boss boss = other.gameObject.GetComponentInParent<Boss>();
-            
-            TakeDamage(boss.damage);
-            
-            boss.Destroy();
+            enemy.health.SetDead();
         }
     }
 }
