@@ -85,15 +85,12 @@ public class PlayModeUI : MonoBehaviour
         timeWheel.fillAmount = ratio;
     }
 
-    public void ShowBulletCount(float current, float max)
-    {
-        BulletCount.text = string.Format("{0:00} / {1:00}", current, max);
-    }
-
     void UpdateUIText()
     {
-        BarrierHP.fillAmount = (float)barrier.currentBarrierHp / barrier.maxBarrierHp;
+        BarrierHP.fillAmount = (float)barrier.health.HP / barrier.health.MaxHP;
         
+        BulletCount.text = $"{gun.BulletCount}/{gun.MaxBulletCount}";
+
         if (GameManager.Instance.ElapsedTime < 60f)
         {
             phaseText.text = "Phase 1";
@@ -257,7 +254,7 @@ public class PlayModeUI : MonoBehaviour
 
     public void MainMenu()
     {
-        EnemyManager.Instance.ResetList();
+        EnemyManager.Instance.DeleteAllEnemies();
         SpawnerManager.Instance.ResetList();
         pausePanel.SetActive(false);
         SceneManager.LoadScene("Scenes/TitleScene", LoadSceneMode.Single);

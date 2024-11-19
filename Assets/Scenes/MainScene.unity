@@ -232,6 +232,7 @@ GameObject:
   - component: {fileID: 2314123}
   - component: {fileID: 2314122}
   - component: {fileID: 2314121}
+  - component: {fileID: 2314124}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -320,11 +321,37 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 1
-  m_AdditionalShaderChannelsFlag: 25
+  m_AdditionalShaderChannelsFlag: 1
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &2314124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2314119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c44dd4e9f2ac14448843c04450ab1c13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScriptPanel: {fileID: 670322700}
+  ScriptText: {fileID: 2005956010}
+  timeText: {fileID: 1648024464}
+  phaseText: {fileID: 326624873}
+  TimeWheelGameObject: {fileID: 1420075780}
+  BarrierHpGameObject: {fileID: 623030340}
+  barrier: {fileID: 1841078684}
+  BulletCountGameObject: {fileID: 836407691}
+  gun: {fileID: 997515351}
+  sensitivitySlider: {fileID: 1461531247}
+  cameraMovement: {fileID: 1838732616}
+  gamePanel: {fileID: 888214588}
+  pausePanel: {fileID: 2040944226}
+  settingsPanel: {fileID: 761378755}
 --- !u!1001 &25088027
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3647,7 +3674,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.032762334, y: -0.80461574, z: -0.15855102, w: 0.57129836}
+  m_LocalRotation: {x: 0.032762337, y: -0.80461574, z: -0.15855102, w: 0.57129836}
   m_LocalPosition: {x: 12.669968, y: 44, z: 26.37001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4692,7 +4719,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 818826492}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayModeUI, Assembly-CSharp
         m_MethodName: ResumeGame
         m_Mode: 1
@@ -5585,18 +5612,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 761378755}
   m_CullTransparentMesh: 1
---- !u!114 &767775692 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6002778002435615963, guid: c4470e8aeb8045146928b57ac42003d3,
-    type: 3}
-  m_PrefabInstance: {fileID: 3198284858320375638}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 477e464a471a32a499feb6b409f30bd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &772577711
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5913,7 +5928,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 818826492}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayModeUI, Assembly-CSharp
         m_MethodName: MainMenu
         m_Mode: 1
@@ -6113,64 +6128,6 @@ MonoBehaviour:
     InitalCount: 4
   - Prefab: {fileID: 1337198075554910, guid: 28326a943ed08ac429dc858eacbdb5fe, type: 3}
     InitalCount: 4
---- !u!1 &818826491
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 818826493}
-  - component: {fileID: 818826492}
-  m_Layer: 0
-  m_Name: UIManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &818826492
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 818826491}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c44dd4e9f2ac14448843c04450ab1c13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ScriptPanel: {fileID: 670322700}
-  ScriptText: {fileID: 2005956010}
-  timeText: {fileID: 1648024464}
-  phaseText: {fileID: 326624873}
-  TimeWheelGameObject: {fileID: 1420075780}
-  BarrierHpGameObject: {fileID: 623030340}
-  barrier: {fileID: 1841078684}
-  BulletCountGameObject: {fileID: 836407691}
-  gun: {fileID: 997515351}
-  sensitivitySlider: {fileID: 1461531247}
-  cameraMovement: {fileID: 1838732616}
-  gamePanel: {fileID: 888214588}
-  pausePanel: {fileID: 2040944226}
-  settingsPanel: {fileID: 761378755}
---- !u!4 &818826493
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 818826491}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 53.58, y: 52.986652, z: 34.68993}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &827344898
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6440,12 +6397,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 836407691}
   m_CullTransparentMesh: 1
---- !u!4 &840616469 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 882943551434329615, guid: c4470e8aeb8045146928b57ac42003d3,
-    type: 3}
-  m_PrefabInstance: {fileID: 3198284858320375638}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &879502403 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 767f9810ba9175b4381cc1618326438b,
@@ -7244,7 +7195,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 840616469}
+  m_Father: {fileID: 1838732613}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1047868767
 PrefabInstance:
@@ -14774,7 +14725,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   gameTime: 180
-  barrier: {fileID: 0}
+  barrier: {fileID: 1841078684}
   gameClearTimelineAsset: {fileID: 11400000, guid: 03d150e589ff3864aaedfd454088e40a,
     type: 2}
   gameFailTimelineAsset: {fileID: 11400000, guid: e49a5c947e39a2b4484e3984d1df5c9f,
@@ -15481,10 +15432,11 @@ GameObject:
   - component: {fileID: 1841078681}
   - component: {fileID: 1841078680}
   - component: {fileID: 1841078683}
+  - component: {fileID: 1841078687}
+  - component: {fileID: 1841078688}
   - component: {fileID: 1841078684}
   - component: {fileID: 1841078685}
   - component: {fileID: 1841078686}
-  - component: {fileID: 1841078687}
   m_Layer: 0
   m_Name: Barrier
   m_TagString: Barrier
@@ -15612,8 +15564,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bac0620a823c73241ae31431b0eb4125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxBarrierHp: 100
-  currentBarrierHp: 0
   hitAlertMinPitch: 0.8
   hitAlertMaxPitch: 1.2
 --- !u!82 &1841078685
@@ -15765,6 +15715,23 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1841078688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841078676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6aefae313d68b0548864a3d1d4968527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Current>k__BackingField: 0
+  <AliveOnAwake>k__BackingField: 1
+  <DestroyOnDead>k__BackingField: 0
+  <HP>k__BackingField: 100
+  <MaxHP>k__BackingField: 100
 --- !u!1 &1842016617
 GameObject:
   m_ObjectHideFlags: 0
@@ -16377,7 +16344,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 818826492}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayModeUI, Assembly-CSharp
         m_MethodName: BackToGame
         m_Mode: 1
@@ -17230,7 +17197,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 818826492}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayModeUI, Assembly-CSharp
         m_MethodName: ShowSettings
         m_Mode: 1
@@ -17614,16 +17581,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3597147056275830298, guid: c4470e8aeb8045146928b57ac42003d3,
+        type: 3}
+      propertyPath: m_Name
+      value: Zoom X
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363735122334206877, guid: c4470e8aeb8045146928b57ac42003d3,
+        type: 3}
+      propertyPath: m_Name
+      value: Zoom O
+      objectReference: {fileID: 0}
     - target: {fileID: 4974371061641033743, guid: c4470e8aeb8045146928b57ac42003d3,
         type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5535832198595570525, guid: c4470e8aeb8045146928b57ac42003d3,
-        type: 3}
-      propertyPath: zoomAim
-      value: 
-      objectReference: {fileID: 767775692}
     - target: {fileID: 6233810981628611509, guid: c4470e8aeb8045146928b57ac42003d3,
         type: 3}
       propertyPath: m_Name
@@ -17688,14 +17660,14 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 2895863796659139031, guid: c4470e8aeb8045146928b57ac42003d3, type: 3}
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 8972401413753173941, guid: c4470e8aeb8045146928b57ac42003d3,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1041663128}
     - targetCorrespondingSourceObject: {fileID: 8523546839793673579, guid: c4470e8aeb8045146928b57ac42003d3,
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 634054263}
-    - targetCorrespondingSourceObject: {fileID: 882943551434329615, guid: c4470e8aeb8045146928b57ac42003d3,
-        type: 3}
-      insertIndex: 0
-      addedObject: {fileID: 1041663128}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6233810981628611509, guid: c4470e8aeb8045146928b57ac42003d3,
         type: 3}
@@ -20657,7 +20629,6 @@ SceneRoots:
   - {fileID: 330585546}
   - {fileID: 832575519}
   - {fileID: 363153907}
-  - {fileID: 818826493}
   - {fileID: 2314120}
   - {fileID: 3449186520972139484}
   - {fileID: 911024142}

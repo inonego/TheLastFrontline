@@ -5,55 +5,39 @@ using UnityEngine;
 
 public class Barrier : MonoBehaviour
 {
-    private bool isActive;
-    
-    public Action onDamage;
-    public Action onDeath;
-    
-    public int maxBarrierHp = 100;
-    public int currentBarrierHp;
-
     [SerializeField] private float hitAlertMinPitch = 0.8f;
     [SerializeField] private float hitAlertMaxPitch = 1.2f;
 
     private new Animation animation;
     private AudioSource audioSource;
+    public Health health {get; private set; }
 
     private void Awake()
     {
         animation = GetComponent<Animation>();
         audioSource = GetComponent<AudioSource>();
+        health = GetComponent<Health>();
+
+        health.OnStateChanged += OnHealthStateChanged;
+        health.OnDamaged += OnDamaged;
     }
 
-    private void Start()
+    private void OnHealthStateChanged(Health.State state)
     {
-        isActive = true;
-        
-        currentBarrierHp = maxBarrierHp;
-
-        onDeath += () => GameManager.Instance.SetGameOver();
+        if (state == Health.State.Dead)
+        {
+            GameManager.Instance.SetGameOver();
+        }
     }
 
-    public void TakeDamage(int damage)
+    public void OnDamaged(int damage)
     {   
         PlayHit();
-        
-        currentBarrierHp = Mathf.Max(currentBarrierHp - damage, 0);
-        onDamage?.Invoke();
-        
-        if (currentBarrierHp == 0)
-        {
-            isActive = false;
-            
-            currentBarrierHp = -1;
-            
-            onDeath?.Invoke();
-        }
     }
     
     private void PlayHit()
     {
-        audioSource.pitch = Mathf.Lerp(hitAlertMinPitch, hitAlertMaxPitch, (float)currentBarrierHp / maxBarrierHp);
+        audioSource.pitch = Mathf.Lerp(hitAlertMinPitch, hitAlertMaxPitch, (float)health.HP / health.MaxHP);
 
         animation.Play();
         audioSource.Play();
@@ -61,13 +45,13 @@ public class Barrier : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        if (!isActive) return;
+        if (health.IsDead) return;
         
         if (other.gameObject.CompareTag("Enemy"))
         {
             Enemy enemy = other.GetComponentInParent<Enemy>();
             
-            TakeDamage(enemy.damage);
+            health.TakeDamage(enemy.damage);
             
             enemy.health.SetDead();
         }

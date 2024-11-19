@@ -17,8 +17,8 @@ public class PoolPack
     public int TotalCount => spawned.Count + pool.Count;
 
     private Queue<GameObject> pool = new Queue<GameObject>();
+    
     private List<GameObject> spawned = new List<GameObject>();
-
     public IReadOnlyList<GameObject> Spawned => spawned;
 
     public void Init(Transform spawnedToParent)

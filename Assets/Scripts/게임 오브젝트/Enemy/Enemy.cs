@@ -55,6 +55,8 @@ public class Enemy : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (health.IsDead) return;
+
         if (collision.gameObject.CompareTag("Bullet")) // 충돌한 객체가 총알인지 확인
         {
             health.TakeDamage(1); // 피해를 입음

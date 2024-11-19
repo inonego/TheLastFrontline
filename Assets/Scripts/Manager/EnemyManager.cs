@@ -13,12 +13,7 @@ public class EnemyManager : MonoSingleton<EnemyManager>
         {
             Destroy(enemy, deleteTime);
         }
-
-        ResetList();
-    }
-
-    public void ResetList()
-    {
+        
         enemies.Clear();
     }
 }
