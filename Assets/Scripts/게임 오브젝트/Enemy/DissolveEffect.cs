@@ -37,9 +37,9 @@ public class DissolveEffect : MonoBehaviour
         }        
     }
 
-    private void OnHealthStateChanged(Health.State state)
+    private void OnHealthStateChanged(Health.StateChangedEventArgs e)
     {
-        if(state == Health.State.Dead)
+        if(e.Current == Health.State.Dead)
         { 
             if (useOnDead)
             {

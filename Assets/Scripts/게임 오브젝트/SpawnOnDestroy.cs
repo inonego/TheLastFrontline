@@ -8,8 +8,11 @@ public class SpawnOnDestroy : MonoBehaviour
     public GameObject prefab;
 
     private void OnDestroy()
-    {
-        Spawn();
+    { 
+        if (gameObject.scene.isLoaded) 
+        {
+            Spawn();
+        }
     }
 
     public void Spawn()

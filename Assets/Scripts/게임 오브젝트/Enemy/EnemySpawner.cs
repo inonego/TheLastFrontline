@@ -1,18 +1,23 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class EnemySpawner : MonoBehaviour
-{
-    public int phase=1;
-    public List<GameObject> enemyPrefabs;
-    public List<float> spawnChances; //각 프리팹 스폰 확률?
-                                     //(0~1 사이 값으로 합이 무조건 1이 돼야함
+{   
+    [Serializable]
+    public class SpawnInfo
+    {
+        public GameObject prefab;
+        public float chance;
+    }
+
+    public List<SpawnInfo> spawnInfoList = new List<SpawnInfo>(); 
+
     public float minTimeBetweenSpawns;
     public float maxTimeBetweenSpawns;
     private float spawnRate = 1.5f;
-    private TimeCounter respawnCounter;
+    private TimeCounter respawnCounter = new TimeCounter();
 
     // 스폰 공간 범위 설정
     public GameObject rangeObject;
@@ -20,39 +25,42 @@ public class EnemySpawner : MonoBehaviour
     
     void Start()
     {
-        respawnCounter = new TimeCounter();
-
         rangeCollider = rangeObject.GetComponent<BoxCollider>();
-        respawnCounter = new TimeCounter();
-        SpawnerManager.Instance.SpawnerAdd(phase, this);
-
     }
+
     void Update()
     {
         respawnCounter.Update();
+
         if(respawnCounter.WasEndedThisFrame())
+        {
             Spawn();
+        }
     }
 
-    public void ActivationSpawner()//스포너 활성화
+    public void Activate()//스포너 활성화
     {
         Spawn();
     }
 
-    public void InactivationSpawner()//스포너 비활성화
+    public void Deactivate()//스포너 비활성화
     {
         respawnCounter.Stop();
     }
     
     void Spawn()
     {
-
         // GetRandomEnemyPrefab => 여기서 프리팹 확률에 따라서 선택
         GameObject enemyPrefab = GetRandomEnemyPrefab();
-        Instantiate(enemyPrefab, ReturnRandomPosition(), transform.rotation);
+
+        if (gameObject.scene.isLoaded) 
+        {
+            Instantiate(enemyPrefab, ReturnRandomPosition(), transform.rotation);
+        }
         
         // 스폰 후에 다시 respawnCounter 시작
         spawnRate = Random.Range(minTimeBetweenSpawns, maxTimeBetweenSpawns);
+
         respawnCounter.Start(spawnRate); // 스폰 후 다음 스폰 카운트다운 시작
     }
     
@@ -62,17 +70,17 @@ public class EnemySpawner : MonoBehaviour
         float randomValue = Random.value; // 0 ~ 1 사이 확률 float 값
         float cumulativeProbability = 0f;
 
-        for (int i = 0; i < enemyPrefabs.Count; i++)
+        for (int i = 0; i < spawnInfoList.Count; i++)
         {
-            cumulativeProbability += spawnChances[i];
+            cumulativeProbability += spawnInfoList[i].chance;
+
             if (randomValue <= cumulativeProbability)
             {
-                return enemyPrefabs[i];
+                return spawnInfoList[i].prefab;
             }
         }
 
-        // 확률 계산 잘못됨 => 기본값으로 첫번째 프리팹 반환
-        return enemyPrefabs[0];
+        return null;
     }
     
     // 스폰 범위에서 랜덤한 위치 반환

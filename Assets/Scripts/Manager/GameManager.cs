@@ -1,30 +1,36 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
-using TMPro;
 using UnityCommunity.UnitySingleton;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.InputSystem;
+using UnityEngine.Timeline;
 using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
-using UnityEngine.Timeline;
 
 public enum GameState
 {
     Idle, Running, Paused, Finished
 }
 
-public class GameManager : PersistentMonoSingleton<GameManager>
+[Serializable]
+public class Phase
+{
+    public float time;
+}
+
+public class GameManager : MonoSingleton<GameManager>
 {
     public GameState state = GameState.Idle;
     
+    public List<Phase> phaseList = new List<Phase>();
+
+    public int currentPhase { get; private set; }= 0;
+
     public float gameTime = 180f;
-    public float RemainTime => playTimeCounter.GetTimeLeft();
-    public float ElapsedTime => playTimeCounter.GetElapsedTime();
 
     private readonly TimeCounter playTimeCounter = new TimeCounter(); //플레이 타이머
 
-    [SerializeField] private Barrier barrier;
+    public float RemainTime => playTimeCounter.GetTimeLeft();
+    public float ElapsedTime => playTimeCounter.GetElapsedTime();
     
     [SerializeField] private TimelineAsset gameClearTimelineAsset;
     [SerializeField] private TimelineAsset gameFailTimelineAsset;
@@ -34,8 +40,15 @@ public class GameManager : PersistentMonoSingleton<GameManager>
     protected override void Awake()
     {
         base.Awake();
+        
+        playableDirector = GetComponentInChildren<PlayableDirector>();
     }
     
+    private void OnDestroy()
+    {
+        AudioManager.Instance.MuteAudioGroup(false);
+    }
+
     private void Update()
     {
         if (state == GameState.Running)
@@ -46,33 +59,9 @@ public class GameManager : PersistentMonoSingleton<GameManager>
             {
                 SetGameClear();
             }
+            
+            ProcessPhase();
         }
-    }
-    
-    // 씬 로드 시 초기화
-    private void OnEnable()
-    {
-        SceneManager.sceneLoaded += OnSceneLoaded;
-        SceneManager.sceneUnloaded += OnSceneUnloaded;
-    }
-
-    private void OnDisable()
-    {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-        SceneManager.sceneUnloaded -= OnSceneUnloaded;
-    }
-
-    // 씬이 새로 로드될 때 초기화 수행
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        playableDirector = GameObject.Find("게임 컷씬")?.GetComponent<PlayableDirector>();
-        
-        ResetGame();
-    }
-
-    private void OnSceneUnloaded(Scene scene)
-    {
-        AudioManager.Instance.MuteAudioGroup(false);
     }
 
     public void GoToScene(string sceneName)
@@ -80,21 +69,15 @@ public class GameManager : PersistentMonoSingleton<GameManager>
         SceneManager.LoadScene(sceneName);
     }
     
-    // 게임 초기화 메서드
-    private void ResetGame()
-    {
-        FinishGame();
-        
-        state = GameState.Idle;
-        
-        Time.timeScale = 1f;
-    }
-
     public void StartGame()
     {
         state = GameState.Running;
-        
-        SpawnerManager.Instance.SpawnerStart(); //스포너 활성화
+
+        Time.timeScale = 1f;
+
+        // 플레이 관련 초기화
+        SetPhase(0);
+
         playTimeCounter.Start(gameTime); //플레이 타이머 시작
     }
 
@@ -118,8 +101,6 @@ public class GameManager : PersistentMonoSingleton<GameManager>
         
         playTimeCounter.Stop(); //플레이 타이머 종료
         EnemyManager.Instance.DeleteAllEnemies(1.5f); //적 모두 삭제
-        SpawnerManager.Instance.SpawnerStop(); //스포너 
-        SpawnerManager.Instance.ResetList();
     }
     
     public void SetGameClear()
@@ -134,5 +115,26 @@ public class GameManager : PersistentMonoSingleton<GameManager>
         FinishGame();
 
         playableDirector.Play(gameFailTimelineAsset);
+    }
+
+    private void SetPhase(int next)
+    {
+        SpawnerManager.Instance.SpawnerPackList[currentPhase].Stop();
+
+        currentPhase = next;
+
+        SpawnerManager.Instance.SpawnerPackList[currentPhase].Start();
+    }
+
+    private void ProcessPhase()
+    {
+        float time = playTimeCounter.GetElapsedTime();
+
+        int nextPhase = currentPhase + 1;
+
+        if (nextPhase < phaseList.Count && time >= phaseList[nextPhase].time)
+        {
+            SetPhase(nextPhase);
+        }
     }
 }

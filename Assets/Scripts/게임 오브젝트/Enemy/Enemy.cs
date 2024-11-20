@@ -63,9 +63,9 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private void OnHealthStateChanged(Health.State state)
+    private void OnHealthStateChanged(Health.StateChangedEventArgs e)
     {
-        if (state == Health.State.Dead)
+        if (e.Current == Health.State.Dead)
         {
             foreach (Collider collider in colliders)
             {

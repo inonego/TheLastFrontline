@@ -15,7 +15,6 @@ public class PlayModeUI : MonoBehaviour
     private float scriptTime = 0f; // 각 스크립트 보여주는 시간
     private bool isFadingOut = false; // Panel 페이드 아웃 중인지 확인
     private float fadeDuration = 2f; // 페이드 인/아웃 시간
-    private int currentPhase = 0; // 현재 phase
     
     [Header("Timer & Phase UI")]
     public TextMeshProUGUI timeText;
@@ -41,7 +40,7 @@ public class PlayModeUI : MonoBehaviour
     public GameObject gamePanel;
     public GameObject pausePanel;
     public GameObject settingsPanel;
-    private InputAction pauseAction => InputManager.Instance.inputActions[InputType.Pause].action;
+    private InputAction pauseAction => InGameInputManager.Instance.inputActions[InGameInputManager.InputType.Pause].action;
     public bool isPaused { get; private set; }
 
     // Start is called before the first frame update
@@ -67,7 +66,7 @@ public class PlayModeUI : MonoBehaviour
     {
         if (pauseAction.IsPressed() && !isPaused)
         {
-            PauseGame();
+            ShowPauseMenu();
         }
 
         ShowScriptText();
@@ -91,20 +90,9 @@ public class PlayModeUI : MonoBehaviour
         
         BulletCount.text = $"{gun.BulletCount}/{gun.MaxBulletCount}";
 
-        if (GameManager.Instance.ElapsedTime < 60f)
-        {
-            phaseText.text = "Phase 1";
-        }
-        else if (GameManager.Instance.ElapsedTime < 120f)
-        {
-            phaseText.text = "Phase 2";
-        }
-        else
-        {
-            phaseText.text = "Phase 3";
-        }
+        phaseText.text = $"Phase { GameManager.Instance.currentPhase + 1 }";
 
-        int min = (int)(GameManager.Instance.RemainTime/ 60f);
+        int min = (int)(GameManager.Instance.RemainTime / 60f);
         int sec = (int)(GameManager.Instance.RemainTime % 60);
 
         timeText.text = string.Format("{0:00}:{1:00}", min, sec);
@@ -118,77 +106,60 @@ public class PlayModeUI : MonoBehaviour
         {
             ScriptText.text = "";
         }
-        else if (nowTime < 60f) // phase 1
+            
+        if (nowTime < 5f)
         {
-            currentPhase = 1;
-
-            if (nowTime < 5f)
-            {
-                ScriptText.text = "The detonation device has been activated, but it's set to trigger in 5 minutes for safety.";
-            }
-            else if (nowTime < 8f)
-            {
-                ScriptText.text = "I have to hold off these monsters for the next 5 minutes.";
-            }
-            else if (nowTime < 11f)
-            {
-                ScriptText.text = "… My legs are shattered. I can barely move.";
-            }
-            else if (nowTime < 14f)
-            {
-                ScriptText.text = "Damn it…";
-            }
-            else if (!isFadingOut) // Panel 페이드 아웃
-            {
-                StartFadeOut();
-            }
+            ScriptText.text = "The detonation device has been activated, but it's set to trigger in 5 minutes for safety.";
         }
-        else if (nowTime < 120f) // phase 2
+        else if (nowTime < 8f)
         {
-            if (currentPhase != 2)
-            {
-                StartNewPhase(2);
-            }
-            if (nowTime < 65f)
-            {
-                ScriptText.text = "More enemies are closing in.";
-            }
-            else if (nowTime < 68f)
-            {
-                ScriptText.text = "What are these things? What are they really?";
-            }
-            else if (nowTime < 71f)
-            {
-                ScriptText.text = "What is their purpose for invading Earth over and over again?";
-            }
-            else if (!isFadingOut)
-            {
-                StartFadeOut();
-            }
+            ScriptText.text = "I have to hold off these monsters for the next 5 minutes.";
         }
-        else // phase 3
+        else if (nowTime < 11f)
         {
-            if (currentPhase != 3)
-            {
-                StartNewPhase(3);
-            }
-            if (nowTime < 125f)
-            {
-                ScriptText.text = "This is an onslaught on a completely different scale.";
-            }
-            else if (nowTime < 128f)
-            {
-                ScriptText.text = "This must be their final assault. If I can hold them off this time, victory will be ours.";
-            }
-            else if (!isFadingOut)
-            {
-                StartFadeOut();
-            }
+            ScriptText.text = "… My legs are shattered. I can barely move.";
+        }
+        else if (nowTime < 14f)
+        {
+            ScriptText.text = "Damn it…";
+        }
+        else if (!isFadingOut) // Panel 페이드 아웃
+        {
+            StartFadeOut();
+        }
+        if (nowTime < 65f)
+        {
+            ScriptText.text = "More enemies are closing in.";
+        }
+        else if (nowTime < 68f)
+        {
+            ScriptText.text = "What are these things? What are they really?";
+        }
+        else if (nowTime < 71f)
+        {
+            ScriptText.text = "What is their purpose for invading Earth over and over again?";
+        }
+        else if (!isFadingOut)
+        {
+            StartFadeOut();
+        }
+        if (nowTime < 125f)
+        {
+            ScriptText.text = "This is an onslaught on a completely different scale.";
+        }
+        else if (nowTime < 128f)
+        {
+            ScriptText.text = "This must be their final assault. If I can hold them off this time, victory will be ours.";
+        }
+        else if (!isFadingOut)
+        {
+            StartFadeOut();
         }
 
         if (isFadingOut)
         {
             float fadeOutTime = scriptTime - fadeDuration;
+
             if (fadeOutTime >= fadeDuration)
             {
                 isFadingOut = false; // 페이드 아웃 완료
@@ -205,33 +176,20 @@ public class PlayModeUI : MonoBehaviour
         scriptTime = fadeDuration; // 페이드 아웃 시작 시간 설정
     }
 
-    void StartNewPhase(int phase)
+    public void ShowPauseMenu()
     {
-        currentPhase = phase;
-        scriptTime = 0f; // 새로운 phase -> 시간 초기화
-        isFadingOut = false;
-        ScriptPanel.SetActive(true); // 대화창 활성화
+        isPaused = true;
+        pausePanel.SetActive(true);
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
-    public void PauseGame()
+    public void HidePauseMenu()
     {
-        if (!isPaused)
-        {
-            pausePanel.SetActive(true);
-            Time.timeScale = 0f; // 게임 중단 (시간 정지)
-            isPaused = true;
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-        }
-    }
-
-    public void ResumeGame()
-    {
+        isPaused = false;
         pausePanel.SetActive(false);
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-        Time.timeScale = 1f; // 게임 재개 (시간 정상)
-        isPaused = false;
     }
 
     public void ShowSettings()
@@ -254,8 +212,6 @@ public class PlayModeUI : MonoBehaviour
 
     public void MainMenu()
     {
-        EnemyManager.Instance.DeleteAllEnemies();
-        SpawnerManager.Instance.ResetList();
         pausePanel.SetActive(false);
         SceneManager.LoadScene("Scenes/TitleScene", LoadSceneMode.Single);
     }

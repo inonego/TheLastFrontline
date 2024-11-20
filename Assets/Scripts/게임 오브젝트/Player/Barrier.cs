@@ -22,15 +22,15 @@ public class Barrier : MonoBehaviour
         health.OnDamaged += OnDamaged;
     }
 
-    private void OnHealthStateChanged(Health.State state)
+    private void OnHealthStateChanged(Health.StateChangedEventArgs e)
     {
-        if (state == Health.State.Dead)
+        if (e.Current == Health.State.Dead)
         {
             GameManager.Instance.SetGameOver();
         }
     }
 
-    public void OnDamaged(int damage)
+    public void OnDamaged(Health.DamagedEventArgs e)
     {   
         PlayHit();
     }
