@@ -9,9 +9,9 @@ public class GunControllerPC : MonoBehaviour
     private Aim aim;
     private ProceduralRecoil proceduralRecoil;
     
-    private InputAction zoomInputAction     => InGameInputManager.Instance.inputActions[InGameInputManager.InputType.Zoom].action;
-    private InputAction fireInputAction     => InGameInputManager.Instance.inputActions[InGameInputManager.InputType.Fire].action;
-    private InputAction reloadInputAction   => InGameInputManager.Instance.inputActions[InGameInputManager.InputType.Reload].action;
+    private InputAction zoomInputAction     => InputManager_InGame.Instance.inputActions[InputManager_InGame.InputType.Zoom].action;
+    private InputAction fireInputAction     => InputManager_InGame.Instance.inputActions[InputManager_InGame.InputType.Fire].action;
+    private InputAction reloadInputAction   => InputManager_InGame.Instance.inputActions[InputManager_InGame.InputType.Reload].action;
 
     private void Awake()
     {

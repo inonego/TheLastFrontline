@@ -6,10 +6,10 @@ using UnityEngine.Audio;
 
 public class AudioManager : MonoSingleton<AudioManager>
 {
-    public AudioMixer audioMixer;
+    public AudioMixer AudioMixer;
     
     public void MuteAudioGroup(bool value)
     {
-        audioMixer.SetFloat("BaseVolume", !value ? 0f : -80f);
+        AudioMixer.SetFloat("BaseVolume", !value ? 0f : -80f);
     }
 }

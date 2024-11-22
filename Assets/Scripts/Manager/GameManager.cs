@@ -14,27 +14,28 @@ public enum GameState
 [Serializable]
 public class Phase
 {
-    public float time;
+    public float Time;
 }
 
 public class GameManager : MonoSingleton<GameManager>
 {
-    public GameState state = GameState.Idle;
+    public GameState State = GameState.Idle;
     
-    public List<Phase> phaseList = new List<Phase>();
+    public float GameTime = 180f;
 
-    public int currentPhase { get; private set; }= 0;
+    public List<Phase> PhaseList = new List<Phase>();
 
-    public float gameTime = 180f;
+    public int CurrentPhase { get; private set; } = 0;
+
+    [Header("Cut Scenes")]
+    [SerializeField] private TimelineAsset gameClearTimelineAsset;
+    [SerializeField] private TimelineAsset gameFailTimelineAsset;
 
     private readonly TimeCounter playTimeCounter = new TimeCounter(); //플레이 타이머
 
     public float RemainTime => playTimeCounter.GetTimeLeft();
     public float ElapsedTime => playTimeCounter.GetElapsedTime();
     
-    [SerializeField] private TimelineAsset gameClearTimelineAsset;
-    [SerializeField] private TimelineAsset gameFailTimelineAsset;
-
     private PlayableDirector playableDirector;
 
     protected override void Awake()
@@ -51,7 +52,7 @@ public class GameManager : MonoSingleton<GameManager>
 
     private void Update()
     {
-        if (state == GameState.Running)
+        if (State == GameState.Running)
         {
             playTimeCounter.Update();
             
@@ -61,6 +62,12 @@ public class GameManager : MonoSingleton<GameManager>
             }
             
             ProcessPhase();
+
+            Time.timeScale = 1f;
+        }
+        else if (State == GameState.Paused)
+        {    
+            Time.timeScale = 0f;
         }
     }
 
@@ -71,33 +78,31 @@ public class GameManager : MonoSingleton<GameManager>
     
     public void StartGame()
     {
-        state = GameState.Running;
-
-        Time.timeScale = 1f;
+        State = GameState.Running;
 
         // 플레이 관련 초기화
         SetPhase(0);
 
-        playTimeCounter.Start(gameTime); //플레이 타이머 시작
+        playTimeCounter.Start(GameTime); //플레이 타이머 시작
     }
 
     public void PauseGame()
     {
-        state = GameState.Paused;
-        
-        Time.timeScale = 0f;
+        State = GameState.Paused;
+
+        playableDirector.Pause();
     }
 
     public void ResumeGame()
     {
-        state = GameState.Running;
+        State = GameState.Running;
 
-        Time.timeScale = 1f;
+        playableDirector.Resume();
     }
     
     public void FinishGame()
     {
-        state = GameState.Finished;
+        State = GameState.Finished;
         
         playTimeCounter.Stop(); //플레이 타이머 종료
         EnemyManager.Instance.DeleteAllEnemies(1.5f); //적 모두 삭제
@@ -119,20 +124,20 @@ public class GameManager : MonoSingleton<GameManager>
 
     private void SetPhase(int next)
     {
-        SpawnerManager.Instance.SpawnerPackList[currentPhase].Stop();
+        SpawnerManager.Instance.SpawnerPackList[CurrentPhase].Stop();
 
-        currentPhase = next;
+        CurrentPhase = next;
 
-        SpawnerManager.Instance.SpawnerPackList[currentPhase].Start();
+        SpawnerManager.Instance.SpawnerPackList[CurrentPhase].Start();
     }
 
     private void ProcessPhase()
     {
         float time = playTimeCounter.GetElapsedTime();
 
-        int nextPhase = currentPhase + 1;
+        int nextPhase = CurrentPhase + 1;
 
-        if (nextPhase < phaseList.Count && time >= phaseList[nextPhase].time)
+        if (nextPhase < PhaseList.Count && time >= PhaseList[nextPhase].Time)
         {
             SetPhase(nextPhase);
         }

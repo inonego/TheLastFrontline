@@ -5,15 +5,15 @@ using UnityEngine;
 
 public class EnemyManager : MonoSingleton<EnemyManager>
 {
-    public List<GameObject> enemies = new List<GameObject>();
+    public List<GameObject> Enemies = new List<GameObject>();
     
     public void DeleteAllEnemies(float deleteTime = 0f)
     {
-        foreach (var enemy in enemies)
+        foreach (var enemy in Enemies)
         {
             Destroy(enemy, deleteTime);
         }
         
-        enemies.Clear();
+        Enemies.Clear();
     }
 }

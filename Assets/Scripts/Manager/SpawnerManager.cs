@@ -5,11 +5,11 @@ using UnityCommunity.UnitySingleton;
 [Serializable]
 public class SpawnerPack
 {
-    public List<EnemySpawner> spawners;
+    public List<EnemySpawner> Spawners;
 
     public void Start()
     {
-        foreach (var spawner in spawners)
+        foreach (var spawner in Spawners)
         {
             spawner.Activate();
         }
@@ -17,7 +17,7 @@ public class SpawnerPack
 
     public void Stop()
     {
-        foreach (var spawner in spawners)
+        foreach (var spawner in Spawners)
         {
             spawner.Deactivate();
         }

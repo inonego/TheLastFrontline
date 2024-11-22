@@ -27,17 +27,17 @@ public class Enemy : MonoBehaviour
 
     private void OnEnable()
     {
-        if(EnemyManager.Instance != null)
+        if (gameObject.scene.isLoaded)
         {
-            EnemyManager.Instance.enemies.Add(gameObject); // 적을 적 관리자의 목록에 추가
+            EnemyManager.Instance.Enemies.Remove(gameObject); // 적이 파괴될 때 목록에서 제거
         }
     }
 
     private void OnDisable()
     {
-        if(EnemyManager.Instance != null)
+        if (gameObject.scene.isLoaded)
         {
-            EnemyManager.Instance.enemies.Remove(gameObject); // 적이 파괴될 때 목록에서 제거
+            EnemyManager.Instance.Enemies.Remove(gameObject); // 적이 파괴될 때 목록에서 제거
         }
     }
 
