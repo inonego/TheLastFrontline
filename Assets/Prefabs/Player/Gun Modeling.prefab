@@ -10,7 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6711731499391130660}
   - component: {fileID: 7669637946851883534}
+  - component: {fileID: 7883973805654318925}
   - component: {fileID: 8453249558852266623}
+  - component: {fileID: 8329415529596710755}
+  - component: {fileID: 2733752297579652671}
   - component: {fileID: 3349509332659135004}
   m_Layer: 0
   m_Name: Gun Modeling
@@ -48,7 +51,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9ba4ea8230f8d146b9c0d625b77bf4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _packList: []
+  _packList:
+  - Prefab: {fileID: 1009853033701157034, guid: 515832d7b30c63149ba94cf464e29391,
+      type: 3}
+    InitalCount: 1
+--- !u!114 &7883973805654318925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695770568420625191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43a5f17fa4e2f604aa251120c7e5a26d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 0}
 --- !u!114 &8453249558852266623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,22 +80,56 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f45d1b8f74cdc3f4dae0ab3ea0a2be2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxBullet: 50
-  delayTime: 0.09
-  reloadTime: 3
-  bullet: {fileID: 1009853033701157034, guid: 515832d7b30c63149ba94cf464e29391, type: 3}
-  shootPoint: {fileID: 341642822265985608}
-  fireSound: {fileID: 8300000, guid: eb92ae29400346243bda23c1c9a0b9f9, type: 3}
-  reloadSound: {fileID: 8300000, guid: c96164ae1c3d76748b4b167a9fa6257c, type: 3}
-  muzzleFlashMaterialList:
+  Bullet: {fileID: 1009853033701157034, guid: 515832d7b30c63149ba94cf464e29391, type: 3}
+  ShootPoint: {fileID: 341642822265985608}
+  BulletCount: 50
+  MaxBulletCount: 50
+  DelayTime: 0.1
+  ReloadTime: 2.5
+  FireSound: {fileID: 8300000, guid: eb92ae29400346243bda23c1c9a0b9f9, type: 3}
+  ReloadSound: {fileID: 8300000, guid: c96164ae1c3d76748b4b167a9fa6257c, type: 3}
+  MuzzleFlashMaterialList:
   - {fileID: 2100000, guid: 286ee5f053639c640b19c8273ceb12f0, type: 2}
   - {fileID: 2100000, guid: 4f7942f3ec944554d843dc886a016a11, type: 2}
   - {fileID: 2100000, guid: e130b61c54a674f4b999b36c352dfa19, type: 2}
   - {fileID: 2100000, guid: 9dca117b85444fb41a3dc042be69f22a, type: 2}
   - {fileID: 2100000, guid: d996449a87a3373448cdfd9b8b0bb67b, type: 2}
-  currentBullet: 0
-  isDelaying: 0
-  isReloading: 0
+--- !u!114 &8329415529596710755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695770568420625191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 477e464a471a32a499feb6b409f30bd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SwapSpeed: 10
+  views:
+  - Point: {fileID: 0}
+    FocalLength: 0.32
+  - Point: {fileID: 0}
+    FocalLength: 0.84
+--- !u!114 &2733752297579652671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695770568420625191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a03e29d1f59d0fb488c500e109d56cc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lockPosition: 0
+  lockRotation: 0
+  recoil: {x: -2, y: 2, z: 5}
+  kickBackZ: 0.2
+  snappiness: 5
+  returnAmount: 8
 --- !u!82 &3349509332659135004
 AudioSource:
   m_ObjectHideFlags: 0

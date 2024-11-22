@@ -6,15 +6,23 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/TitleScene.unity
+    path: Assets/Scenes/PC/TitleScene.unity
     guid: 735396eb4044b624f83d3b554cc19407
   - enabled: 1
-    path: Assets/Scenes/MainScene.unity
+    path: Assets/Scenes/PC/MainScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Scenes/EndingCreditScene.unity
+    path: Assets/Scenes/PC/EndingCreditScene.unity
     guid: 4fe4bfdff40353f46a25daa8d65b0733
   m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 897782c96c959b54b9c6572a6dcb4df4,
+      type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: 68751891ffe3de74cb9c354acd81b486,
+      type: 2}
+    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 1226da4bb7da1a7489cc18021e06206f,
+      type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 3324f91b92975b141835b693ae89597d,
+      type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: de674be4be0cc454dad8c5d233a0c192,
       type: 2}
   m_UseUCBPForAssetBundles: 0
