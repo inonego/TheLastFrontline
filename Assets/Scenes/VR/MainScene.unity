@@ -6387,6 +6387,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blaster
       objectReference: {fileID: 0}
+    - target: {fileID: 3349509332659135004, guid: 2a3f8c202f57a8c419e39a44d2a364c0,
+        type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0.855
+      objectReference: {fileID: 0}
     - target: {fileID: 6711731499391130660, guid: 2a3f8c202f57a8c419e39a44d2a364c0,
         type: 3}
       propertyPath: m_LocalPosition.x

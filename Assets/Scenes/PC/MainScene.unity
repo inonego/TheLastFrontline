@@ -252,6 +252,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 796189926}
   - {fileID: 888214589}
   - {fileID: 2040944227}
   - {fileID: 761378756}
@@ -6015,6 +6016,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 790484099}
   m_CullTransparentMesh: 1
+--- !u!1 &796189925
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 796189926}
+  m_Layer: 5
+  m_Name: CVLikeTracker Bounding Box Group
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &796189926
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796189925}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2314120}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &803449455
 GameObject:
   m_ObjectHideFlags: 0
@@ -14786,6 +14822,7 @@ GameObject:
   - component: {fileID: 1757636707}
   - component: {fileID: 1757636715}
   - component: {fileID: 1757636716}
+  - component: {fileID: 1757636717}
   m_Layer: 0
   m_Name: "\uAC8C\uC784 \uB9E4\uB2C8\uC800"
   m_TagString: Untagged
@@ -14807,7 +14844,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   State: 0
   GameTime: 180
-  PhaseList: []
+  PhaseList:
+  - Time: 0
+  - Time: 60
+  - Time: 120
   gameClearTimelineAsset: {fileID: 11400000, guid: 03d150e589ff3864aaedfd454088e40a,
     type: 2}
   gameFailTimelineAsset: {fileID: 11400000, guid: e49a5c947e39a2b4484e3984d1df5c9f,
@@ -14857,6 +14897,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   KeyFrames: []
+--- !u!114 &1757636717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757636706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8049797e96004984385841fd88ac9cda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UpdateInterval: 0
+  MaxDetectionCount: 3
+  DetectionRadiusInScreenSpace: 500
+  InitialUIObjectCount: 3
+  BoundingBoxPrefab: {fileID: 8929442792830182813, guid: 705ee6b86065f0448b30b37aea2e27d0,
+    type: 3}
+  BoundingBoxParent: {fileID: 796189926}
 --- !u!1 &1782302847
 GameObject:
   m_ObjectHideFlags: 0
@@ -20008,7 +20067,7 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: PC
+  m_DefaultControlScheme: 
   m_DefaultActionMap: InGame
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}

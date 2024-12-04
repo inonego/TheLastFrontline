@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [RequireComponent(typeof(Health), typeof(Rigidbody))]
@@ -16,12 +17,20 @@ public class Enemy : MonoBehaviour
     public new Rigidbody rigidbody { get; private set; }  // 물리적 특성을 위한 Rigidbody
     private Collider[] colliders;
 
+    private MeshRenderer[] meshRenderers;
+    private SkinnedMeshRenderer[] skinnedMeshRenderers;
+    
+    public bool isVisible => meshRenderers.Any(meshRenderer => meshRenderer != null && meshRenderer.isVisible) || skinnedMeshRenderers.Any(skinnedMeshRenderer => skinnedMeshRenderer != null && skinnedMeshRenderer.isVisible);
+
     private void Awake()
     {
         health = GetComponent<Health>(); // Health 컴포넌트 가져오기
         rigidbody = GetComponent<Rigidbody>(); // Rigidbody 컴포넌트 가져오기
         colliders = GetComponentsInChildren<Collider>();
-        
+
+        meshRenderers = GetComponentsInChildren<MeshRenderer>();
+        skinnedMeshRenderers = GetComponentsInChildren<SkinnedMeshRenderer>();
+
         health.OnStateChanged += OnHealthStateChanged;
     }
 
@@ -29,7 +38,7 @@ public class Enemy : MonoBehaviour
     {
         if (gameObject.scene.isLoaded)
         {
-            EnemyManager.Instance.Enemies.Remove(gameObject); // 적이 파괴될 때 목록에서 제거
+            EnemyManager.Instance.Enemies.Add(this); // 적이 파괴될 때 목록에서 제거
         }
     }
 
@@ -37,7 +46,7 @@ public class Enemy : MonoBehaviour
     {
         if (gameObject.scene.isLoaded)
         {
-            EnemyManager.Instance.Enemies.Remove(gameObject); // 적이 파괴될 때 목록에서 제거
+            EnemyManager.Instance.Enemies.Remove(this); // 적이 파괴될 때 목록에서 제거
         }
     }
 

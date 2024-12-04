@@ -95,7 +95,7 @@ public class DissolveEffect : MonoBehaviour
 
     private void SetDissolveMaterial()
     {
-        if(dissolveMaterial == null) return;
+        if (dissolveMaterial == null) return;
 
         foreach (var meshRenderer in meshRenderers)
         {
