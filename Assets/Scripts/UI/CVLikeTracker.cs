@@ -13,9 +13,10 @@ public class CVLikeTracker : MonoBehaviour
     public float DetectionRadiusInScreenSpace = 10f;  
 
     [Header("UI")]
+    public Vector3 UIScale = Vector3.one;
     public int InitialUIObjectCount = 3;
     public GameObject BoundingBoxPrefab; 
-    public Transform BoundingBoxParent;
+    public RectTransform BoundingBoxParent;
 
     public Camera MainCamera { get; private set; } = null;
     
@@ -210,6 +211,8 @@ public class CVLikeTracker : MonoBehaviour
                 ScreenSpaceDistance = screenSpaceDistance,
                 WorldSpaceDistance = worldSpaceDistance
             };
+
+            UI.transform.localScale = UIScale;
 
             UI.SetTrackInfo(info);
         }

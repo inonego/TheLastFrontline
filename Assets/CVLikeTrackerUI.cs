@@ -26,7 +26,7 @@ public class CVLikeTrackerUI : MonoBehaviour
     {
         if (trackInfo == null) return;
 
-        transform.position = trackInfo.Value.ScreenPosition;
+        transform.localPosition = trackInfo.Value.ScreenPosition;
 
         DistanceUI.text = $"{Mathf.Round(trackInfo.Value.WorldSpaceDistance)}M";
         HealthUI.text = $"{trackInfo.Value.Enemy.health.HP}";
