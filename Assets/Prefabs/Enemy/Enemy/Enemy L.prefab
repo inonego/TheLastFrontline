@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -1734655220980249064}
   - component: {fileID: 6684932336843493439}
   - component: {fileID: 3755986306116751399}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Enemy L
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -211,7 +211,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a60afe692581f1e40ac5e703cf4bab8c,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

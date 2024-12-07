@@ -1,11 +1,13 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
+
+using inonego;
 
 using Random = UnityEngine.Random;
 
-[RequireComponent(typeof(Pool))]
+[RequireComponent(typeof(PoolPack))]
 public class BackgroundExplosion : MonoBehaviour
 {
     [Header("General")]
@@ -28,11 +30,11 @@ public class BackgroundExplosion : MonoBehaviour
 
     private Coroutine workingCoroutine;
 
-    private Pool pool;
+    private PoolPack poolPack;
 
     private void Awake()
     {
-        pool = GetComponent<Pool>();
+        poolPack = GetComponent<PoolPack>();
     }
 
     private void Start()
@@ -54,9 +56,9 @@ public class BackgroundExplosion : MonoBehaviour
 
     public void MakeExplosion(Vector3 position)
     {
-        int index = Random.Range(0, pool.packList.Count);
+        int index = Random.Range(0, poolPack.PoolList.Count);
 
-        GameObject GO = pool.packList[index].Spawn();
+        GameObject GO = poolPack.PoolList[index].Spawn();
 
         GO.transform.position = position;
 

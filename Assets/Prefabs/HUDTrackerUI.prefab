@@ -476,7 +476,7 @@ GameObject:
   - component: {fileID: 8299230551357355394}
   - component: {fileID: 6922209342345121763}
   m_Layer: 5
-  m_Name: CVLikeTrackerUI
+  m_Name: HUDTrackerUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -528,6 +528,6 @@ MonoBehaviour:
   HealthUI: {fileID: 8029410473309516086}
   LineRenderer: {fileID: 3527115862730600580}
   UIParent: {fileID: 7392599475573255438}
-  RandomRange: {x: 80, y: 120}
-  LineLengthOffset: -25
-  SlerpSpeed: 8
+  LineLengthStartOffset: 25
+  LineLengthEndOffset: -25
+  LerpSpeed: 0

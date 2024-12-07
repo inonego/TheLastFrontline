@@ -23,12 +23,12 @@ public class EnemySpawner : MonoBehaviour
     public GameObject rangeObject;
     private BoxCollider rangeCollider;
     
-    void Start()
+    private void Awake()
     {
         rangeCollider = rangeObject.GetComponent<BoxCollider>();
     }
 
-    void Update()
+    private void Update()
     {
         respawnCounter.Update();
 

@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+using inonego;
+
 [RequireComponent(typeof(Health), typeof(Rigidbody))]
 public class Enemy : MonoBehaviour
 {
@@ -68,11 +70,11 @@ public class Enemy : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Bullet")) // 충돌한 객체가 총알인지 확인
         {
-            health.TakeDamage(1); // 피해를 입음
+            health.ApplyDamage(1); // 피해를 입음
         }
     }
 
-    private void OnHealthStateChanged(Health.StateChangedEventArgs e)
+    private void OnHealthStateChanged(Health sender, Health.StateChangedEventArgs e)
     {
         if (e.Current == Health.State.Dead)
         {
