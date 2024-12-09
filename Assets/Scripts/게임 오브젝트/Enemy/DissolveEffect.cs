@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using inonego;
+
 [RequireComponent(typeof(Health))]
 public class DissolveEffect : MonoBehaviour
 {   
@@ -37,7 +39,7 @@ public class DissolveEffect : MonoBehaviour
         }        
     }
 
-    private void OnHealthStateChanged(Health.StateChangedEventArgs e)
+    private void OnHealthStateChanged(Health sender, Health.StateChangedEventArgs e)
     {
         if(e.Current == Health.State.Dead)
         { 
@@ -95,7 +97,7 @@ public class DissolveEffect : MonoBehaviour
 
     private void SetDissolveMaterial()
     {
-        if(dissolveMaterial == null) return;
+        if (dissolveMaterial == null) return;
 
         foreach (var meshRenderer in meshRenderers)
         {

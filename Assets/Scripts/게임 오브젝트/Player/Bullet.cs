@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using inonego;
+
 public class Bullet : MonoBehaviour
 {
     public float bulletSpeed = 100f;

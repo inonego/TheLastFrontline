@@ -1,7 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+
+using inonego;
 
 [RequireComponent(typeof(Health), typeof(Rigidbody))]
 public class Enemy : MonoBehaviour
@@ -12,30 +15,32 @@ public class Enemy : MonoBehaviour
     
     private Transform target; // 적이 추적할 목표
 
-    
-
     public Health health           { get; private set; }  // 적의 생명체 관리
     public new Rigidbody rigidbody { get; private set; }  // 물리적 특성을 위한 Rigidbody
     private Collider[] colliders;
 
-    private SpawnOnDestroy spawnOnDestroy;
+    private MeshRenderer[] meshRenderers;
+    private SkinnedMeshRenderer[] skinnedMeshRenderers;
+    
+    public bool isVisible => meshRenderers.Any(meshRenderer => meshRenderer != null && meshRenderer.isVisible) || skinnedMeshRenderers.Any(skinnedMeshRenderer => skinnedMeshRenderer != null && skinnedMeshRenderer.isVisible);
 
     private void Awake()
     {
         health = GetComponent<Health>(); // Health 컴포넌트 가져오기
         rigidbody = GetComponent<Rigidbody>(); // Rigidbody 컴포넌트 가져오기
         colliders = GetComponentsInChildren<Collider>();
-        
-        health.OnStateChanged += OnHealthStateChanged;
 
-        spawnOnDestroy = GetComponent<SpawnOnDestroy>();
+        meshRenderers = GetComponentsInChildren<MeshRenderer>();
+        skinnedMeshRenderers = GetComponentsInChildren<SkinnedMeshRenderer>();
+
+        health.OnStateChanged += OnHealthStateChanged;
     }
 
     private void OnEnable()
     {
         if (gameObject.scene.isLoaded)
         {
-            EnemyManager.Instance.Enemies.Remove(gameObject); // 적이 파괴될 때 목록에서 제거
+            EnemyManager.Instance.Enemies.Add(this); // 적이 파괴될 때 목록에서 제거
         }
     }
 
@@ -43,7 +48,7 @@ public class Enemy : MonoBehaviour
     {
         if (gameObject.scene.isLoaded)
         {
-            EnemyManager.Instance.Enemies.Remove(gameObject); // 적이 파괴될 때 목록에서 제거
+            EnemyManager.Instance.Enemies.Remove(this); // 적이 파괴될 때 목록에서 제거
         }
     }
 
@@ -65,12 +70,11 @@ public class Enemy : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Bullet")) // 충돌한 객체가 총알인지 확인
         {
-            health.TakeDamage(1); // 피해를 입음
-            
+            health.ApplyDamage(1); // 피해를 입음
         }
     }
 
-    private void OnHealthStateChanged(Health.StateChangedEventArgs e)
+    private void OnHealthStateChanged(Health sender, Health.StateChangedEventArgs e)
     {
         if (e.Current == Health.State.Dead)
         {

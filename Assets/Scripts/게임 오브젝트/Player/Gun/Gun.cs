@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using inonego;
+
 public class Gun : MonoBehaviour
 {    
     [Header("General")]
@@ -32,14 +34,14 @@ public class Gun : MonoBehaviour
     public event OnFireEvent OnFired;
     public event OnReloadEvent OnReloaded;
 
-    private Pool pool;
+    private PoolPack poolPack;
     private ParticleSystem muzzleFlashParticle;
     private ParticleSystemRenderer muzzleFlashRenderer;
     private AudioSource audioSource;
 
     private void Awake()
     {
-        pool = GetComponent<Pool>();
+        poolPack = GetComponent<PoolPack>();
         muzzleFlashParticle = ShootPoint.GetComponent<ParticleSystem>();
         muzzleFlashRenderer = ShootPoint.GetComponent<ParticleSystemRenderer>();
         audioSource = GetComponent<AudioSource>();
@@ -100,7 +102,7 @@ public class Gun : MonoBehaviour
 
         BulletCount--;
 
-        GameObject GO = pool.packList[0].Spawn(ShootPoint.position, ShootPoint.rotation);
+        GameObject GO = poolPack.PoolList[0].Spawn(ShootPoint.position, ShootPoint.rotation);
 
         muzzleFlashRenderer.material = MuzzleFlashMaterialList[UnityEngine.Random.Range(0, MuzzleFlashMaterialList.Count)];
 

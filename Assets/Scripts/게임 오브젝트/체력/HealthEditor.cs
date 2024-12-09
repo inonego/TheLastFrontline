@@ -1,6 +1,9 @@
 using UnityEditor;
 using UnityEngine;
 
+namespace inonego
+{
+
 [CustomEditor(typeof(Health))]
 public class HealthEditor : Editor
 {
@@ -65,7 +68,7 @@ public class HealthEditor : Editor
         healValue = EditorGUILayout.IntField("힐", healValue);
         if (GUILayout.Button("적용", GUILayout.Width(50)))
         {
-            health.TakeHeal(healValue);
+            health.ApplyHeal(healValue);
         }
         EditorGUILayout.EndHorizontal();
 
@@ -74,13 +77,15 @@ public class HealthEditor : Editor
         damageValue = EditorGUILayout.IntField("데미지", damageValue);
         if (GUILayout.Button("적용", GUILayout.Width(50)))
         {
-            health.TakeDamage(damageValue);
+            health.ApplyDamage(damageValue);
         }
         EditorGUILayout.EndHorizontal();
-        
+
         if (GUI.changed)
         {
             EditorUtility.SetDirty(target);
         }
     }
+}
+
 }

@@ -55,9 +55,16 @@ public class PlayModeUI : MonoBehaviour
         UpdateUIText();
         UpdateTimeWheel();
         
-        if (pauseAction.IsPressed() && !IsPaused)
+        if (pauseAction.WasPressedThisFrame())
         {
-            ShowPauseMenu();
+            if (!IsPaused)
+            {
+                ShowPauseMenu();
+            }
+            else
+            {
+                HidePauseMenu();
+            }
         }
     }
     
@@ -107,8 +114,11 @@ public class PlayModeUI : MonoBehaviour
 
     public void ShowSettings()
     {
-        PausePanel.SetActive(false);
-        SettingsPanel.SetActive(true);
+        if(SettingsPanel != null)
+        {
+            PausePanel.SetActive(false);
+            SettingsPanel.SetActive(true);
+        }
     }
 
     public void BackToPausePanel()

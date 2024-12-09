@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6711731499391130660}
-  - component: {fileID: 7669637946851883534}
   - component: {fileID: 534475992190059590}
+  - component: {fileID: 6484191739236983559}
   - component: {fileID: 8453249558852266623}
   - component: {fileID: 2733752297579652671}
   - component: {fileID: 3349509332659135004}
@@ -38,22 +38,6 @@ Transform:
   - {fileID: 8690129650301467295}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7669637946851883534
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1695770568420625191}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9ba4ea8230f8d146b9c0d625b77bf4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _packList:
-  - Prefab: {fileID: 1009853033701157034, guid: 6d4f2165dec22a64a84d4086252b5653,
-      type: 3}
-    InitalCount: 1
 --- !u!114 &534475992190059590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,6 +50,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70cc00abca8a0ee4f9c1073dec6fb14d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6484191739236983559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695770568420625191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 483a1a9708e1d6245879574d96714cdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolList:
+  - Prefab: {fileID: 1009853033701157034, guid: 6d4f2165dec22a64a84d4086252b5653,
+      type: 3}
+    InitalCount: 0
 --- !u!114 &8453249558852266623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,7 +167,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.855
       inSlope: 0
       outSlope: 0
       tangentMode: 0

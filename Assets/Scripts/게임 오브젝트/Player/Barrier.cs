@@ -1,7 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
+
+using inonego;
 
 public class Barrier : MonoBehaviour
 {
@@ -19,10 +22,10 @@ public class Barrier : MonoBehaviour
         health = GetComponent<Health>();
 
         health.OnStateChanged += OnHealthStateChanged;
-        health.OnDamaged += OnDamaged;
+        health.OnHealDamageApplied += OnHealDamageApplied;
     }
 
-    private void OnHealthStateChanged(Health.StateChangedEventArgs e)
+    private void OnHealthStateChanged(Health sender, Health.StateChangedEventArgs e)
     {
         if (e.Current == Health.State.Dead)
         {
@@ -30,7 +33,7 @@ public class Barrier : MonoBehaviour
         }
     }
 
-    public void OnDamaged(Health.DamagedEventArgs e)
+    public void OnHealDamageApplied(Health sender, Health.AppliedEventArgs e)
     {   
         PlayHit();
     }
@@ -51,7 +54,7 @@ public class Barrier : MonoBehaviour
         {
             Enemy enemy = other.GetComponentInParent<Enemy>();
             
-            health.TakeDamage(enemy.damage);
+            health.ApplyDamage(enemy.damage);
             
             enemy.health.SetDead();
         }
