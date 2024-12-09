@@ -100,8 +100,8 @@ MonoBehaviour:
   <Current>k__BackingField: 0
   <AliveOnAwake>k__BackingField: 1
   <DestroyOnDead>k__BackingField: 1
-  <HP>k__BackingField: 7
-  <MaxHP>k__BackingField: 7
+  <HP>k__BackingField: 3
+  <MaxHP>k__BackingField: 3
 --- !u!114 &6684932336843493439
 MonoBehaviour:
   m_ObjectHideFlags: 0

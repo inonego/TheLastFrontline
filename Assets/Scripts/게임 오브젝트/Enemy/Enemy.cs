@@ -12,9 +12,13 @@ public class Enemy : MonoBehaviour
     
     private Transform target; // 적이 추적할 목표
 
+    
+
     public Health health           { get; private set; }  // 적의 생명체 관리
     public new Rigidbody rigidbody { get; private set; }  // 물리적 특성을 위한 Rigidbody
     private Collider[] colliders;
+
+    private SpawnOnDestroy spawnOnDestroy;
 
     private void Awake()
     {
@@ -23,6 +27,8 @@ public class Enemy : MonoBehaviour
         colliders = GetComponentsInChildren<Collider>();
         
         health.OnStateChanged += OnHealthStateChanged;
+
+        spawnOnDestroy = GetComponent<SpawnOnDestroy>();
     }
 
     private void OnEnable()
@@ -60,6 +66,7 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.CompareTag("Bullet")) // 충돌한 객체가 총알인지 확인
         {
             health.TakeDamage(1); // 피해를 입음
+            
         }
     }
 

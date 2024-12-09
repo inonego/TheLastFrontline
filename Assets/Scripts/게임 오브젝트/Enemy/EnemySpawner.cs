@@ -55,8 +55,9 @@ public class EnemySpawner : MonoBehaviour
 
         if (gameObject.scene.isLoaded) 
         {
-            Instantiate(enemyPrefab, ReturnRandomPosition(), transform.rotation);
+            Instantiate(enemyPrefab, ReturnRandomPosition(), enemyPrefab.transform.rotation);
         }
+        Debug.Log(enemyPrefab.transform.rotation);
         
         // 스폰 후에 다시 respawnCounter 시작
         spawnRate = Random.Range(minTimeBetweenSpawns, maxTimeBetweenSpawns);
