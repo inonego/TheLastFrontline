@@ -100,8 +100,8 @@ MonoBehaviour:
   <Current>k__BackingField: 0
   <AliveOnAwake>k__BackingField: 1
   <DestroyOnDead>k__BackingField: 1
-  <HP>k__BackingField: 7
-  <MaxHP>k__BackingField: 7
+  <HP>k__BackingField: 3
+  <MaxHP>k__BackingField: 3
 --- !u!114 &6684932336843493439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   count: 2
-  prefab: {fileID: 2063612324883351183, guid: afcc35445974c7f418236364e962b1ba, type: 3}
+  prefab: {fileID: 5982799142993032058, guid: ea9f81a4e5c4b6f418e2c7ee52933da3, type: 3}
 --- !u!1001 &6446647904732610631
 PrefabInstance:
   m_ObjectHideFlags: 0
