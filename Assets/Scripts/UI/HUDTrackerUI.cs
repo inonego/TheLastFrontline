@@ -41,7 +41,7 @@ public class HUDTrackerUI : MonoBehaviour
     {
         endPoint -= TrackInfo.Value.ScreenPosition;
 
-        EndPoint = Vector3.Slerp(EndPoint, endPoint, LerpSpeed * Time.deltaTime);
+        EndPoint = Vector3.Slerp(EndPoint, endPoint, LerpSpeed * Time.unscaledDeltaTime);
 
         UIParent.localPosition = EndPoint;
 

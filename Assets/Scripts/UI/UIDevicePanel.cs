@@ -25,7 +25,7 @@ public class UIDevicePanel : MonoBehaviour
     {
         Vector3 UIPoint = (UIPanel.transform.position - mainCamera.transform.position).normalized * UIPanelViewOffset;
 
-        UIPanel.transform.position = Vector3.Lerp(UIPanel.transform.position, UIDevice.transform.position + Vector3.up * UIPanelHeightOffset + UIPoint, MoveLerpSpeed * Time.deltaTime);
+        UIPanel.transform.position = Vector3.Lerp(UIPanel.transform.position, UIDevice.transform.position + Vector3.up * UIPanelHeightOffset + UIPoint, MoveLerpSpeed * Time.unscaledDeltaTime);
 
         Vector3 viewPoint = mainCamera.WorldToViewportPoint(UIDevice.transform.position);  
         if (viewPoint.x >= 0 - UIVisibleOffset && viewPoint.y >= 0 - UIVisibleOffset && viewPoint.x <= 1 + UIVisibleOffset && viewPoint.y <= 1 + UIVisibleOffset && viewPoint.z >= 0) 
@@ -42,7 +42,7 @@ public class UIDevicePanel : MonoBehaviour
     {
         if (mainCamera == null) return;
 
-        UIPanel.transform.rotation = Quaternion.Slerp(UIPanel.transform.rotation, Quaternion.LookRotation(UIPanel.transform.position - mainCamera.transform.position, Vector3.up), LookLerpSpeed * Time.deltaTime);
+        UIPanel.transform.rotation = Quaternion.Slerp(UIPanel.transform.rotation, Quaternion.LookRotation(UIPanel.transform.position - mainCamera.transform.position, Vector3.up), LookLerpSpeed * Time.unscaledDeltaTime);
     }
 
     public void Show()
