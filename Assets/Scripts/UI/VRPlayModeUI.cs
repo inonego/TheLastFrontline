@@ -107,19 +107,15 @@ public class VRPlayModeUI : MonoBehaviour
 
         // UIPausePanel에 대해 이동 및 회전
         Vector3 UIPausePanelTargetP = mainCamera.transform.position + mainCamera.transform.forward * UIPausePanelOffset;
-       
+
+        Vector3 delta = UIPausePanelTargetP - UIPausePanel.transform.position;
+        Vector3 UIPausePanelPFinal = UIPausePanel.transform.position + delta.normalized * Mathf.Max(delta.magnitude - UIPausePanelMoveThreshold, 0f);
+
+        Vector3 UIPausePanelP = Vector3.Lerp(UIPausePanel.transform.position, UIPausePanelPFinal, PauseMenuMoveLerpSpeed * Time.unscaledDeltaTime);
         Quaternion UIPausePanelR = Quaternion.Slerp(UIPausePanel.transform.rotation, Quaternion.LookRotation(UIPausePanel.transform.position - mainCamera.transform.position, Vector3.up), PauseMenuLookLerpSpeed * Time.unscaledDeltaTime);
 
-        // UIPausePanel의 위치가 카메라와의 거리가 일정 이상 멀어지면 이동
-        if (Vector3.Distance(UIPausePanel.transform.position, UIPausePanelTargetP) > UIPausePanelMoveThreshold)
-        { 
-            Vector3 UIPausePanelP = Vector3.Lerp(UIPausePanel.transform.position, UIPausePanelTargetP, PauseMenuMoveLerpSpeed * Time.unscaledDeltaTime);
-
-            UIPausePanel.transform.position = UIPausePanelP;
-        }
-
+        UIPausePanel.transform.position = UIPausePanelP;
         UIPausePanel.transform.rotation = UIPausePanelR;
-
         if (IsPaused)
         {
             if (!isVisible) return;
