@@ -7,9 +7,9 @@
             "actions": [
                 {
                     "name": "Fire",
-                    "type": "Value",
+                    "type": "Button",
                     "id": "38df01ea-0604-4ca6-ade7-2a362e8c3a9b",
-                    "expectedControlType": "Axis",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
@@ -78,11 +78,44 @@
                 },
                 {
                     "name": "",
+                    "id": "47da1ee7-85e3-4190-b93e-79b156252e44",
+                    "path": "<XRController>{RightHand}/{GripButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VR",
+                    "action": "Reload",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "37b60bfc-f4c7-448e-8f10-7a216c356a98",
+                    "path": "<XRController>{LeftHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VR",
+                    "action": "PauseGame",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "b9e3ed54-70e3-4680-a2a2-c6c7bd0b434b",
                     "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
                     "groups": "PC",
+                    "action": "PauseGame",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b461e5c1-8288-4270-ae2d-8e67a9ca1d6d",
+                    "path": "<XRController>{LeftHand}/{SecondaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VR",
                     "action": "PauseGame",
                     "isComposite": false,
                     "isPartOfComposite": false

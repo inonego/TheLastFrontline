@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System;
 
 public class PlayModeUI : MonoBehaviour
 {
@@ -48,6 +49,8 @@ public class PlayModeUI : MonoBehaviour
 
         ScriptPlayer.OnScriptTextChanged += OnScriptTextChanged;
     }
+
+    public event Action<bool> OnPaused;
 
     // Update is called once per frame
     private void Update()
@@ -101,6 +104,8 @@ public class PlayModeUI : MonoBehaviour
         PausePanel.SetActive(true);
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+
+        OnPaused?.Invoke(true);
     }
 
     public void HidePauseMenu()
@@ -110,6 +115,8 @@ public class PlayModeUI : MonoBehaviour
         PausePanel.SetActive(false);
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+
+        OnPaused?.Invoke(false);
     }
 
     public void ShowSettings()

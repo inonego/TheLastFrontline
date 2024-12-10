@@ -21,12 +21,7 @@ public class GunControllerVR : MonoBehaviour
 
     private void Update()
     {
-        float triggerValue = fireInputAction.ReadValue<float>();
-        gun.SetTriggerPressed(triggerValue > 0.1f);
-        // 발사 버튼이 눌렸는지 확인
-        //gun.SetTriggerPressed(fireInputAction.IsPressed());
-      
-        Debug.Log(fireInputAction.IsPressed());
+        gun.SetTriggerPressed(fireInputAction.triggered);
 
         // 재장전 버튼이 눌렸거나 총알이 없으나 재장전 중이 아닐 경우 재장전
         if (reloadInputAction.WasPressedThisFrame() || (gun.BulletCount == 0 && !gun.isReloading))
