@@ -57,7 +57,7 @@ public class DissolveEffect : MonoBehaviour
     private IEnumerator DoDissolveOnDead()
     {
         yield return StartCoroutine(DoDissolve(inverse: false));
-
+        
         Destroy(transform.root.gameObject);
     }
 
