@@ -27,11 +27,13 @@ public class VRPlayModeUI : MonoBehaviour
     public TextMeshProUGUI BulletCountUI;
     
     [Header("Panel")]
-    public GameObject UIDevice;
-    public GameObject UIDevicePanel;
-    public GameObject UIPausePanel;
+    public VRModeUI DeviceUI;
+    public VRModeUI PauseUI;
     
-    [Header("Pause Menu")]
+    [Header("Device UI")]
+    public float DeviceUIVisibleOffset = 0.1f;
+
+    [Header("Pause UI")]
     public List<Button> PauseMenuButtons;
     public int PauseMenuIndex = 0;
 
@@ -39,41 +41,19 @@ public class VRPlayModeUI : MonoBehaviour
     public InputActionReference PauseAction;
     public InputActionReference SelectAction;
 
-    [Header("Speed")]
-    public float MoveLerpSpeed;
-    public float LookLerpSpeed;
-    public float PauseMenuMoveLerpSpeed;
-    public float PauseMenuLookLerpSpeed;
-
-    [Header("Offset")]
-    public float UIVisibleOffset = 0.2f;
-    public float UIPanelHeightOffset = 0.8f;
-    public float UIPanelViewOffset = 0.8f;
-    public float UIPausePanelOffset = 0.8f;
-    public float UIPausePanelMoveThreshold = 0.1f;
     
     [Header("Sound")]
-    public AudioClip ShowSound;
-    public AudioClip HideSound;
     public AudioClip SelectSound;
 
     private Camera mainCamera;
 
-    private bool isVisible = false;
-
     private AudioSource audioSource;
-
-    private Animator UIPanelAnimator;
-    private Animator UIPausePanelAnimator;
 
     public bool IsPaused => GameManager.Instance.State == GameState.Paused;
 
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
-
-        UIPanelAnimator = UIDevicePanel.GetComponent<Animator>();
-        UIPausePanelAnimator = UIPausePanel.GetComponent<Animator>();
     }
 
     private void Start()
@@ -100,30 +80,8 @@ public class VRPlayModeUI : MonoBehaviour
             }
         }
 
-        Vector3 UIPoint = (UIDevicePanel.transform.position - mainCamera.transform.position).normalized * UIPanelViewOffset;
-
-        // UIDevicePanel에 대해 이동 및 회전
-        Vector3 UIDevicePanelP = Vector3.Lerp(UIDevicePanel.transform.position, UIDevice.transform.position + Vector3.up * UIPanelHeightOffset + UIPoint, MoveLerpSpeed * Time.unscaledDeltaTime);
-        Quaternion UIDevicePanelR = Quaternion.Slerp(UIDevicePanel.transform.rotation, Quaternion.LookRotation(UIDevicePanel.transform.position - mainCamera.transform.position, Vector3.up), LookLerpSpeed * Time.unscaledDeltaTime);
-
-        UIDevicePanel.transform.position = UIDevicePanelP;
-        UIDevicePanel.transform.rotation = UIDevicePanelR;
-
-        // UIPausePanel에 대해 이동 및 회전
-        Vector3 UIPausePanelTargetP = mainCamera.transform.position + mainCamera.transform.forward * UIPausePanelOffset;
-
-        Vector3 delta = UIPausePanelTargetP - UIPausePanel.transform.position;
-        Vector3 UIPausePanelPFinal = UIPausePanel.transform.position + delta.normalized * Mathf.Max(delta.magnitude - UIPausePanelMoveThreshold, 0f);
-
-        Vector3 UIPausePanelP = Vector3.Lerp(UIPausePanel.transform.position, UIPausePanelPFinal, PauseMenuMoveLerpSpeed * Time.unscaledDeltaTime);
-        Quaternion UIPausePanelR = Quaternion.Slerp(UIPausePanel.transform.rotation, Quaternion.LookRotation(UIPausePanel.transform.position - mainCamera.transform.position, Vector3.up), PauseMenuLookLerpSpeed * Time.unscaledDeltaTime);
-
-        UIPausePanel.transform.position = UIPausePanelP;
-        UIPausePanel.transform.rotation = UIPausePanelR;
-
         if (IsPaused)
         {            
-
             if (SelectAction.action.WasPressedThisFrame())
             {
                 float selectValue = SelectAction.action.ReadValue<float>();
@@ -135,9 +93,9 @@ public class VRPlayModeUI : MonoBehaviour
 
             PauseMenuButtons[PauseMenuIndex].Select();
 
-            if (!isVisible) return;
+            if (!DeviceUI.IsVisible) return;
 
-            HideUIDevicePanel();
+            DeviceUI.Hide();
         }
         else
         {
@@ -178,9 +136,8 @@ public class VRPlayModeUI : MonoBehaviour
         
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
-        
-        UIPausePanelAnimator.SetBool("IsVisible", true);
-        audioSource.PlayOneShot(ShowSound);
+            
+        PauseUI.Show();
 
         PauseMenuIndex = 0;
     }
@@ -193,45 +150,26 @@ public class VRPlayModeUI : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
 
-        UIPausePanelAnimator.SetBool("IsVisible", false);
-        audioSource.PlayOneShot(HideSound);
+        PauseUI.Hide();
 
         PauseMenuIndex = 0;
     }
 
-    // UIDevicePanel을 표시합니다.
-    public void ShowUIDevicePanel()
-    {
-        UIPanelAnimator.SetBool("IsVisible", true);
-        audioSource.PlayOneShot(ShowSound);
-
-        isVisible = true;
-    }
-
-    // UIDevicePanel을 숨깁니다.
-    public void HideUIDevicePanel()
-    {
-        UIPanelAnimator.SetBool("IsVisible", false);
-        audioSource.PlayOneShot(HideSound);
-
-        isVisible = false;
-    }
-    
     private void CheckVisible()
     {
-        Vector3 viewPoint = mainCamera.WorldToViewportPoint(UIDevice.transform.position);  
+        Vector3 viewPoint = mainCamera.WorldToViewportPoint(DeviceUI.transform.position);  
         
-        if (viewPoint.x >= 0 - UIVisibleOffset && viewPoint.y >= 0 - UIVisibleOffset && viewPoint.x <= 1 + UIVisibleOffset && viewPoint.y <= 1 + UIVisibleOffset && viewPoint.z >= 0) 
+        if (viewPoint.x >= 0 - DeviceUIVisibleOffset && viewPoint.y >= 0 - DeviceUIVisibleOffset && viewPoint.x <= 1 + DeviceUIVisibleOffset && viewPoint.y <= 1 + DeviceUIVisibleOffset && viewPoint.z >= 0) 
         {
-            if (isVisible) return;
+            if (DeviceUI.IsVisible) return;
 
-            ShowUIDevicePanel();
+            DeviceUI.Show();
         }
         else
         {
-            if (!isVisible) return;
+            if (!DeviceUI.IsVisible) return;
 
-            HideUIDevicePanel();
+            DeviceUI.Hide();
         }
     }
 
