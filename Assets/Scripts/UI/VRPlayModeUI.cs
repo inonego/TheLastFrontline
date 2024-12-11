@@ -31,6 +31,10 @@ public class VRPlayModeUI : MonoBehaviour
     public GameObject UIDevicePanel;
     public GameObject UIPausePanel;
     
+    [Header("Pause Menu")]
+    public List<Button> PauseMenuButtons;
+    public int PauseMenuIndex = 0;
+
     [Header("Input")]
     public InputActionReference PauseAction;
     public InputActionReference SelectAction;
@@ -48,10 +52,10 @@ public class VRPlayModeUI : MonoBehaviour
     public float UIPausePanelOffset = 0.8f;
     public float UIPausePanelMoveThreshold = 0.1f;
     
-
     [Header("Sound")]
     public AudioClip ShowSound;
     public AudioClip HideSound;
+    public AudioClip SelectSound;
 
     private Camera mainCamera;
 
@@ -92,7 +96,7 @@ public class VRPlayModeUI : MonoBehaviour
             }
             else
             {
-                HidePauseMenu();
+                PauseMenuButtons[PauseMenuIndex].onClick.Invoke();
             }
         }
 
@@ -116,8 +120,21 @@ public class VRPlayModeUI : MonoBehaviour
 
         UIPausePanel.transform.position = UIPausePanelP;
         UIPausePanel.transform.rotation = UIPausePanelR;
+
         if (IsPaused)
-        {
+        {            
+
+            if (SelectAction.action.WasPressedThisFrame())
+            {
+                float selectValue = SelectAction.action.ReadValue<float>();
+
+                PauseMenuIndex = (PauseMenuIndex + (selectValue > 0f ? 1 : -1) + PauseMenuButtons.Count) % PauseMenuButtons.Count;
+
+                audioSource.PlayOneShot(SelectSound);
+            }
+
+            PauseMenuButtons[PauseMenuIndex].Select();
+
             if (!isVisible) return;
 
             HideUIDevicePanel();
@@ -164,6 +181,8 @@ public class VRPlayModeUI : MonoBehaviour
         
         UIPausePanelAnimator.SetBool("IsVisible", true);
         audioSource.PlayOneShot(ShowSound);
+
+        PauseMenuIndex = 0;
     }
 
     // 게임을 재시작하고 일시정지 메뉴를 숨깁니다.
@@ -176,6 +195,8 @@ public class VRPlayModeUI : MonoBehaviour
 
         UIPausePanelAnimator.SetBool("IsVisible", false);
         audioSource.PlayOneShot(HideSound);
+
+        PauseMenuIndex = 0;
     }
 
     // UIDevicePanel을 표시합니다.
@@ -216,7 +237,11 @@ public class VRPlayModeUI : MonoBehaviour
 
     public void QuitGame()
     {
-        Application.Quit();
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+        #else
+            Application.Quit();
+        #endif
     }
     
 #endregion

@@ -58,6 +58,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Select",
+                    "type": "Value",
+                    "id": "99fd4df3-4c49-48c3-aa4f-b73fcc195605",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -107,17 +116,6 @@
                 },
                 {
                     "name": "",
-                    "id": "37b60bfc-f4c7-448e-8f10-7a216c356a98",
-                    "path": "<XRController>{LeftHand}/{PrimaryButton}",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "VR",
-                    "action": "PauseGame",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "b9e3ed54-70e3-4680-a2a2-c6c7bd0b434b",
                     "path": "<Keyboard>/escape",
                     "interactions": "",
@@ -129,8 +127,8 @@
                 },
                 {
                     "name": "",
-                    "id": "b461e5c1-8288-4270-ae2d-8e67a9ca1d6d",
-                    "path": "<XRController>{LeftHand}/{SecondaryButton}",
+                    "id": "27e1042b-981d-4480-b6e8-98f808514a56",
+                    "path": "<XRController>{LeftHand}/{MenuButton}",
                     "interactions": "",
                     "processors": "",
                     "groups": "VR",
@@ -170,6 +168,39 @@
                     "action": "Radio",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "b6323ce6-0c76-4328-a63b-3b5789f95dda",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Select",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "86908f5d-89c5-40fa-9686-281b2681250b",
+                    "path": "<XRController>{LeftHand}/{SecondaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "7b0247fc-2a3b-4eb3-974e-2e2395215c77",
+                    "path": "<XRController>{LeftHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         }
