@@ -11,6 +11,7 @@ using Random = UnityEngine.Random;
 public class BackgroundExplosion : MonoBehaviour
 {
     [Header("General")]
+    public bool autoStart = true;
     public LayerMask groundLayer;
 
     [Header("Time")]
@@ -23,6 +24,10 @@ public class BackgroundExplosion : MonoBehaviour
     public float distance;
     public float radius;
     public float noneRadius;
+
+    public float minScale;
+    public float maxScale;
+
     public Transform noneExplosionPoint;
 
     [Header("Gizmo")]
@@ -39,7 +44,10 @@ public class BackgroundExplosion : MonoBehaviour
 
     private void Start()
     {
-        BeginExplosion();
+        if (autoStart)
+        {
+            BeginExplosion();
+        }
     }
 
     public void BeginExplosion()
@@ -62,9 +70,18 @@ public class BackgroundExplosion : MonoBehaviour
 
         GO.transform.position = position;
 
+        float scale = Random.Range(minScale, maxScale);
+
+        GO.transform.localScale = Vector3.one * scale;
+
         CameraShake.Instance.GiveShake(GO);
 
         StartCoroutine(DespawnExplosion(GO));
+    }
+
+    public void MakeExplosionRandom()
+    {
+        MakeExplosion(GetRandomPosition());
     }
 
     private IEnumerator DespawnExplosion(GameObject GO)
@@ -78,9 +95,7 @@ public class BackgroundExplosion : MonoBehaviour
     {
         while (true)
         {
-            Vector3 randPos = GetRandomPosition();
-
-            MakeExplosion(randPos);
+            MakeExplosionRandom();
             
             yield return new WaitForSeconds(Random.Range(minTimeBetweenExplosion, maxTimeBetweenExplosion));
         }

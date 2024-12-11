@@ -1,14 +1,14 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 public class Radio : MonoBehaviour
 {
-    public int damage;
+    public Bombard bombard;
+
     private Vector3 InitialPosition;
     
-    private bool canUsed=false;
+    public bool canUsed = true;
     private XRGrabInteractable grabble;
     void Awake()
     {
@@ -21,12 +21,9 @@ public class Radio : MonoBehaviour
     {
         if (canUsed)
         {
-            //폭격
-            foreach (var enemy in EnemyManager.Instance.Enemies)
-            {
-                enemy.health.ApplyDamage(damage);
-            }
+            bombard.Execute();
             
+            canUsed = false;
         }
     }
 
