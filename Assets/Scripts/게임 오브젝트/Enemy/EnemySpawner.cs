@@ -23,6 +23,9 @@ public class EnemySpawner : MonoBehaviour
     public GameObject rangeObject;
     private BoxCollider rangeCollider;
     
+    public bool isGroundMonster = false;
+    
+    
     private void Awake()
     {
         rangeCollider = rangeObject.GetComponent<BoxCollider>();
@@ -96,6 +99,15 @@ public class EnemySpawner : MonoBehaviour
         Vector3 RandomPostion = new Vector3(range_X, 0f, range_Z);
 
         Vector3 respawnPosition = originPosition + RandomPostion;
+
+        if (isGroundMonster)
+        {
+            Physics.Raycast(respawnPosition,Vector3.down, out RaycastHit hit, 1000, LayerMask.GetMask("Ground"));
+
+            respawnPosition.y = hit.point.y+1f;
+        }
+        
+        
         return respawnPosition;
 
     }

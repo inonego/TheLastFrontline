@@ -45,12 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a127f2834ae1576409c0957a4bee427b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phase: 1
-  enemyPrefabs:
-  - {fileID: 8276687240861986080, guid: 077530d4ecbf3144a8ff7aea5559399c, type: 3}
-  - {fileID: 6547877746942013638, guid: 422357057d902f64fad0d809a8445018, type: 3}
-  spawnChances: []
-  enemy: {fileID: 6547877746942013638, guid: 422357057d902f64fad0d809a8445018, type: 3}
+  spawnInfoList: []
   minTimeBetweenSpawns: 3
   maxTimeBetweenSpawns: 5
   rangeObject: {fileID: 8311013497570558826}
@@ -101,7 +96,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
