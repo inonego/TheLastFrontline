@@ -169,6 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 6
   damage: 3
+  isHalt: 0
 --- !u!114 &3592574118137178883
 MonoBehaviour:
   m_ObjectHideFlags: 0
