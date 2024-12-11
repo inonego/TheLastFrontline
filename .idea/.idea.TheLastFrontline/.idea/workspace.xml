@@ -6,42 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="213f37a9-47e9-4c81-a0c3-bd4cef47adf3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheLastFrontline/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheLastFrontline/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Packages/InputSystem/InputActions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/InputSystem/InputActions.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Packages/XR/Settings/OpenXR Package Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/XR/Settings/OpenXR Package Settings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/CutScenes/BarrierBreak.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/CutScenes/BarrierBreak.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/CutScenes/BarrierHit.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/CutScenes/BarrierHit.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/CutScenes/Core Explosion.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/CutScenes/Core Explosion.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/CutScenes/Family.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/CutScenes/Family.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy/JabMob1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy/JabMob1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy/JabMob2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy/JabMob2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/GRENADE.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/GRENADE.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Radio.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Radio.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/VR/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/VR/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/VRPlayModeUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/VRPlayModeUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/UnitySingleton-main/Readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/게임 오브젝트/UnitySingleton-main/Readme.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/UnitySingleton-main/Readme.txt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/게임 오브젝트/UnitySingleton-main/Readme.txt.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/UnitySingleton-main/Scenes.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/게임 오브젝트/UnitySingleton-main/Scenes.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/UnitySingleton-main/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/게임 오브젝트/UnitySingleton-main/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/UnitySingleton-main/Scenes/Game.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/게임 오브젝트/UnitySingleton-main/Scenes/Game.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/UnitySingleton-main/Scenes/Main Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/게임 오브젝트/UnitySingleton-main/Scenes/Main Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/UnitySingleton-main/Scenes/Main Menu.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/게임 오브젝트/UnitySingleton-main/Scenes/Main Menu.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/UnitySingleton-main/Scenes/_Preload.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/게임 오브젝트/UnitySingleton-main/Scenes/_Preload.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/UnitySingleton-main/Scenes/_Preload.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/게임 오브젝트/UnitySingleton-main/Scenes/_Preload.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/UnitySingleton-main/Scripts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/게임 오브젝트/UnitySingleton-main/Scripts.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/UnitySingleton-main/Scripts/Runtime.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/게임 오브젝트/UnitySingleton-main/Scripts/Runtime.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/UnitySingleton-main/Scripts/Runtime/ISingleton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/게임 오브젝트/UnitySingleton-main/Scripts/Runtime/ISingleton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/UnitySingleton-main/Scripts/Runtime/ISingleton.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/게임 오브젝트/UnitySingleton-main/Scripts/Runtime/ISingleton.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/UnitySingleton-main/Scripts/Runtime/MonoSingleton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/게임 오브젝트/UnitySingleton-main/Scripts/Runtime/MonoSingleton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/UnitySingleton-main/Scripts/Runtime/MonoSingleton.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/게임 오브젝트/UnitySingleton-main/Scripts/Runtime/MonoSingleton.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/UnitySingleton-main/Scripts/Runtime/PersistentMonoSingleton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/게임 오브젝트/UnitySingleton-main/Scripts/Runtime/PersistentMonoSingleton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/UnitySingleton-main/Scripts/Runtime/PersistentMonoSingleton.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/게임 오브젝트/UnitySingleton-main/Scripts/Runtime/PersistentMonoSingleton.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/UnitySingleton-main/Scripts/Runtime/Singleton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/게임 오브젝트/UnitySingleton-main/Scripts/Runtime/Singleton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/UnitySingleton-main/Scripts/Runtime/Singleton.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/게임 오브젝트/UnitySingleton-main/Scripts/Runtime/Singleton.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/UnitySingleton-main/Scripts/Runtime/UnityCommunity.UnitySingleton.Runtime.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/게임 오브젝트/UnitySingleton-main/Scripts/Runtime/UnityCommunity.UnitySingleton.Runtime.asmdef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/UnitySingleton-main/Scripts/Runtime/UnityCommunity.UnitySingleton.Runtime.asmdef.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/게임 오브젝트/UnitySingleton-main/Scripts/Runtime/UnityCommunity.UnitySingleton.Runtime.asmdef.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/UnitySingleton-main/Scripts/Samples.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/게임 오브젝트/UnitySingleton-main/Scripts/Samples.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/UnitySingleton-main/Scripts/Samples/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/게임 오브젝트/UnitySingleton-main/Scripts/Samples/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/UnitySingleton-main/Scripts/Samples/GameManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/게임 오브젝트/UnitySingleton-main/Scripts/Samples/GameManager.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/UnitySingleton-main/Scripts/Samples/Readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/게임 오브젝트/UnitySingleton-main/Scripts/Samples/Readme.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/UnitySingleton-main/Scripts/Samples/Readme.txt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/게임 오브젝트/UnitySingleton-main/Scripts/Samples/Readme.txt.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/UnitySingleton-main/Scripts/Samples/SceneGameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/게임 오브젝트/UnitySingleton-main/Scripts/Samples/SceneGameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/UnitySingleton-main/Scripts/Samples/SceneGameManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/게임 오브젝트/UnitySingleton-main/Scripts/Samples/SceneGameManager.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/UnitySingleton-main/Scripts/Samples/SceneTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/게임 오브젝트/UnitySingleton-main/Scripts/Samples/SceneTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/UnitySingleton-main/Scripts/Samples/SceneTest.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/게임 오브젝트/UnitySingleton-main/Scripts/Samples/SceneTest.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/UnitySingleton-main/Scripts/Samples/Test.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/게임 오브젝트/UnitySingleton-main/Scripts/Samples/Test.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/UnitySingleton-main/Scripts/Samples/Test.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/게임 오브젝트/UnitySingleton-main/Scripts/Samples/Test.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/게임 오브젝트/Player/Grenade.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/게임 오브젝트/Player/Grenade.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/RightHand_Robot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/RightHand_Robot.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +47,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;KHJ&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;JJL__interactiveObj&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -181,6 +159,7 @@
       <workItem from="1733854000258" duration="410000" />
       <workItem from="1733855166649" duration="673000" />
       <workItem from="1733862171901" duration="7065000" />
+      <workItem from="1733906308251" duration="10620000" />
     </task>
     <servers />
   </component>
