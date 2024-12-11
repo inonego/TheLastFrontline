@@ -137,10 +137,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b35444fcdeaf1484d89afb95cb86bb00,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: -2567170013071336207}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b35444fcdeaf1484d89afb95cb86bb00,
-        type: 3}
-      insertIndex: -1
       addedObject: {fileID: 7442966060202969277}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b35444fcdeaf1484d89afb95cb86bb00,
         type: 3}
@@ -262,18 +258,6 @@ MonoBehaviour:
   dissolveSpeed: 1.5
   replaceMaterialOnDissolve: 0
   dissolveMaterial: {fileID: 0}
---- !u!114 &-2567170013071336207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3166571412737394357}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6eb3dba1c9cc3ce4e97209f03e13dbce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &7442966060202969277
 Animator:
   serializedVersion: 7

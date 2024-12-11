@@ -36,13 +36,14 @@ public class Gun : MonoBehaviour
     private ParticleSystem muzzleFlashParticle;
     private ParticleSystemRenderer muzzleFlashRenderer;
     private AudioSource audioSource;
-
+    private Animator animator;
     private void Awake()
     {
         pool = GetComponent<Pool>();
         muzzleFlashParticle = ShootPoint.GetComponent<ParticleSystem>();
         muzzleFlashRenderer = ShootPoint.GetComponent<ParticleSystemRenderer>();
         audioSource = GetComponent<AudioSource>();
+        animator = GetComponentInChildren<Animator>();
     }
 
     private void Start()
@@ -78,7 +79,9 @@ public class Gun : MonoBehaviour
     private IEnumerator DoReload()
     {
         isReloading = true; // 재장전 시작
-
+        
+        animator.SetTrigger("Reloading");
+            
         float playSoundTime = Mathf.Max(ReloadTime - ReloadSound.length, 0f); // 소리 재생 시간 계산
         
         yield return new WaitForSeconds(playSoundTime); // 소리 재생 대기
