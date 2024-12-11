@@ -30,7 +30,7 @@ MonoBehaviour:
     m_Value: 65472
   tint:
     m_OverrideState: 1
-    m_Value: {r: 1, g: 0.9009434, b: 0.9009434, a: 1}
+    m_Value: {r: 0.41509432, g: 0.41509432, b: 0.41509432, a: 1}
   highQualityFiltering:
     m_OverrideState: 0
     m_Value: 1
@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5485954d14dfb9a4c8ead8edb0ded5b1, type: 3}
   m_Name: LiftGammaGain
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   lift:
     m_OverrideState: 1
     m_Value: {x: 0.9836493, y: 1, z: 0.8724909, w: 0}
