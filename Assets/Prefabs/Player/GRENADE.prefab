@@ -42,42 +42,42 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1239396ac78510042862357699e4da38,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11
+      value: 11.155
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1239396ac78510042862357699e4da38,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 43.306004
+      value: 43.31
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1239396ac78510042862357699e4da38,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 24.254549
+      value: 24.391998
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1239396ac78510042862357699e4da38,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.69663334
+      value: 0.7071067
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1239396ac78510042862357699e4da38,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.69663334
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1239396ac78510042862357699e4da38,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.12125186
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1239396ac78510042862357699e4da38,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.12125186
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1239396ac78510042862357699e4da38,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1239396ac78510042862357699e4da38,
         type: 3}
@@ -87,7 +87,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1239396ac78510042862357699e4da38,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -19.747
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1239396ac78510042862357699e4da38,
         type: 3}
@@ -113,15 +113,19 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1239396ac78510042862357699e4da38,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2314847749106760995}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1239396ac78510042862357699e4da38,
-        type: 3}
-      insertIndex: -1
       addedObject: {fileID: 7285599385327073556}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1239396ac78510042862357699e4da38,
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1024360576338830504}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1239396ac78510042862357699e4da38,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6942443357742101594}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1239396ac78510042862357699e4da38,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8335441850042348571}
   m_SourcePrefab: {fileID: 100100000, guid: 1239396ac78510042862357699e4da38, type: 3}
 --- !u!4 &1341471292574434298 stripped
 Transform:
@@ -273,8 +277,8 @@ MonoBehaviour:
   m_ReinitializeDynamicAttachEverySingleGrab: 1
   m_AttachEaseInTime: 0.15
   m_MovementType: 0
-  m_VelocityDamping: 1
-  m_VelocityScale: 1
+  m_VelocityDamping: 0.5
+  m_VelocityScale: 2
   m_AngularVelocityDamping: 1
   m_AngularVelocityScale: 1
   m_TrackPosition: 1
@@ -314,27 +318,6 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
---- !u!135 &2314847749106760995
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1861690497831590208}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.0021781658
-  m_Center: {x: -0.000049215916, y: -1.164153e-10, z: 0.0021993874}
 --- !u!114 &7285599385327073556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -347,9 +330,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57a9674ae868daa40a9880e4a2499ba6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BoomRadius: 10
-  damage: 1
-  boomForce: 500
+  BoomRadius: 20
+  damage: 3
+  boomForce: 1
   explodePrefab: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b,
     type: 3}
   explodeSound: {fileID: 8300000, guid: 14f6495b1e26eaa47971f0a48bd6a41e, type: 3}
@@ -451,3 +434,45 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &6942443357742101594
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861690497831590208}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0032540546, y: 0.0031146766, z: 0.0043563317}
+  m_Center: {x: -0.000049215916, y: -1.164153e-10, z: 0.0021993874}
+--- !u!65 &8335441850042348571
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861690497831590208}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0032540546, y: 0.0031146766, z: 0.0043563317}
+  m_Center: {x: -0.000049215916, y: -1.164153e-10, z: 0.0021993874}

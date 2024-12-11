@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -57162794267575449}
   - component: {fileID: 6684932336843493439}
   - component: {fileID: -8553632774683905450}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -116,6 +116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 7
   damage: 7
+  isHalt: 0
 --- !u!114 &-8553632774683905450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,7 +212,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9aef0ea747b3172448285ddee41c4b62,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
