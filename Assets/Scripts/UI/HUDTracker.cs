@@ -24,6 +24,13 @@ public class HUDTracker : MonoBehaviour
 
     private Dictionary<Enemy, HUDTrackerUI> enemyHUDTrackerUIList = new Dictionary<Enemy, HUDTrackerUI>();
     
+    public struct ScreenSpaceInfo
+    {
+        public Vector2 ScreenPosition;
+        public float ScreenSpaceDistance;
+        public float ScreenSpaceDepth;
+    }
+
     /// <summary>
     /// 컴포넌트 초기화 시 호출되는 메서드
     /// </summary>
@@ -66,11 +73,11 @@ public class HUDTracker : MonoBehaviour
                     {
                         if (enemy.isVisible)
                         {
-                            var (enemyScreenPos, screenSpaceDistance) = GetScreenSpaceInfo(enemy);
+                            var screenSpaceInfo = GetScreenSpaceInfo(enemy);
 
-                            if (screenSpaceDistance <= detectionRadiusInScreenSpace)
+                            if (screenSpaceInfo.ScreenSpaceDistance <= detectionRadiusInScreenSpace && screenSpaceInfo.ScreenSpaceDepth > 0f)
                             {
-                                detectedEnemies.Add(new KeyValuePair<Enemy, float>(enemy, screenSpaceDistance));
+                                detectedEnemies.Add(new KeyValuePair<Enemy, float>(enemy, screenSpaceInfo.ScreenSpaceDistance));
                             }
                         }
                     }
@@ -140,7 +147,7 @@ public class HUDTracker : MonoBehaviour
                 foreach (var (enemy, UI) in enemyHUDTrackerUIList)
                 {
                     // 적의 스크린 좌표와 스크린 공간 거리 계산
-                    var (enemyScreenPos, screenSpaceDistance) = GetScreenSpaceInfo(enemy);
+                    var screenSpaceInfo = GetScreenSpaceInfo(enemy);
 
                     // 적의 월드 공간 거리 계산
                     float worldSpaceDistance = Vector3.Distance(Camera.transform.position, enemy.transform.position);
@@ -148,8 +155,8 @@ public class HUDTracker : MonoBehaviour
                     TrackInfo info = new TrackInfo
                     {
                         Enemy = enemy,
-                        ScreenPosition = enemyScreenPos,
-                        ScreenSpaceDistance = screenSpaceDistance,
+                        ScreenPosition = screenSpaceInfo.ScreenPosition,
+                        ScreenSpaceDistance = screenSpaceInfo.ScreenSpaceDistance,
                         WorldSpaceDistance = worldSpaceDistance
                     };
 
@@ -198,15 +205,21 @@ public class HUDTracker : MonoBehaviour
     /// </summary>
     /// <param name="enemy"></param>
     /// <returns></returns>
-    private (Vector3 screenPos, float screenSpaceDistance) GetScreenSpaceInfo(Enemy enemy)
+    private ScreenSpaceInfo GetScreenSpaceInfo(Enemy enemy)
     {
         Vector3 screenCenter = Camera.ViewportToScreenPoint(new Vector3(0.5f, 0.5f, 0f));
         
-        Vector3 enemyScreenPos = Vector3.Scale(Camera.WorldToScreenPoint(enemy.transform.position), new Vector3(1f, 1f, 0f));
+        Vector3 enemyScreenPos = Camera.WorldToScreenPoint(enemy.transform.position);
 
-        float screenSpaceDistance = Vector3.Distance(enemyScreenPos, screenCenter);
+        float screenSpaceDistance = Vector3.Distance(Vector3.Scale(enemyScreenPos, new Vector3(1f, 1f, 0f)), screenCenter);
+        float screenSpaceDepth = enemyScreenPos.z;
 
-        return (enemyScreenPos, screenSpaceDistance);
+        return new ScreenSpaceInfo
+        {
+            ScreenPosition = enemyScreenPos,
+            ScreenSpaceDistance = screenSpaceDistance,
+            ScreenSpaceDepth = screenSpaceDepth
+        };
     }
     
     private List<Vector2> UIEndPoints = new List<Vector2>();

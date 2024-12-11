@@ -1,17 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using inonego;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI.Extensions;
 
 public class HUDTrackerUI : MonoBehaviour
 {
+    public AudioClip GetDamagedSound;
+
     public TextMeshProUGUI DistanceUI;
     public TextMeshProUGUI HealthUI;
 
     public UILineRenderer LineRenderer;
 
     public RectTransform UIParent;
+    private Animator animator;
+    private AudioSource audioSource;
 
     public float LineLengthStartOffset;
     public float LineLengthEndOffset;
@@ -21,6 +26,12 @@ public class HUDTrackerUI : MonoBehaviour
     public float LerpSpeed;
 
     public HUDTracker.TrackInfo? TrackInfo { get; private set; }
+
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
+    }
 
     private void LateUpdate()
     {
@@ -32,9 +43,36 @@ public class HUDTrackerUI : MonoBehaviour
         HealthUI.text = $"{TrackInfo.Value.Enemy.health.HP}";
     }
 
-    public void SetTrackInfo(HUDTracker.TrackInfo trackInfo)
+    private void OnEnable()
     {
+        animator.Rebind();
+        animator.Update(0f);
+    }
+
+    private void OnDisable()
+    {
+        SetTrackInfo(null);
+    }
+
+    public void SetTrackInfo(HUDTracker.TrackInfo? trackInfo)
+    {
+        if (TrackInfo != null)
+        {
+            TrackInfo.Value.Enemy.health.OnHealDamageApplied -= OnEnemyDamaged;
+        }
+
         TrackInfo = trackInfo;
+
+        if (TrackInfo != null)
+        {
+            TrackInfo.Value.Enemy.health.OnHealDamageApplied += OnEnemyDamaged;
+        }
+    }
+
+    private void OnEnemyDamaged(Health sender, Health.AppliedEventArgs e)
+    {
+        animator.SetTrigger("GetDamaged");
+        audioSource.PlayOneShot(GetDamagedSound);
     }
 
     public void UpdateLine(Vector2 endPoint)
