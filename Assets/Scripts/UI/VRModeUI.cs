@@ -42,7 +42,15 @@ public class VRModeUI : MonoBehaviour
     {
         if (ShowOnStart)
         {
+            transform.localScale = Vector3.zero;
+            
             Show();
+        }
+        else
+        {
+            transform.localScale = Vector3.one;
+
+            Hide();
         }
     }
 

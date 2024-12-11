@@ -16,6 +16,14 @@ public class PlayText : MonoBehaviour
         Play();
     }
 
+    public void Play(string text)
+    {
+        Text = text;
+        TextUI.text = "";
+        
+        Play();
+    }
+
     public void Play()
     {
         StartCoroutine(PlayTextCoroutine());
