@@ -8,10 +8,10 @@ public class ScriptPlayer : MonoBehaviour
     [Serializable]
     public class KeyFrame : IComparable<KeyFrame>
     {
-        public float Start { get; set; }
-        public float End   { get; set; }
+        [field: SerializeField] public float Start { get; set; }
+        [field: SerializeField] public float End   { get; set; }
 
-        public string Text { get; set; }
+        [field: SerializeField] public string Text { get; set; }
 
         public int CompareTo(KeyFrame other)
         {

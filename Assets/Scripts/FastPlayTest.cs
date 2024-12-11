@@ -7,6 +7,12 @@ public class FastPlayTest : MonoBehaviour
 {
     private PlayableDirector playableDirector;
 
+    public bool CutSceneOnStart = true;
+    public GameState StartState = GameState.Idle;
+    public bool SetGameClear = true;
+    public bool SetGameFail = true;
+
+
     private void Awake()
     {
         playableDirector = GetComponentInChildren<PlayableDirector>();
@@ -14,11 +20,31 @@ public class FastPlayTest : MonoBehaviour
     
     public void Start()
     {
-        playableDirector.Stop();
+        if (!CutSceneOnStart)
+        {
+            playableDirector.Stop();
 
-        GameManager.Instance.StartGame();
+            AudioManager.Instance.MuteAudioGroup(false);
+        }
 
-        AudioManager.Instance.MuteAudioGroup(false);
+        if (StartState == GameState.Idle)
+        {
+            GameManager.Instance.StartGame();
+        }
+        else
+        //
+        if (StartState == GameState.Finished)
+        {
+            if (SetGameClear)
+            {
+                GameManager.Instance.SetGameClear();
+            }
+
+            if (SetGameFail)
+            {
+                GameManager.Instance.SetGameOver();
+            }
+        }
     }
     
 }

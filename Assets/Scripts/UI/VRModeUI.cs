@@ -66,7 +66,11 @@ public class VRModeUI : MonoBehaviour
     public void Show()
     {
         animator.SetBool("IsVisible", true);
-        audioSource.PlayOneShot(ShowSound);
+        
+        if (ShowSound != null)
+        {
+            audioSource.PlayOneShot(ShowSound);
+        }
 
         IsVisible = true;
     }
@@ -74,7 +78,11 @@ public class VRModeUI : MonoBehaviour
     public void Hide()
     {
         animator.SetBool("IsVisible", false);
-        audioSource.PlayOneShot(HideSound);
+
+        if (HideSound != null)
+        {
+            audioSource.PlayOneShot(HideSound);
+        }
 
         IsVisible = false;
     }

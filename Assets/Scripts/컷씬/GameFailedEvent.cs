@@ -15,11 +15,6 @@ public class GameFailedEvent : MonoBehaviour
     public float MinAlertDelay = 0.1f;
     public float MaxAlertDelay = 0.5f;
 
-    public void Start()
-    {
-        SetGameFailed();
-    }
-
     public void CreateAlertPanel()
     {
         GameObject GO = Instantiate(AlertPanel, Origin.position, Quaternion.identity);
