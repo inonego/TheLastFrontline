@@ -6,20 +6,206 @@
   <component name="ChangeListManager">
     <list default="true" id="213f37a9-47e9-4c81-a0c3-bd4cef47adf3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheLastFrontline/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheLastFrontline/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/CutScenes/BarrierBreak.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/CutScenes/BarrierBreak.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/CutScenes/BarrierHit.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/CutScenes/BarrierHit.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/CutScenes/Core Explosion.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/CutScenes/Core Explosion.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/CutScenes/Family.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/CutScenes/Family.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy/JabMob1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy/JabMob1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy/JabMob2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy/JabMob2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/GRENADE.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/GRENADE.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Radio.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Radio.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/VR/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/VR/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/게임 오브젝트/Player/Grenade.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/게임 오브젝트/Player/Grenade.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/RightHand_Robot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/RightHand_Robot.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HandAnimation.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HandAnimation/Grabbing.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HandAnimation/Grabbing.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HandAnimation/Hand.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HandAnimation/Hand.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HandAnimation/IdleHand.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HandAnimation/IdleHand.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HandAnimation/ThrowHand.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HandAnimation/ThrowHand.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/InputSystem/InputActions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/InputSystem/InputActions.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XR.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XR.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XR/Settings.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XR/Settings.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/LeftHand_Robot.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/LeftHand_Robot.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Material.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Material/RobotHand Red.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Material/RobotHand Red.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Material/RobotHand.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Material/RobotHand.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Material/RobotHand_AO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Material/RobotHand_AO.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Material/RobotHand_albedo Red.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Material/RobotHand_albedo Red.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Material/RobotHand_albedo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Material/RobotHand_albedo.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Material/RobotHand_normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Material/RobotHand_normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Model.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Model/RobotHand.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Model/RobotHand.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_ArrowGrab.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_ArrowGrab.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_BearHeadGrab.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_BearHeadGrab.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_Bow.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_Bow.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_BowlingBall.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_BowlingBall.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_CubeGrab.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_CubeGrab.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_Fist.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_Fist.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_FistOpenThumb.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_FistOpenThumb.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_FlashlightNormal.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_FlashlightNormal.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_Grenade.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_Grenade.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_GrenadeActivate.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_GrenadeActivate.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_GunHold.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_GunHold.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_GunTriggerPull.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_GunTriggerPull.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_HandGun.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_HandGun.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_HandGunBottom.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_HandGunBottom.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_HandGunMagazine.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_HandGunMagazine.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_HandGunTriggerPull.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_HandGunTriggerPull.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_JoystickThumbDown.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_JoystickThumbDown.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_JoystickThumbUp.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_JoystickThumbUp.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_Key.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_Key.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_Knob.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_Knob.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_LargeGrab.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_LargeGrab.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_LargeGrab2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_LargeGrab2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_MediumGrab.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_MediumGrab.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_OneFingerPinch.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_OneFingerPinch.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_Open.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_Open.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_Point.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_Point.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_Relax.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_Relax.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_Rifle - ForeGripPose.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_Rifle - ForeGripPose.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_RifleMagazineGrab.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_RifleMagazineGrab.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_RockClimbLedge.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_RockClimbLedge.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_SphereGrab.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_SphereGrab.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_TerraFormerGunHold.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_TerraFormerGunHold.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_TerraFormerGunHoldTrigger.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_TerraFormerGunHoldTrigger.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_TinyHat.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_TinyHat.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_TwoFingerPinch.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_TwoFingerPinch.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_WideLargeGrab.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/Poses/Pose_WideLargeGrab.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/RightHand_Robot.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI Starter Kit/Hands &amp; Poses/Robot Hand/RightHand_Robot.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/Materials/bdl_byx01.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/Materials/bdl_byx01.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/Materials/bdl_byx01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/Materials/bdl_byx01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/animation.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/animation/attack1.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/animation/attack1.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/animation/bdl_byx.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/animation/bdl_byx.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/animation/bdl_byx.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/animation/bdl_byx.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/animation/bdl_byx@ainjured2.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/animation/bdl_byx@ainjured2.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/animation/bdl_byx@appear.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/animation/bdl_byx@appear.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/animation/bdl_byx@attack1.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/animation/bdl_byx@attack1.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/animation/bdl_byx@attack2.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/animation/bdl_byx@attack2.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/animation/bdl_byx@dead.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/animation/bdl_byx@dead.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/animation/bdl_byx@deadend.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/animation/bdl_byx@deadend.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/animation/bdl_byx@earthfree_getup.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/animation/bdl_byx@earthfree_getup.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/animation/bdl_byx@earthfree_loop.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/animation/bdl_byx@earthfree_loop.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/animation/bdl_byx@fightstand.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/animation/bdl_byx@fightstand.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/animation/bdl_byx@injured1.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/animation/bdl_byx@injured1.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/animation/bdl_byx@knockout_earthfree.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/animation/bdl_byx@knockout_earthfree.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/animation/bdl_byx@knockout_floor.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/animation/bdl_byx@knockout_floor.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/animation/bdl_byx@knockout_getup.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/animation/bdl_byx@knockout_getup.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/animation/bdl_byx@knockout_loop.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/animation/bdl_byx@knockout_loop.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/animation/bdl_byx@run.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/animation/bdl_byx@run.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/animation/bdl_byx@stand.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/animation/bdl_byx@stand.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/animation/bdl_byx@wait1.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/animation/bdl_byx@wait1.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/animation/bdl_byx@wait2.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/animation/bdl_byx@wait2.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/animation/bdl_byx@walk.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/animation/bdl_byx@walk.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/animation/stand.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/animation/stand.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/prefab/bdl_byx.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/prefab/bdl_byx.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/show.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/big_bat_carb/show.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/metroid-floating.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/metroid-floating/source.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/metroid-floating/source/metroid_1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/metroid-floating/source/metroid_1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/metroid-floating/source/metroid_2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/metroid-floating/source/metroid_2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/metroid-floating/source/metroid_final.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/metroid-floating/source/metroid_final.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/metroid-floating/textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/metroid-floating/textures/Base_Color.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/metroid-floating/textures/Base_Color.jpeg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/metroid-floating/textures/Blue 3.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/metroid-floating/textures/Blue 3.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/metroid-floating/textures/Emmissive.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/metroid-floating/textures/Emmissive.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/metroid-floating/textures/LMaterial 1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/metroid-floating/textures/LMaterial 1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/metroid-floating/textures/Normal.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/metroid-floating/textures/Normal.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/metroid-floating/textures/Opacity.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/metroid-floating/textures/Opacity.jpeg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/metroid-floating/textures/Opacity.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/metroid-floating/textures/Opacity.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/metroid-floating/textures/Roughness.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/metroid-floating/textures/Roughness.jpeg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/metroid-floating/textures/Roughness.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/metroid-floating/textures/Roughness.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/metroid-floating/textures/Scattering.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/metroid-floating/textures/Scattering.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/metroid-floating/textures/metroid_rig_new_neurons_nuclei_SHD 1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/metroid-floating/textures/metroid_rig_new_neurons_nuclei_SHD 1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/metroid-floating/textures/metroid_rig_new_neurons_nuclei_SHD.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/metroid-floating/textures/metroid_rig_new_neurons_nuclei_SHD.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +217,7 @@
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager/TutorialManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/게임 오브젝트/Player/Radio.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.sequences@2.1.1/Editor/Core/Common/SequencesAssetDatabase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@2.5.4/Runtime/Interaction/XRInteractionManager.cs" root0="SKIP_HIGHLIGHTING" />
@@ -43,19 +230,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;JJL__interactiveObj&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "InteractiveObj__final",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="유닛 테스트(배치 모드)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2023.2.20f1\Editor\Unity.exe" />
@@ -159,7 +346,7 @@
       <workItem from="1733854000258" duration="410000" />
       <workItem from="1733855166649" duration="673000" />
       <workItem from="1733862171901" duration="7065000" />
-      <workItem from="1733906308251" duration="10620000" />
+      <workItem from="1733906308251" duration="26499000" />
     </task>
     <servers />
   </component>
