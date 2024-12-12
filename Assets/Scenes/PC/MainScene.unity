@@ -5261,6 +5261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a97f5897a98877d43939cd8fe462b1e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  autoStart: 1
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -5270,6 +5271,8 @@ MonoBehaviour:
   distance: 1000
   radius: 88
   noneRadius: 22
+  minScale: 0
+  maxScale: 0
   noneExplosionPoint: {fileID: 1942212547}
   gizmoMesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &814883170
@@ -13314,6 +13317,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41b2ba5b245ba13429c7ab1269c41b70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CutSceneOnStart: 1
+  StartState: 0
+  SetGameClear: 1
+  SetGameFail: 1
 --- !u!1 &1814960273 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5891828583609809693, guid: e22b65fef728f1943a6691bc0e547656,
@@ -14541,7 +14548,7 @@ MonoBehaviour:
   Camera: {fileID: 330585545}
   MaxDetectionCount: 3
   DetectionRadiusInScreenSpace: 500
-  UIScale: {x: 1, y: 1}
+  UIScale: {x: 1, y: 1, z: 1}
   BoundingBoxPrefab: {fileID: 8929442792830182813, guid: 705ee6b86065f0448b30b37aea2e27d0,
     type: 3}
   BoundingBoxParent: {fileID: 796189926}
