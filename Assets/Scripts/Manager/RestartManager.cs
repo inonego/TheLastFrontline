@@ -22,10 +22,11 @@ public class RestartManager : MonoSingleton<RestartManager>
             //게임 재시작
             SceneManager.LoadScene("MainScene");
         }
-        
+        else
+        //
         if (QuitAction.action.WasPressedThisFrame())
         {
-            Application.Quit();
+            SceneManager.LoadScene("TutorialScene");
         }
     }
 }

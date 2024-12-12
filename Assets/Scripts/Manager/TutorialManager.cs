@@ -87,8 +87,10 @@ public class TutorialManager : MonoSingleton<TutorialManager>
                     yield return ShowText("To shoot, press the corresponding button on the left controller.");
                     imagePanelAnimator.SetBool("IsVisible", false);
                     yield return ShowText("I'll summon the monster, kill it.");
-                    GameObject monster1 = Instantiate(monsterPrefab, spawnPoint.position, spawnPoint.rotation);
+                    
+                    GameObject monster1 = SpawnMonster();
                     yield return WaitForMonsterDeath(monster1);
+
                     yield return ShowText("Good. Let me tell you how to use grenade.");
                     index++;
                     break;
@@ -103,8 +105,10 @@ public class TutorialManager : MonoSingleton<TutorialManager>
                     yield return ShowText("Now grab a grenade.");
                     yield return WaitForGrenadeGrab();
                     yield return ShowText("Good! Let's kill a monster with grenade.");
-                    GameObject monster2 = Instantiate(monsterPrefab, spawnPoint.position, spawnPoint.rotation);
+
+                    GameObject monster2 = SpawnMonster();
                     yield return WaitForMonsterDeath(monster2);
+
                     yield return ShowText("Good. Let me tell you how to use the radio.");
                     index++;
                     break;
@@ -116,8 +120,10 @@ public class TutorialManager : MonoSingleton<TutorialManager>
                     yield return ShowText("Now grab a radio.");
                     yield return WaitForRadioGrab();
                     yield return ShowText("Good! Let's kill a monster with radio.");
-                    GameObject monster3 = Instantiate(monsterPrefab, spawnPoint.position, spawnPoint.rotation);
+
+                    GameObject monster3 = SpawnMonster();
                     yield return WaitForMonsterDeath(monster3);
+
                     yield return ShowText("Good. Let's go protect the world.");
                     isEnd = true;
                     break;
@@ -126,6 +132,16 @@ public class TutorialManager : MonoSingleton<TutorialManager>
         
         // 메인 씬으로 전환 필요
         SceneManager.LoadScene("MainScene");
+    }
+
+    private GameObject SpawnMonster()
+    {
+        GameObject monster = Instantiate(monsterPrefab, spawnPoint.position, spawnPoint.rotation);
+
+        monster.GetComponent<Enemy>().Halt();
+        monster.GetComponent<Rigidbody>().isKinematic = true;
+
+        return monster;
     }
 
     private IEnumerator ShowText(string message)

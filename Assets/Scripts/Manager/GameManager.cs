@@ -90,14 +90,20 @@ public class GameManager : MonoSingleton<GameManager>
     {
         State = GameState.Paused;
 
-        playableDirector.Pause();
+        if (playableDirector != null)
+        {
+            playableDirector.Pause();
+        }   
     }
 
     public void ResumeGame()
     {
         State = GameState.Running;
 
-        playableDirector.Resume();
+        if (playableDirector != null)
+        {
+            playableDirector.Resume();
+        }
     }
     
     public void FinishGame()
@@ -112,14 +118,20 @@ public class GameManager : MonoSingleton<GameManager>
     {
         FinishGame();
         
-        playableDirector.Play(gameClearTimelineAsset);
+        if (playableDirector != null && gameClearTimelineAsset != null)
+        {
+            playableDirector.Play(gameClearTimelineAsset);
+        }
     }
 
     public void SetGameOver()
     {
         FinishGame();
 
-        playableDirector.Play(gameFailTimelineAsset);
+        if (playableDirector != null && gameFailTimelineAsset != null)
+        {
+            playableDirector.Play(gameFailTimelineAsset);
+        }
     }
 
     private void SetPhase(int next)
@@ -133,6 +145,8 @@ public class GameManager : MonoSingleton<GameManager>
 
     private void ProcessPhase()
     {
+        if (PhaseList.Count == 0) return;
+
         float time = playTimeCounter.GetElapsedTime();
 
         int nextPhase = CurrentPhase + 1;

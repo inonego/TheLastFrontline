@@ -10,6 +10,8 @@ public class AudioManager : MonoSingleton<AudioManager>
     
     public void MuteAudioGroup(bool value)
     {
+        if (AudioMixer == null) return;
+
         AudioMixer.SetFloat("BaseVolume", !value ? 0f : -80f);
     }
 }
