@@ -3250,6 +3250,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1593048417}
+  - component: {fileID: 1593048419}
   - component: {fileID: 1593048415}
   - component: {fileID: 1593048414}
   - component: {fileID: 1593048418}
@@ -3319,8 +3320,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RestartAction: {fileID: -1387847942214095202, guid: a77bf7968ddc3254992e058b8df800f6,
     type: 3}
-  QuitAction: {fileID: -4641422249680603934, guid: a77bf7968ddc3254992e058b8df800f6,
+  QuitAction: {fileID: -8236409909424877041, guid: a77bf7968ddc3254992e058b8df800f6,
     type: 3}
+--- !u!114 &1593048419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593048411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10350039c4cf98b47bc60c1fce1f3b04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  State: 0
+  GameTime: 180
+  PhaseList: []
+  gameClearTimelineAsset: {fileID: 0}
+  gameFailTimelineAsset: {fileID: 0}
 --- !u!1 &1605446480
 GameObject:
   m_ObjectHideFlags: 0

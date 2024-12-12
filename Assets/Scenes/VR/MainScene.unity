@@ -2142,7 +2142,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: RestartScene
+          m_StringArgument: ReWinScene
           m_BoolArgument: 0
         m_CallState: 2
   - m_PersistentCalls:
@@ -13452,15 +13452,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1757636706}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 41b2ba5b245ba13429c7ab1269c41b70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   CutSceneOnStart: 1
   StartState: 3
-  SetGameClear: 0
-  SetGameFail: 1
+  SetGameClear: 1
+  SetGameFail: 0
 --- !u!95 &1778815990 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 8502834933882426881, guid: 59feb73c4d89d7144ae43c83a2f3dacf,

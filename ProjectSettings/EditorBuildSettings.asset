@@ -14,6 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/VR/MainScene.unity
     guid: e67923d7271d18741a98350ee5f61b13
+  - enabled: 1
+    path: Assets/Scenes/VR/ReWinScene.unity
+    guid: 26fdd9f7ec31c7c45ae9289ac0e8f553
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 897782c96c959b54b9c6572a6dcb4df4,
       type: 2}
